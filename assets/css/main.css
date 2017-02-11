@@ -1094,6 +1094,35 @@
 
 .project {
 	display: flex;
+	height: 250px;
+}
+
+.project > * {
+	margin: 5px;
+}
+
+.project .description {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 20px;
+}
+
+.project .image {
+	opacity: 0.9;
+}
+
+.project .image:hover {
+	opacity: 1;
+}
+
+.project .description h1 {
+	font-size: 1.3em;
+	padding-bottom: 15px;
+}
+
+.project .description p {
+	font-size: 0.8em;
 }
 
 /* Footer */
@@ -1603,15 +1632,10 @@
 			#footer {
 				text-align: center;
 				padding: 2em 0 0 0;
-				font-size: 0.85em;
+				font-size: 1.5em;
+				width: 100%;
+				display: flex;
+				justify-content: space-around;
 			}
-
-				#footer .copyright li {
-					display: block;
-				}
-
-					#footer .copyright li:before {
-						display: none;
-					}
 
 	}
