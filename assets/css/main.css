@@ -1125,6 +1125,14 @@
 	font-size: 0.8em;
 }
 
+#skills i {
+	font-size: 3em;
+}
+
+#skills > div div {
+	text-align: center;
+}
+
 /* Footer */
 
 	#footer {
@@ -1253,6 +1261,7 @@
 				width: 45em;
 				margin: 0 auto;
 				opacity: 0.00001;
+				margin-top: 40px;
 			}
 
 				#wrapper.tall {
