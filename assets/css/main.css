@@ -1648,3 +1648,22 @@
 			}
 
 	}
+
+.contact-info div {
+	padding-bottom: 20px;
+}
+
+.contact-info i {
+	font-size: 2em;
+	color: black;
+}
+
+.contact-info a {
+	text-decoration: none;
+	color: black;
+	opacity: 0.8;
+}
+
+.contact-info a:hover {
+	opacity: 1;
+}
