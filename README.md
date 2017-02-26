@@ -34,7 +34,7 @@ A simulation based on the rules of Brian's Brain.
 
 It is built using Vanilla Javascript, HTML5 Canvas, and Easel.js.
 
-[See Live Version Here](/brians_brain)
+[See Live Version Here](http://www.davidhu.io/brians_brain)
 
 ## Skills
 - Ruby
