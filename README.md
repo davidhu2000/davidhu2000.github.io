@@ -49,4 +49,4 @@ It is built using Vanilla Javascript, HTML5 Canvas, and Easel.js.
 - [Github](https://www.github.com/davidhu2000)
 - [Email](mailto:davidhu314@gmail.com)
 - [LinkedIn](https://www.linkedin.com/in/davidhu2000)
-- [Resume](images/resume.pdf)
+- [Resume](http://www.davidhu.io/images/resume.pdf)
