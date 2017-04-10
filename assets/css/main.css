@@ -1098,12 +1098,13 @@
 	padding: 10px 5px;
 	border: 1px solid #e2e2e2;
 	margin: 5px 0;
-	box-shadow: 0px 1px 2px #e2e2e2;
+	box-shadow: none;
 	opacity: 0.85;
 }
 
 .project:hover {
 	opacity: 1;
+	box-shadow: 0px 1px 1px #e2e2e2;
 }
 
 .project > * {
