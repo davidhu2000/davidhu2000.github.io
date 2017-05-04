@@ -908,7 +908,8 @@
 
 		.image img {
 			display: block;
-			width: 100%;
+			height: 264px;
+			width: 423px;
 		}
 
 		.image.fit {
