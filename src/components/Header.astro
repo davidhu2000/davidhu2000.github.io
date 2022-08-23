@@ -1,25 +1,104 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../config';
+import IconGithub from "./icons/IconGithub.astro";
+import IconSun from "./icons/IconSun.astro";
+import IconMenu from "./icons/IconMenu.astro";
+import IconRSS from "./icons/IconRSS.astro";
+import Logo from "./Logo.astro";
+const {} = Astro.props;
+
+const linkClasses =
+	"font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out";
 ---
 
-<header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
-	</nav>
+<header
+	class="sticky top-0 z-40 flex-none mx-auto w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm border-b dark:border-b-0"
+>
+	<div
+		class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4"
+	>
+		<div class="flex justify-between">
+			<a class="flex items-center" href="/">
+				<Logo />
+			</a>
+			<div class="flex items-center md:hidden">
+				<button
+					type="button"
+					class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+					aria-label="Toggle between Dark and Light mode"
+					data-aw-toggle-color-scheme
+				>
+					<IconSun class="w-6 h-6" />
+				</button>
+				<button
+					class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition"
+					aria-label="Toggle Menu"
+					data-aw-toggle-menu
+				>
+					<IconMenu class="w-6 h-6" />
+				</button>
+			</div>
+		</div>
+		<nav
+			class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200"
+			aria-label="Main navigation"
+			id="menu"
+		>
+			<ul
+				class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center collapse w-full md:w-auto collapsed text-xl md:text-base"
+			>
+				<li>
+					<a class={linkClasses} href="/projects">Projects</a>
+				</li>
+				<li>
+					<a class={linkClasses} href="/blog">Blog</a>
+				</li>
+				<li class="md:hidden">
+					<a
+						class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						href="https://github.com/onwidget/astrowind"
+					>
+						Github
+					</a>
+				</li>
+			</ul>
+			<div
+				class="md:self-center flex items-center mb-4 md:mb-0 collapse collapsed"
+			>
+				<div class="hidden items-center mr-3 md:flex">
+					<button
+						type="button"
+						class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+						aria-label="Toggle between Dark and Light mode"
+						data-aw-toggle-color-scheme
+					>
+						<IconSun />
+					</button>
+					<a
+						class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+						aria-label="RSS Feed"
+						href="/rss.xml"
+					>
+						<IconRSS />
+					</a>
+					<a
+						href="https://github.com/onwidget/astrowind"
+						class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1"
+						aria-label="Astrowind Github"
+					>
+						<IconGithub />
+					</a>
+				</div>
+			</div>
+		</nav>
+	</div>
 </header>
-<style>
-	header {
-		margin: 0em 0 2em;
+
+<style is:global>
+	[data-aw-toggle-menu].expanded .line1 {
+		transform: rotate(-45deg) translate(-12px, 8px);
 	}
-	h2 {
-		margin: 0.5em 0;
+
+	[data-aw-toggle-menu].expanded .line2 {
+		transform: rotate(45deg) translate(4px, -16px);
 	}
 </style>
