@@ -10,7 +10,6 @@
 >
 > Built using Electron, React.js, Redux, Webpack, and Youtube API
 
-
 ### React/Redux File Generator
 
 > An npm module used to generate file templates for the React / Redux cycle.
@@ -44,6 +43,7 @@
 [See Live Version Here](http://www.davidhu.io/brians_brain)
 
 ## Skills
+
 - Ruby
 - Rails
 - Javascript
@@ -60,6 +60,7 @@
 - Heroku
 
 ## Contact
+
 - [Github](https://www.github.com/davidhu2000)
 - [LinkedIn](https://www.linkedin.com/in/davidhu2000)
 - [AngelList](https://angel.co/davidhu2000)
