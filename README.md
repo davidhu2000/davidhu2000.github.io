@@ -1,67 +1,61 @@
-# David Hu
+# Astro Starter Kit: Blog
 
-![My Picture](./images/me.jpg)
+```
+npm init astro -- --template blog
+```
 
-## Projects
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
 
-### Youtube Desktop
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-> A desktop client of youtube that allows the user to browse Youtube without the need of a browser.
->
-> Built using Electron, React.js, Redux, Webpack, and Youtube API
+Features:
 
+- ✅ Minimal styling (make it your own!)
+- ✅ 100/100 Lighthouse performance
+- ✅ SEO-friendly with canonical URLs and OpenGraph data
+- ✅ Sitemap support
+- ✅ RSS Feed support
+- ✅ Markdown & MDX support
 
-### React/Redux File Generator
+## 🚀 Project Structure
 
-> An npm module used to generate file templates for the React / Redux cycle.
->
-> It is built using Javascript and Javascript File System.
+Inside of your Astro project, you'll see the following folders and files:
 
-[See Live Version Here](https://www.npmjs.com/package/redux-file-gen)
+```
+├── public/
+├── src/
+│   ├── components/
+│   ├── layouts/
+│   └── pages/
+├── astro.config.mjs
+├── README.md
+├── package.json
+└── tsconfig.json
+```
 
-### Tempo
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-> A single page music streaming web application that features continuous playing while browsing and live search.
->
-> It is built using React, Redux, and Rails.
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-[See Live Version Here](http://www.tempostream.com)
+Any static assets, like images, can be placed in the `public/` directory.
 
-### Eezee
+## 🧞 Commands
 
-> A mobile app that queries over 300 video streaming services to determine which ones host the searched movie.
->
-> It is built using React-Native, Redux, and Firebase.
+All commands are run from the root of the project, from a terminal:
 
-[See Live Version Here](https://play.google.com/store/apps/details?id=com.eezee)
+| Command                | Action                                           |
+| :--------------------- | :----------------------------------------------- |
+| `npm install`          | Installs dependencies                            |
+| `npm run dev`          | Starts local dev server at `localhost:3000`      |
+| `npm run build`        | Build your production site to `./dist/`          |
+| `npm run preview`      | Preview your build locally, before deploying     |
+| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro --help` | Get help using the Astro CLI                     |
 
-### Brian's Brain Simulation
+## 👀 Want to learn more?
 
-> A simulation based on the rules of Brian's Brain.
->
-> It is built using Vanilla Javascript, HTML5 Canvas, and Easel.js.
+Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
-[See Live Version Here](http://www.davidhu.io/brians_brain)
+## Credit
 
-## Skills
-- Ruby
-- Rails
-- Javascript
-- React
-- Redux
-- jQuery
-- SQL
-- Webpack
-- HTML5
-- CSS3
-- Git
-- Sass
-- Bootstrap
-- Heroku
-
-## Contact
-- [Github](https://www.github.com/davidhu2000)
-- [LinkedIn](https://www.linkedin.com/in/davidhu2000)
-- [AngelList](https://angel.co/davidhu2000)
-- [Email](mailto:davidhu314@gmail.com)
-- [Resume](http://www.davidhu.io/images/resume.pdf)
+This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
