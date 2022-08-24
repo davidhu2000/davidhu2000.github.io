@@ -3,14 +3,17 @@ const {} = Astro.props;
 ---
 
 <script is:inline>
+  const classList = document.documentElement.classList;
+  const localStorageTheme = localStorage.getItem("theme");
+
   if (
-    localStorage.theme === "dark" ||
-    (!("theme" in localStorage) &&
+    localStorageTheme === "dark" ||
+    (!localStorageTheme &&
       window.matchMedia("(prefers-color-scheme: dark)").matches)
   ) {
-    document.documentElement.classList.add("dark");
+    classList.add("dark");
   } else {
-    document.documentElement.classList.remove("dark");
+    classList.remove("dark");
   }
 
   function attachEvent(selector, event, fn) {
@@ -35,10 +38,8 @@ const {} = Astro.props;
     });
 
     attachEvent("[data-aw-toggle-color-scheme]", "click", function (elem) {
-      document.documentElement.classList.toggle("dark");
-      localStorage.theme = document.documentElement.classList.contains("dark")
-        ? "dark"
-        : "light";
+      classList.toggle("dark");
+      localStorage.theme = classList.contains("dark") ? "dark" : "light";
     });
   };
   window.onpageshow = function () {
