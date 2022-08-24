@@ -1,57 +1,61 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import { formatDate } from "../helpers/formatDate";
+import PageLayout from "../layouts/PageLayout.astro";
 
-export interface Props {
+interface Props {
 	content: {
 		title: string;
 		description: string;
-		pubDate?: string;
-		updatedDate?: string;
+		pubDate: string;
+		updatedDate: string;
 		heroImage?: string;
+		url: string;
 	};
 }
 
 const {
-	content: { title, description, pubDate, updatedDate, heroImage },
+	content: { title, description, pubDate, heroImage, url },
 } = Astro.props as Props;
+
+const canonical = new URL(`blog/${url}`, Astro.site);
+
+// TODO: update to integrate with reading time package
+const readingTime = 10;
 ---
 
-<html>
-	<head>
-		<BaseHead title={title} description={description} />
-		<style>
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			hr {
-  				border-top: 1px solid #DDD;
-				margin: 1rem 0;
-			}
-		</style>
-	</head>
-
-	<body>
-		<Header />
-		<main>
+<PageLayout meta={{ title, description, canonical }}>
+	<main>
+		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
 			<article>
-				{heroImage && (
-					<img
-						width={720}
-						height={360}
-						src={heroImage}
-						alt=""
-					/>
-				)}
-				<h1 class="title">{title}</h1>
-				{pubDate && <time>{pubDate}</time>}
-				{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
-				<hr/>
-				<slot />
+				<header>
+					<p class="max-w-3xl mx-auto text-center">
+						<time datetime={pubDate}>
+							{formatDate(pubDate)}
+						</time> ~ {Math.ceil(readingTime)} min
+					</p>
+					<h1
+						class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-6 md:mb-8"
+					>
+						{title}
+					</h1>
+				</header>
+				{
+					heroImage && (
+						<img
+							width={720}
+							height={360}
+							src={heroImage}
+							alt="Blog Hero Image"
+							class="max-w-full lg:max-w-6xl mx-auto mt-4 mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
+						/>
+					)
+				}
+				<div
+					class="container mx-auto px-4 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
+				>
+					<slot />
+				</div>
 			</article>
-		</main>
-		<Footer />
-	</body>
-</html>
+		</section>
+	</main>
+</PageLayout>

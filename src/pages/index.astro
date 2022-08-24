@@ -2,17 +2,17 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 import BasicScripts from "../components/BasicScripts.astro";
+import { SITE } from "../config";
 ---
 
 <!DOCTYPE html>
 <html lang="en-us">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={SITE.name} description={SITE.description} />
 	</head>
 	<body>
-		<Header title={SITE_TITLE} />
+		<Header title={SITE.name} />
 		<main>content</main>
 		<Footer />
 		<BasicScripts />
