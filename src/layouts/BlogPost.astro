@@ -1,12 +1,7 @@
 ---
-import { SITE } from "../config";
-
 import PageLayout from "../layouts/PageLayout.astro";
 
 const { content: post } = Astro.props;
-console.log(Astro.props);
-// const title = `${post.title} — ${SITE.name}`;
-// const description = post.description;
 
 interface Props {
 	content: {
