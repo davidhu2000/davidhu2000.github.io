@@ -1,4 +1,5 @@
 ---
+import { formatDate } from "../helpers/formatDate";
 import PageLayout from "../layouts/PageLayout.astro";
 
 interface Props {
@@ -29,13 +30,7 @@ const readingTime = 10;
 				<header>
 					<p class="max-w-3xl mx-auto text-center">
 						<time datetime={pubDate}>
-							{
-								new Date(pubDate).toLocaleDateString(undefined, {
-									year: "numeric",
-									month: "short",
-									day: "numeric",
-								})
-							}
+							{formatDate(pubDate)}
 						</time> ~ {Math.ceil(readingTime)} min
 					</p>
 					<h1

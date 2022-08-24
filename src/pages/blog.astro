@@ -3,6 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE } from "../config";
+import { formatDate } from "../helpers/formatDate";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
@@ -26,14 +27,7 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 						posts.map((post) => (
 							<li>
 								<time datetime={post.frontmatter.pubDate}>
-									{new Date(post.frontmatter.pubDate).toLocaleDateString(
-										"en-us",
-										{
-											year: "numeric",
-											month: "short",
-											day: "numeric",
-										}
-									)}
+									{formatDate(post.frontmatter.pubDate)}
 								</time>
 								<a href={post.url}>{post.frontmatter.title}</a>
 							</li>
