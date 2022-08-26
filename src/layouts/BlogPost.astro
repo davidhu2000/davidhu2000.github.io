@@ -19,8 +19,8 @@ const {
 
 const canonical = new URL(`blog/${url}`, Astro.site);
 
-// TODO: update to integrate with reading time package
-const readingTime = 10;
+// TODO: add support for pagination
+// TODO: add reading time functionality
 ---
 
 <PageLayout meta={{ title, description, canonical }}>
@@ -31,7 +31,7 @@ const readingTime = 10;
 					<p class="max-w-3xl mx-auto text-center">
 						<time datetime={pubDate}>
 							{formatDate(pubDate)}
-						</time> ~ {Math.ceil(readingTime)} min
+						</time>
 					</p>
 					<h1
 						class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-6 md:mb-8"
