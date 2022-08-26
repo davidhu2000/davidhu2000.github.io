@@ -6,8 +6,7 @@ interface Props {
 	content: {
 		title: string;
 		description: string;
-		pubDate: string;
-		updatedDate: string;
+		pubDate?: string;
 		heroImage?: string;
 		url: string;
 	};
@@ -28,11 +27,11 @@ const canonical = new URL(`blog/${url}`, Astro.site);
 		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
 			<article>
 				<header>
-					<p class="max-w-3xl mx-auto text-center">
+					{pubDate && <p class="max-w-3xl mx-auto text-center">
 						<time datetime={pubDate}>
 							{formatDate(pubDate)}
 						</time>
-					</p>
+					</p>}
 					<h1
 						class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-6 md:mb-8"
 					>
