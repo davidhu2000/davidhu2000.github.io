@@ -7,7 +7,7 @@ import Logo from "./Logo.astro";
 const {} = Astro.props;
 
 const linkClasses =
-	"font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out";
+	"font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out hover:underline";
 
 const githubUrl = "https://github.com/davidhu2000";
 ---
@@ -53,6 +53,9 @@ const githubUrl = "https://github.com/davidhu2000";
 				</li>
 				<li>
 					<a class={linkClasses} href="/blog">Blog</a>
+				</li>
+				<li>
+					<a class={linkClasses} href="/about">About</a>
 				</li>
 				<li class="md:hidden">
 					<a
