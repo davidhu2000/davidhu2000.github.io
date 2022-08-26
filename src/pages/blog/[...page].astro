@@ -1,0 +1,56 @@
+---
+import BlogListItem from "../../components/BlogListItem.astro";
+import PageLayout from "../../layouts/PageLayout.astro";
+import { SITE } from "../../config";
+import Pagination from "../../components/Pagination.astro";
+
+export async function getStaticPaths({ paginate }) {
+  const posts = (await Astro.glob("../blog/*.{md,mdx}")).sort(
+    (a, b) =>
+      new Date(b.frontmatter.pubDate).valueOf() -
+      new Date(a.frontmatter.pubDate).valueOf()
+  );
+
+  return paginate(posts, {
+    pageSize: SITE.postsPerPage,
+  });
+}
+
+const { page } = Astro.props;
+
+
+const currentPage = page.currentPage ?? 1;
+
+const title = `Blog ${currentPage > 1 ? `— Page ${currentPage} ` : ""}— ${
+  SITE.name
+}`;
+const description = "News and step-by-step guides about AstroWind";
+const canonical = new URL("/blog", Astro.site);
+---
+
+<PageLayout meta={{ title, description, canonical }}>
+	<section class="px-4 sm:px-6 py-8 sm:py-16 lg:py-20 mx-auto max-w-3xl">
+		<header>
+			<h1
+				class="text-center text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-8 md:mb-16"
+			>
+				Here Lies My Articles...
+			</h1>
+		</header>
+		<ul>
+			{
+				page.data.map((post) => (
+					<li class="mb-10 md:mb-16">
+						<BlogListItem post={post} />
+					</li>
+				))
+			}
+		</ul>
+
+    {
+      (page.url.prev || page.url.next) && (
+        <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+      )
+    }
+	</section>
+</PageLayout>
