@@ -1,9 +1,7 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import BlogListItem from "../components/BlogListItem.astro";
+import PageLayout from "../layouts/PageLayout.astro";
 import { SITE } from "../config";
-import { formatDate } from "../helpers/formatDate";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
@@ -11,31 +9,33 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 		new Date(b.frontmatter.pubDate).valueOf() -
 		new Date(a.frontmatter.pubDate).valueOf()
 );
+
+const currentPage = 1
+
+const title = `Blog ${currentPage > 1 ? `— Page ${currentPage} ` : ""}— ${
+  SITE.name
+}`;
+const description = "News and step-by-step guides about AstroWind";
+const canonical = new URL("/blog", Astro.site);
 ---
 
-<!DOCTYPE html>
-<html lang="en-us">
-	<head>
-		<BaseHead title={SITE.name} description={SITE.description} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<content>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<time datetime={post.frontmatter.pubDate}>
-									{formatDate(post.frontmatter.pubDate)}
-								</time>
-								<a href={post.url}>{post.frontmatter.title}</a>
-							</li>
-						))
-					}
-				</ul>
-			</content>
-			<Footer />
-		</main>
-	</body>
-</html>
+<PageLayout meta={{ title, description, canonical }}>
+	<section class="px-4 sm:px-6 py-8 sm:py-16 lg:py-20 mx-auto max-w-3xl">
+		<header>
+			<h1
+				class="text-center text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-8 md:mb-16"
+			>
+				Here Lies My Articles...
+			</h1>
+		</header>
+		<ul>
+			{
+				posts.map((post) => (
+					<li class="mb-10 md:mb-16">
+						<BlogListItem post={post} />
+					</li>
+				))
+			}
+		</ul>
+	</section>
+</PageLayout>
