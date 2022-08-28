@@ -1,13 +1,56 @@
 ---
+import { Icon } from "astro-icon";
 const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} DH. All rights reserved.
+	<div class="max-w-6xl mx-auto px-4 sm:px-6">
+		<div class="md:flex md:items-center md:justify-between py-4 md:py-8">
+			<ul class="flex mb-6 md:order-1 md:ml-4 md:mb-0">
+				<li>
+					<a
+						class="flex justify-center items-center text-gray-600 hover:text-gray-700 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out dark:bg-gray-800 dark:text-gray-400 p-1.5"
+						aria-label="Twitter"
+						href="https://twitter.com/notdavidhu"
+						target="_blank"
+					>
+						<Icon name="mdi:twitter" class="w-5 h-5" />
+					</a>
+				</li>
+				<li class="ml-4">
+					<a
+						class="flex justify-center items-center text-gray-600 hover:text-gray-700 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out dark:bg-gray-800 dark:text-gray-400 p-1.5"
+						aria-label="LinkedIn"
+						href="https://www.linkedin.com/in/davidhu2000/"
+						target="_blank"
+					>
+						<Icon name="mdi:linkedin" class="w-5 h-5" />
+					</a>
+				</li>
+				<li class="ml-4">
+					<a
+						class="flex justify-center items-center text-gray-600 hover:text-gray-700 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out dark:bg-gray-800 dark:text-gray-400 p-1.5"
+						aria-label="Github"
+						href="https://github.com/davidhu2000/davidhu2000.github.io"
+						target="_blank"
+					>
+						<Icon name="mdi:github" class="w-5 h-5" />
+					</a>
+				</li>
+				<li class="ml-4">
+					<a
+						class="flex justify-center items-center text-gray-600 hover:text-gray-700 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out dark:bg-gray-800 dark:text-gray-400 p-1.5"
+						aria-label="RSS"
+						href="/rss.xml"
+						target="_blank"
+					>
+						<Icon name="tabler:rss" class="w-5 h-5" />
+					</a>
+				</li>
+			</ul>
+			<div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
+				&copy; {today.getFullYear()} David Hu. All rights reserved.
+			</div>
+		</div>
+	</div>
 </footer>
-<style>
-	footer {
-		padding: 25px;
-		text-align: center;
-	}
-</style>
