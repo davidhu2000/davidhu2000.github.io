@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon";
 import PageLayout from "../layouts/PageLayout.astro";
 import IconLoading from "../components/icons/IconLoading.astro";
 
@@ -7,6 +8,28 @@ const canonical = new URL(`about`, Astro.site);
 const title = "About David Hu";
 const description =
   "Sometimes I write code. Other times, I write code with coffee.";
+
+const steps = [
+  {
+    icon: "tabler:arrow-down",
+    name: "step 1",
+    content: "step 1 content",
+  },
+  {
+    icon: "tabler:arrow-down",
+    name: "step 2",
+    content: "step 2 content",
+  },
+  {
+    icon: "tabler:arrow-down",
+    name: "step 3",
+    content: "step 3 content",
+  },
+  {
+    icon: "mdi:check",
+    name: "ready",
+  },
+];
 ---
 
 <PageLayout meta={{ title, description, canonical }}>
@@ -25,6 +48,41 @@ const description =
             — David Hu, <cite>Unknown</cite>
           </figcaption>
         </figure>
+      </div>
+    </section>
+
+    <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
+      <div class="grid gap-6 row-gap-10 md:grid-cols-2">
+        <div class="md:py-6 md:pr-16 text-gray-700 dark:text-gray-400">
+          {
+            steps.map((step) => (
+              <div class="flex">
+                <div class="flex flex-col items-center mr-4">
+                  <div>
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-blue-500 border-2">
+                      <Icon
+                        name={step.icon}
+                        class="w-6 h-6 text-gray-600 dark:text-slate-200 icon-bold"
+                      />
+                    </div>
+                  </div>
+                  {step.content && (
+                    <div class="w-px h-full bg-gray-300 dark:bg-slate-500" />
+                  )}
+                </div>
+                <div class="pt-1 pb-8">
+                  <p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">
+                    {step.name}
+                  </p>
+                  <p>{step.content}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+        <div class="relative sm:hidden md:block">
+          <img src="/main/me.webp" />
+        </div>
       </div>
     </section>
   </main>
