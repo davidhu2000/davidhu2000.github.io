@@ -1,0 +1,45 @@
+---
+const posts = (await Astro.glob("../pages/blog/*.{md,mdx}"))
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.pubDate).valueOf() -
+      new Date(a.frontmatter.pubDate).valueOf()
+  )
+  .slice(0, 4);
+---
+
+<section class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
+  <div class="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
+    <h2
+      class="max-w-lg mb-2 font-sans text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none lg:mb-5 group"
+    >
+      <span class="inline-block mb-1 sm:mb-4">My latest blog posts</span>
+    </h2>
+  </div>
+
+  <div class="grid gap-6 row-gap-5 md:grid-cols-2 lg:grid-cols-4 -mb-6">
+    {
+      posts.map((post) => (
+        <div class="mb-6 transition">
+          <img
+            src={post.frontmatter.heroImage}
+            class="object-cover w-full h-64 mb-6 rounded shadow-lg bg-gray-400 dark:bg-slate-700"
+            width={400}
+            alt={post.frontmatter.title}
+          />
+          <h3 class="mb-2 text-xl font-bold leading-snug sm:text-2xl">
+            <a
+              href={post.url}
+              class="hover:text-blue-600 decoration-1 transition ease-in duration-200 p-0"
+            >
+              {post.frontmatter.title}
+            </a>
+          </h3>
+          <p class="text-gray-700 dark:text-gray-400">
+            {post.frontmatter.description}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</section>

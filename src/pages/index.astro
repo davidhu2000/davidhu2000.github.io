@@ -2,6 +2,7 @@
 import PageLayout from "../layouts/PageLayout.astro";
 import IconProgramming from "../components/icons/IconProgramming.astro";
 import IconFeature from "../components/icons/IconFeature.astro";
+import HighlightedBlogs from "../components/HighlightedBlogs.astro";
 
 const canonical = new URL(`/`, Astro.site);
 
@@ -60,6 +61,8 @@ const technologies = [
         </h1>
       </div>
     </section>
+
+    <HighlightedBlogs />
 
     <section class="scroll-mt-16" id="features">
       <div
