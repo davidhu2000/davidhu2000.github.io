@@ -1,12 +1,9 @@
 ---
 import Icon from "astro-icon";
+import { sortPosts, TPost } from "../helpers/sortPosts";
 
-const posts = (await Astro.glob("../pages/blog/*.{md,mdx}"))
-  .sort(
-    (a, b) =>
-      new Date(b.frontmatter.pubDate).valueOf() -
-      new Date(a.frontmatter.pubDate).valueOf()
-  )
+const posts = ((await Astro.glob("../pages/blog/*.{md,mdx}")) as TPost[])
+  .sort(sortPosts)
   .slice(0, 4);
 ---
 
