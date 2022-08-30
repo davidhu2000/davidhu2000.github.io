@@ -5,7 +5,22 @@ import { SITE } from "../../config";
 import Pagination from "../../components/Pagination.astro";
 import { sortPosts, TPost } from "../../helpers/sortPosts";
 
-export async function getStaticPaths({ paginate }) {
+interface IProps {
+	page: {
+		data: TPost[];
+		currentPage: number;
+		url: { prev: string; next: string };
+	};
+}
+
+interface IStaticPathProps {
+	paginate: (
+		posts: TPost[],
+		{ pageSize }: { pageSize: number }
+	) => { page: { data: TPost[] } };
+}
+
+export async function getStaticPaths({ paginate }: IStaticPathProps) {
 	const posts = ((await Astro.glob("../blog/*.{md,mdx}")) as TPost[]).sort(
 		sortPosts
 	);
@@ -15,7 +30,7 @@ export async function getStaticPaths({ paginate }) {
 	});
 }
 
-const { page } = Astro.props;
+const { page } = Astro.props as IProps;
 
 const currentPage = page.currentPage ?? 1;
 
