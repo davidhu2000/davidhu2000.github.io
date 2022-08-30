@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon";
 import PageLayout from "../layouts/PageLayout.astro";
 import IconLoading from "../components/icons/IconLoading.astro";
+import Technologies from "../components/Technologies.astro";
 
 const canonical = new URL(`about`, Astro.site);
 
@@ -85,5 +86,7 @@ const steps = [
         </div>
       </div>
     </section>
+
+    <Technologies />
   </main>
 </PageLayout>
