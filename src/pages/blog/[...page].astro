@@ -3,26 +3,39 @@ import BlogListItem from "../../components/BlogListItem.astro";
 import PageLayout from "../../layouts/PageLayout.astro";
 import { SITE } from "../../config";
 import Pagination from "../../components/Pagination.astro";
+import { sortPosts, TPost } from "../../helpers/sortPosts";
 
-export async function getStaticPaths({ paginate }) {
-  const posts = (await Astro.glob("../blog/*.{md,mdx}")).sort(
-    (a, b) =>
-      new Date(b.frontmatter.pubDate).valueOf() -
-      new Date(a.frontmatter.pubDate).valueOf()
-  );
-
-  return paginate(posts, {
-    pageSize: SITE.postsPerPage,
-  });
+interface IProps {
+	page: {
+		data: TPost[];
+		currentPage: number;
+		url: { prev: string; next: string };
+	};
 }
 
-const { page } = Astro.props;
+interface IStaticPathProps {
+	paginate: (
+		posts: TPost[],
+		{ pageSize }: { pageSize: number }
+	) => { page: { data: TPost[] } };
+}
 
+export async function getStaticPaths({ paginate }: IStaticPathProps) {
+	const posts = ((await Astro.glob("../blog/*.{md,mdx}")) as TPost[]).sort(
+		sortPosts
+	);
+
+	return paginate(posts, {
+		pageSize: SITE.postsPerPage,
+	});
+}
+
+const { page } = Astro.props as IProps;
 
 const currentPage = page.currentPage ?? 1;
 
 const title = `Blog ${currentPage > 1 ? `— Page ${currentPage} ` : ""}— ${
-  SITE.name
+	SITE.name
 }`;
 const description = "News and step-by-step guides about AstroWind";
 const canonical = new URL("/blog", Astro.site);
@@ -47,10 +60,10 @@ const canonical = new URL("/blog", Astro.site);
 			}
 		</ul>
 
-    {
-      (page.url.prev || page.url.next) && (
-        <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
-      )
-    }
+		{
+			(page.url.prev || page.url.next) && (
+				<Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+			)
+		}
 	</section>
 </PageLayout>
