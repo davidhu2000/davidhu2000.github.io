@@ -1,5 +1,5 @@
 {
-  "name": "@example/blog",
+  "name": "@davidhu/blog",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,12 +10,12 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^0.10.0",
+    "@astrojs/mdx": "^0.10.3",
     "@astrojs/rss": "^1.0.0",
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^1.0.0",
     "@tailwindcss/typography": "^0.5.4",
-    "astro": "^1.0.7",
+    "astro": "^1.1.2",
     "astro-icon": "^0.7.3"
   },
   "packageManager": "yarn@3.2.2"
