@@ -1,5 +1,4 @@
 ---
-import Icon from "astro-icon";
 import { sortPosts, TPost } from "../helpers/sortPosts";
 
 const posts = ((await Astro.glob("../pages/blog/*.{md,mdx}")) as TPost[])
