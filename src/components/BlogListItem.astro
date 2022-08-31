@@ -4,18 +4,25 @@ import { formatDate } from "../helpers/formatDate";
 const { post } = Astro.props;
 
 const { frontmatter } = post;
+
+const maxLength = 340;
+let { description } = frontmatter;
+
+if (description.length > maxLength) {
+  description = `${description.slice(0, maxLength)}...`;
+}
 ---
 
 <article
   class="max-w-md mx-auto md:max-w-none grid md:grid-cols-2 gap-6 md:gap-8"
 >
-  <a class="relative block group" href="#0">
+  <a class="relative block group px-0" href={post.url}>
     <div
       class="relative h-0 pb-[56.25%] md:pb-[75%] md:h-80 lg:pb-[56.25%] overflow-hidden bg-gray-400 dark:bg-slate-700 rounded shadow-lg"
     >
       <img
         src={frontmatter.heroImage}
-        class="absolute inset-0 w-full h-full object-cover mb-6 rounded shadow-lg"
+        class="absolute inset-0 w-full h-full object-cover mb-6 rounded shadow-lg hover:mix-blend-luminosity"
         width={400}
         sizes="(max-width: 767px) 400px, 768px"
         alt={frontmatter.description}
@@ -24,9 +31,9 @@ const { frontmatter } = post;
   </a>
   <div>
     <header>
-      <h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2">
+      <h2 class="text-xl sm:text-2xl font-bold mb-2">
         <a
-          class="hover:text-blue-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200"
+          class="hover:text-blue-600 decoration-1 transition ease-in duration-200 px-0"
           href={post.url}
         >
           {frontmatter.title}
@@ -34,7 +41,7 @@ const { frontmatter } = post;
       </h2>
     </header>
     <p class="text-md sm:text-lg flex-grow">
-      {frontmatter.description}
+      {description}
     </p>
     <footer class="flex items-center mt-4">
       <div>
