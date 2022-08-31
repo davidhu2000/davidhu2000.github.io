@@ -18,7 +18,6 @@ const {
 
 const canonical = new URL(`blog/${url}`, Astro.site);
 
-// TODO: add support for pagination
 // TODO: add reading time functionality
 ---
 
@@ -27,11 +26,13 @@ const canonical = new URL(`blog/${url}`, Astro.site);
 		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
 			<article>
 				<header>
-					{pubDate && <p class="max-w-3xl mx-auto text-center">
-						<time datetime={pubDate}>
-							{formatDate(pubDate)}
-						</time>
-					</p>}
+					{
+						pubDate && (
+							<p class="max-w-3xl mx-auto text-center">
+								<time datetime={pubDate}>{formatDate(pubDate)}</time>
+							</p>
+						)
+					}
 					<h1
 						class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-6 md:mb-8"
 					>
@@ -41,8 +42,6 @@ const canonical = new URL(`blog/${url}`, Astro.site);
 				{
 					heroImage && (
 						<img
-							width={720}
-							height={360}
 							src={heroImage}
 							alt="Blog Hero Image"
 							class="max-w-full lg:max-w-6xl mx-auto mt-4 mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"

@@ -5,7 +5,7 @@ import { SITE } from "../../config";
 import Pagination from "../../components/Pagination.astro";
 import { sortPosts, TPost } from "../../helpers/sortPosts";
 
-interface IProps {
+interface Props {
 	page: {
 		data: TPost[];
 		currentPage: number;
@@ -14,10 +14,7 @@ interface IProps {
 }
 
 interface IStaticPathProps {
-	paginate: (
-		posts: TPost[],
-		{ pageSize }: { pageSize: number }
-	) => { page: { data: TPost[] } };
+	paginate: (posts: TPost[], { pageSize }: { pageSize: number }) => Props;
 }
 
 export async function getStaticPaths({ paginate }: IStaticPathProps) {
@@ -30,7 +27,7 @@ export async function getStaticPaths({ paginate }: IStaticPathProps) {
 	});
 }
 
-const { page } = Astro.props as IProps;
+const { page } = Astro.props;
 
 const currentPage = page.currentPage ?? 1;
 
