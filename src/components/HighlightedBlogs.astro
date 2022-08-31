@@ -20,12 +20,16 @@ const posts = ((await Astro.glob("../pages/blog/*.{md,mdx}")) as TPost[])
     {
       posts.map((post) => (
         <div class="mb-6 transition">
-          <img
-            src={post.frontmatter.heroImage}
-            class="object-cover w-full h-64 mb-6 rounded shadow-lg bg-gray-400 dark:bg-slate-700"
-            width={400}
-            alt={post.frontmatter.title}
-          />
+          <a
+            href={post.url}
+            class="hover:text-blue-600 decoration-1 transition ease-in duration-200 p-0"
+          >
+            <img
+              src={post.frontmatter.heroImage}
+              class="object-cover w-full h-64 mb-6 rounded shadow-lg bg-gray-400 dark:bg-slate-700 hover:ring-4 transition"
+              alt={post.frontmatter.title}
+            />
+          </a>
           <h3 class="mb-2 text-xl font-bold leading-snug sm:text-2xl">
             <a
               href={post.url}

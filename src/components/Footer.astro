@@ -15,10 +15,10 @@ const links = socialLinks.concat({
 		<div class="md:flex md:items-center md:justify-between py-4 md:py-8">
 			<ul class="flex mb-6 md:order-1 md:ml-4 md:mb-0">
 				{
-					links.map((link) => (
-						<li class="ml-4">
+					links.map((link, index) => (
+						<li class={index > 0 ? "ml-4" : ""}>
 							<a
-								class="rounded-full shadow p-1.5 link"
+								class={`rounded-full shadow link ${index > 0 ? "p-1.5" : "px-0 py-1.5"}`}
 								aria-label={link.label}
 								href={link.url}
 								target="_blank"
