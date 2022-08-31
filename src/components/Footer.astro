@@ -1,29 +1,13 @@
 ---
 import { Icon } from "astro-icon";
+import { socialLinks } from "../data/socialLinks";
 const today = new Date();
 
-const links = [
-	{
-		label: "Twitter",
-		url: "https://twitter.com/notdavidhu",
-		icon: "mdi:twitter",
-	},
-	{
-		label: "LinkedIn",
-		url: "https://www.linkedin.com/in/davidhu2000/",
-		icon: "mdi:linkedin",
-	},
-	{
-		label: "Github",
-		url: "https://github.com/davidhu2000/davidhu2000.github.io",
-		icon: "mdi:github",
-	},
-	{
-		label: "RSS",
-		url: "/rss.xml",
-		icon: "mdi:rss-feed",
-	},
-];
+const links = socialLinks.concat({
+	label: "RSS",
+	url: "/rss.xml",
+	icon: "mdi:rss-feed",
+});
 ---
 
 <footer>
