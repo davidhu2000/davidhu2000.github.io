@@ -1,7 +1,6 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import IconProgramming from "../components/icons/IconProgramming.astro";
-import IconFeature from "../components/icons/IconFeature.astro";
 import HighlightedBlogs from "../components/HighlightedBlogs.astro";
 import BlogTech from "../components/BlogTech.astro";
 
@@ -10,44 +9,6 @@ const canonical = new URL(`/`, Astro.site);
 const title = "David Hu";
 const description =
   "Sometimes I write code. Other times, I write code with coffee.";
-
-const technologies = [
-  [
-    {
-      title: "Astro",
-      description: "Build faster websites.",
-      url: "https://astro.build/",
-    },
-    {
-      title: "ReactJS",
-      description: "A JavaScript library for building user interfaces",
-      url: "https://reactjs.org/",
-    },
-    {
-      title: "Typescript",
-      description:
-        "A strongly typed programming language that builds on JavaScript",
-      url: "https://www.typescriptlang.org/",
-    },
-  ],
-  [
-    {
-      title: "TailwindCSS",
-      description: "A utility-first CSS framework",
-      url: "https://tailwindcss.com/",
-    },
-    {
-      title: "AstroWind Theme",
-      description: "Astro template to kickstart your website",
-      url: "https://astrowind.vercel.app/",
-    },
-    {
-      title: "unDraw",
-      description: "The design project with open-source illustrations",
-      url: "https://undraw.co/",
-    },
-  ],
-];
 ---
 
 <PageLayout meta={{ title, description, canonical }}>
