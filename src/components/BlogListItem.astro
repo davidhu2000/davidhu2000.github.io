@@ -17,17 +17,12 @@ if (description.length > maxLength) {
   class="max-w-md mx-auto md:max-w-none grid md:grid-cols-2 gap-6 md:gap-8"
 >
   <a class="relative block group p-0 link" href={post.url}>
-    <div
-      class="relative h-0 pb-[56.25%] md:pb-[75%] md:h-80 lg:pb-[56.25%] overflow-hidden bg-gray-400 dark:bg-slate-700 rounded shadow-lg"
-    >
-      <img
-        src={frontmatter.heroImage}
-        class="absolute inset-0 w-full h-full object-cover mb-6 rounded shadow-lg hover:mix-blend-luminosity"
-        width={400}
-        sizes="(max-width: 767px) 400px, 768px"
-        alt={frontmatter.description}
-      />
-    </div>
+    <img
+      src={frontmatter.heroImage}
+      class="absolute inset-0 w-full h-full object-cover mb-6 rounded shadow-lg hover:ring-4 hover:ring-sky-400 dark:hover:ring-sky-500 duration-300"
+      sizes="(max-width: 767px) 400px, 768px"
+      alt={frontmatter.description}
+    />
   </a>
   <div>
     <header>
