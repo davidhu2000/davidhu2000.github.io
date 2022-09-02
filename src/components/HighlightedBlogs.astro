@@ -26,7 +26,7 @@ const posts = ((await Astro.glob("../pages/blog/*.{md,mdx}")) as TPost[])
           >
             <img
               src={post.frontmatter.heroImage}
-              class="object-cover w-full h-64 mb-6 rounded shadow-lg bg-gray-400 dark:bg-slate-700 hover:ring-4 hover:ring-sky-400 dark:hover:ring-sky-500 transition"
+              class="object-cover w-full h-64 mb-6 rounded shadow-lg hover:ring-4 hover:ring-sky-400 dark:hover:ring-sky-500 transition duration-300"
               alt={post.frontmatter.title}
             />
           </a>
