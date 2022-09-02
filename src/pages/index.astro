@@ -1,52 +1,14 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import IconProgramming from "../components/icons/IconProgramming.astro";
-import IconFeature from "../components/icons/IconFeature.astro";
 import HighlightedBlogs from "../components/HighlightedBlogs.astro";
+import BlogTech from "../components/BlogTech.astro";
 
 const canonical = new URL(`/`, Astro.site);
 
 const title = "David Hu";
 const description =
   "Sometimes I write code. Other times, I write code with coffee.";
-
-const technologies = [
-  [
-    {
-      title: "Astro",
-      description: "Build faster websites.",
-      url: "https://astro.build/",
-    },
-    {
-      title: "ReactJS",
-      description: "A JavaScript library for building user interfaces",
-      url: "https://reactjs.org/",
-    },
-    {
-      title: "Typescript",
-      description:
-        "A strongly typed programming language that builds on JavaScript",
-      url: "https://www.typescriptlang.org/",
-    },
-  ],
-  [
-    {
-      title: "TailwindCSS",
-      description: "A utility-first CSS framework",
-      url: "https://tailwindcss.com/",
-    },
-    {
-      title: "AstroWind Theme",
-      description: "Astro template to kickstart your website",
-      url: "https://astrowind.vercel.app/",
-    },
-    {
-      title: "unDraw",
-      description: "The design project with open-source illustrations",
-      url: "https://undraw.co/",
-    },
-  ],
-];
 ---
 
 <PageLayout meta={{ title, description, canonical }}>
@@ -64,46 +26,6 @@ const technologies = [
 
     <HighlightedBlogs />
 
-    <section class="scroll-mt-16" id="features">
-      <div
-        class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20 bg-blue-50 dark:bg-slate-800"
-      >
-        <div
-          class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12"
-        >
-          <p
-            class="text-base text-blue-600 dark:text-blue-200 font-semibold tracking-wide uppercase"
-          >
-            Technologies
-          </p>
-          <h2
-            class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4"
-          >
-            What I used to build this site
-          </h2>
-        </div>
-        <div class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0">
-          {
-            technologies.map((subitems) => (
-              <div class="space-y-8 sm:px-8">
-                {subitems.map(({ title, description }) => (
-                  <div class="flex flex-row max-w-md">
-                    <div class="mb-4 mr-4">
-                      <div class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500">
-                        <IconFeature />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 class="mb-3 text-xl font-bold">{title}</h3>
-                      <p>{description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ))
-          }
-        </div>
-      </div>
-    </section>
+    <BlogTech />
   </main>
 </PageLayout>
