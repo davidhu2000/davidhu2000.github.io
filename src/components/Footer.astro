@@ -4,34 +4,36 @@ import { socialLinks } from "../data/socialLinks";
 const today = new Date();
 
 const links = socialLinks.concat({
-	label: "RSS",
-	url: "/rss.xml",
-	icon: "mdi:rss-feed",
+  label: "RSS",
+  url: "/rss.xml",
+  icon: "mdi:rss-feed",
 });
 ---
 
 <footer>
-	<div class="max-w-6xl mx-auto px-4 sm:px-6">
-		<div class="md:flex md:items-center md:justify-between py-4 md:py-8">
-			<ul class="flex mb-6 md:order-1 md:ml-4 md:mb-0">
-				{
-					links.map((link, index) => (
-						<li class={index > 0 ? "ml-4" : ""}>
-							<a
-								class={`rounded-full shadow link ${index > 0 ? "p-1.5" : "px-0 py-1.5"}`}
-								aria-label={link.label}
-								href={link.url}
-								target="_blank"
-							>
-								<Icon name={link.icon} class="w-5 h-5" />
-							</a>
-						</li>
-					))
-				}
-			</ul>
-			<div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
-				&copy; {today.getFullYear()} David Hu. All rights reserved.
-			</div>
-		</div>
-	</div>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="md:flex md:items-center md:justify-between py-4 md:py-8">
+      <ul class="flex mb-6 md:order-1 md:ml-4 md:mb-0">
+        {
+          links.map((link, index) => (
+            <li class={index > 0 ? "ml-4" : ""}>
+              <a
+                class={`rounded-full shadow link ${
+                  index > 0 ? "p-1.5" : "px-0 py-1.5"
+                }`}
+                aria-label={link.label}
+                href={link.url}
+                target="_blank"
+              >
+                <Icon name={link.icon} class="w-5 h-5" />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
+        &copy; {today.getFullYear()} David Hu. All rights reserved.
+      </div>
+    </div>
+  </div>
 </footer>
