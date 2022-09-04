@@ -1,0 +1,53 @@
+---
+layout: "../../layouts/BlogPost.astro"
+title: "Comparing Performance Between Old & New Sites"
+description: "Taking a closer look at the performance between the two sites. The result may or may not shock you, but probably won't."
+pubDate: "2022-09-05"
+heroImage: "/blog/comparing-performace-between-old-new-sites/hero-image.webp"
+---
+
+In the my prior [post](/blog/first-post-on-my-new-blog), I detailed my experience of rebuilding my site using Astro. Now, I want to do some actual comparisons between old and new performance. I ran lighthouse on both and here are the results.
+
+### Light House Configurations
+
+For both tests, I used the same lighthouse configurations
+
+- Mode: Navigation
+- Device: mobile
+- Categories: Performance, Accessibility, Best Practices, SEO, PWA
+
+I also made sure to run the test in incongito mode to avoid extensions such as React DevTools affecting the results.
+
+### Light House Scores
+
+I'd like to note these scores are a bit skewed as I removed the projects section which included a lot of unoptimized images/gifs, which are all loaded the moment the page loads.
+
+#### Category Scores
+
+| Category       | Old | New |
+| -------------- | --: | --: |
+| Performance    |  48 |  99 |
+| Accessibility  |  81 |  98 |
+| Best Practices |  83 |  92 |
+| SEO            |  92 | 100 |
+
+#### Metrics
+
+| Metric                   |   Old |   New |
+| ------------------------ | ----: | ----: |
+| First Contentful Paint   |  2.4s |  1.6s |
+| Speed Index              |  4.3s |  1.6s |
+| Largest Contentful Paint | 12.5s |  1.6s |
+| Time to Interative       | 10.3s |  1.6s |
+| Total Blocking Time      | 160ms |   0ms |
+| Cumulative Layout Shift  | 0.432 | 0.001 |
+
+Here are some [good docs](https://web.dev/learn-core-web-vitals/) on what these metrics mean.
+
+The old site loads around 125kb worth of javascript, where as the new site loads almost none: the only javascript file being google analytics. This is the reason why `First Contentful Paint` is the same as `Time to Interative` since it's purely HTML.
+
+AstroJS is 100% a huge part of the performace gain, but also reworking / optimizing the site using the latest recommendations, e.g. using `.webp` instead of `.jpg`.
+
+In any case, the numbers are just:
+
+![WOW](/blog/comparing-performace-between-old-new-sites/wow.webp)

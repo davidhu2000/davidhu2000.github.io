@@ -1,5 +1,13 @@
 {
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "editor.defaultFormatter": "astro-build.astro-vscode"
+  "editor.defaultFormatter": "astro-build.astro-vscode",
+  "[mdx]": {
+    "editor.wordWrap": "on",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[md]": {
+    "editor.wordWrap": "on",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
