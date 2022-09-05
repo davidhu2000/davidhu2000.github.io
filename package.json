@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "new": "sh scripts/create-blog.sh"
   },
   "devDependencies": {
     "@astrojs/mdx": "^0.10.3",
