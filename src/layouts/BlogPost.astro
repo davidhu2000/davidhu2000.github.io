@@ -8,15 +8,17 @@ interface Props {
 }
 
 const {
-  content: { title, description, pubDate, heroImage, url },
+  content: { title, description, pubDate, heroImage },
 } = Astro.props as Props;
 
-const canonical = new URL(`blog/${url}`, Astro.site);
+const tweetLink = `https://twitter.com/intent/tweet?url=
+ ${encodeURIComponent(Astro.request.url)}
+&text=${encodeURIComponent(`I just read "${title}" by @notdavidhu\n\n`)}`;
 
 // TODO: add reading time functionality
 ---
 
-<PageLayout meta={{ title, description, canonical, image: heroImage }}>
+<PageLayout meta={{ title, description, image: heroImage }}>
   <main>
     <section class="py-8 sm:py-16 lg:py-20 mx-auto">
       <article>
@@ -43,6 +45,17 @@ const canonical = new URL(`blog/${url}`, Astro.site);
         >
           <slot />
         </div>
+
+        <footer class="max-w-3xl lg:max-w-6xl mx-auto mt-4 mb-6 px-4 sm:px-6">
+          <a
+            class="link px-0"
+            target="_blank"
+            rel="noreferrer noopener"
+            href={tweetLink}
+          >
+            Tweet this article
+          </a>
+        </footer>
       </article>
     </section>
   </main>
