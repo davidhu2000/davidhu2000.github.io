@@ -8,13 +8,13 @@ export interface IPageProps {
   };
 }
 
-export interface IStaticPathProps {
+export interface IStaticPathProps<Params = undefined, Props = undefined> {
   paginate: (
     posts: TPost[],
     options: {
       pageSize: number;
-      params?: { tag: string; tags: string };
-      props?: { tag: string };
+      params?: Params;
+      props?: Props;
     }
   ) => IPageProps;
 }

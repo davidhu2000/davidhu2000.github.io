@@ -1,12 +1,14 @@
 ---
+import type { GetStaticPathsOptions } from "astro";
+
 import { SITE } from "../../../config";
 import PageLayout from "../../../layouts/PageLayout.astro";
 import BlogList from "../../../layouts/BlogList.astro";
-import type { IStaticPathProps } from "../../../helpers/staticPathProps";
 import { getPosts } from "../../../helpers/getPosts";
 import { getTags } from "../../../helpers/getTags";
+import type { IPageProps } from "../../../helpers/staticPathProps";
 
-export async function getStaticPaths({ paginate }: IStaticPathProps) {
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const posts = getPosts();
 
   const tags = getTags(posts);
@@ -21,6 +23,10 @@ export async function getStaticPaths({ paginate }: IStaticPathProps) {
       }
     );
   });
+}
+
+interface Props extends IPageProps {
+  tag: string;
 }
 
 const { page, tag } = Astro.props;
