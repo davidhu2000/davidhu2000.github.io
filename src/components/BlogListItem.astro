@@ -1,5 +1,6 @@
 ---
 import { formatDate } from "../helpers/formatDate";
+import PostTags from "./PostTags.astro";
 
 const { post } = Astro.props;
 
@@ -38,13 +39,15 @@ if (description.length > maxLength) {
     <p class="text-md sm:text-lg flex-grow">
       {description}
     </p>
-    <footer class="flex items-center mt-4">
+
+    <footer class="mt-4">
       <div>
         <span class="text-gray-500 dark:text-slate-400">
-          <time>
-            {formatDate(frontmatter.pubDate)}
-          </time>
+          <time datetime={post.pubDate}>{formatDate(frontmatter.pubDate)}</time>
         </span>
+      </div>
+      <div class="mt-4">
+        <PostTags tags={frontmatter.tags} />
       </div>
     </footer>
   </div>

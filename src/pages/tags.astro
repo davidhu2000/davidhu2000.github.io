@@ -1,0 +1,43 @@
+---
+import { getPosts } from "../helpers/getPosts";
+import PageLayout from "../layouts/PageLayout.astro";
+
+const posts = getPosts();
+
+const tags: Record<string, number> = {};
+
+posts.forEach((post) => {
+  post.frontmatter.tags.forEach((tag) => {
+    tags[tag] = (tags[tag] || 0) + 1;
+  });
+});
+
+const meta = {
+  title: `David Hu Blog Tags`,
+  description: "A list of tags available for the blog posts",
+  canonical: Astro.url,
+};
+---
+
+<PageLayout meta={meta}>
+  <section class="px-4 sm:px-6 py-8 sm:py-16 lg:py-20 mx-auto max-w-3xl">
+    <header>
+      <h1
+        class="text-center text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-8 md:mb-16"
+      >
+        Blogs by tags
+      </h1>
+    </header>
+    <ul>
+      {
+        Object.entries(tags).map((tag) => (
+          <li class="m-2 bg-gray-100 dark:bg-slate-700 inline-block block h-auto w-auto cursor-pointer rounded-full transition hover:ring-4 hover:ring-sky-400 dark:hover:ring-sky-500 duration-300">
+            <a href={`/tag/${tag[0]}`} class="link">
+              {tag[0].replaceAll("-", " ")} ({tag[1]})
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</PageLayout>
