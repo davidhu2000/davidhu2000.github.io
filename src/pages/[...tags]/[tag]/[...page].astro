@@ -4,16 +4,14 @@ import PageLayout from "../../../layouts/PageLayout.astro";
 import BlogList from "../../../layouts/BlogList.astro";
 import type { IStaticPathProps } from "../../../helpers/staticPathProps";
 import { getPosts } from "../../../helpers/getPosts";
+import { getTags } from "../../../helpers/getTags";
 
 export async function getStaticPaths({ paginate }: IStaticPathProps) {
   const posts = getPosts();
 
-  const tags = new Set<string>();
-  posts.forEach((post) => {
-    post.frontmatter.tags.forEach((tag) => tags.add(tag.toLowerCase()));
-  });
+  const tags = getTags(posts);
 
-  return Array.from(tags).map((tag) => {
+  return tags.map((tag) => {
     return paginate(
       posts.filter((post) => post.frontmatter.tags.includes(tag)),
       {
