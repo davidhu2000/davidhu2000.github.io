@@ -1,14 +1,10 @@
 ---
+import type { GetStaticPathsOptions } from "astro";
 import PageLayout from "../../layouts/PageLayout.astro";
 import { SITE } from "../../config";
 import BlogList from "../../layouts/BlogList.astro";
 import type { IPageProps } from "../../helpers/staticPathProps";
 import { getPosts } from "../../helpers/getPosts";
-import { getTags } from "../../helpers/getTags";
-import type { GetStaticPathsOptions } from "astro";
-
-const posts = getPosts();
-const tags = getTags(posts);
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const posts = getPosts();
@@ -32,5 +28,5 @@ const canonical = new URL("/blog", Astro.site);
 ---
 
 <PageLayout meta={{ title, description, canonical }}>
-  <BlogList title={`Here Lies My Articles...`} page={page} tags={tags} />
+  <BlogList title={`Here Lies My Articles...`} page={page} />
 </PageLayout>
