@@ -1,0 +1,20 @@
+---
+interface Props {
+  tags: string[];
+  class?: string;
+}
+
+const { tags, class: className = "text-sm" } = Astro.props;
+---
+
+<ul class={className}>
+  {
+    tags.map((tag) => (
+      <li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 cursor-pointer rounded-full transition hover:ring-1 hover:ring-sky-400 dark:hover:ring-sky-500 duration-200">
+        <a href={`/tag/${tag}`} class="link py-1">
+          {tag}
+        </a>
+      </li>
+    ))
+  }
+</ul>

@@ -1,31 +1,20 @@
 ---
-import BlogListItem from "../../components/BlogListItem.astro";
+import type { GetStaticPathsOptions } from "astro";
 import PageLayout from "../../layouts/PageLayout.astro";
 import { SITE } from "../../config";
-import Pagination from "../../components/Pagination.astro";
-import { sortPosts, TPost } from "../../helpers/sortPosts";
+import BlogList from "../../layouts/BlogList.astro";
+import type { IPageProps } from "../../helpers/staticPathProps";
+import { getPosts } from "../../helpers/getPosts";
 
-interface Props {
-  page: {
-    data: TPost[];
-    currentPage: number;
-    url: { prev: string; next: string };
-  };
-}
-
-interface IStaticPathProps {
-  paginate: (posts: TPost[], { pageSize }: { pageSize: number }) => Props;
-}
-
-export async function getStaticPaths({ paginate }: IStaticPathProps) {
-  const posts = ((await Astro.glob("../blog/*.{md,mdx}")) as TPost[]).sort(
-    sortPosts
-  );
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const posts = getPosts();
 
   return paginate(posts, {
     pageSize: SITE.postsPerPage,
   });
 }
+
+interface Props extends IPageProps {}
 
 const { page } = Astro.props;
 
@@ -39,28 +28,5 @@ const canonical = new URL("/blog", Astro.site);
 ---
 
 <PageLayout meta={{ title, description, canonical }}>
-  <section class="px-4 sm:px-6 py-8 sm:py-16 lg:py-20 mx-auto max-w-3xl">
-    <header>
-      <h1
-        class="text-center text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-8 md:mb-16"
-      >
-        Here Lies My Articles...
-      </h1>
-    </header>
-    <ul>
-      {
-        page.data.map((post) => (
-          <li class="mb-10 md:mb-16">
-            <BlogListItem post={post} />
-          </li>
-        ))
-      }
-    </ul>
-
-    {
-      (page.url.prev || page.url.next) && (
-        <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
-      )
-    }
-  </section>
+  <BlogList title={`Here Lies My Articles...`} page={page} />
 </PageLayout>

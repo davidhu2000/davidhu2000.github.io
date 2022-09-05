@@ -4,4 +4,5 @@ export interface IPostFrontmatter {
   description: string;
   pubDate: string;
   heroImage: string;
+  tags: string[];
 }

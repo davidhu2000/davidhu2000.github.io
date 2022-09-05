@@ -4,6 +4,7 @@ title: "First Post on My New Blog"
 description: "How did I like using Astro to rebuild my personal site?"
 pubDate: "2022-08-30"
 heroImage: "/blog/first-post-on-my-new-blog/hero-image.webp"
+tags: ["astro", "web-performance"]
 ---
 
 A few weeks ago, I decided to start building a blog, on top of rebuilding my site. A big decision is choosing a framework. I had a few simple requirements
@@ -12,7 +13,7 @@ A few weeks ago, I decided to start building a blog, on top of rebuilding my sit
 2. Has to be a framework I have never used before. This is more for personal learning than a technical reason. So, sorry NextJS.
 3. Seems like I should've had another reason, so this is to complete the trio.
 
-As I started comparing frameworks, two stood out to me: Gatsby and Astro. 
+As I started comparing frameworks, two stood out to me: Gatsby and Astro.
 
 Both can handle SSG. But what stood out to me about Astro (besides being the new shiny new thing), is partial hydration. Because I'm mostly using static content, minimizing javascript is a huge, huge plus. Astro also does a great job comparing itself to other frameworks in their [docs](https://docs.astro.build/en/comparing-astro-vs-other-tools/#gatsby-vs-astro). The performance difference between Astro and Gatsby blew me away. I ran my own lighthouse tests, and Astro's doc site nearly gets 100 across the board.
 
@@ -25,7 +26,7 @@ I found Astro very easy to learn. The only thing that took me a bit to understan
 In the `BlogList.astro` file, I used the `getStaticPaths` function, which receives a `paginate` function as a prop. And I had to define the interface myself and did not find any predefined types for the function. (Please let me know if I missed something obvious)
 
 ```ts
-import { sortPosts, TPost } from "../../helpers/sortPosts";
+import { sortPosts, TPost } from "../../helpers/getPosts";
 
 interface Props {
   page: {
@@ -66,7 +67,7 @@ interface Props {
   name: string;
   greeting?: number;
 }
-let { greeting = 'Hello', name } = Astro.props;
+let { greeting = "Hello", name } = Astro.props;
 
 greeting = "world";
 ---
