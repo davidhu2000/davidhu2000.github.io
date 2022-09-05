@@ -8,7 +8,7 @@ interface Props {
 }
 
 const {
-  content: { title, description, pubDate, heroImage, url, tags },
+  content: { title, description, pubDate, heroImage, url },
 } = Astro.props as Props;
 
 const canonical = new URL(`blog/${url}`, Astro.site);
