@@ -3,6 +3,7 @@ import { Icon } from "astro-icon";
 import PageLayout from "../layouts/PageLayout.astro";
 import IconLoading from "../components/icons/IconLoading.astro";
 import Technologies from "../components/Technologies.astro";
+import { Image } from "@astrojs/image/components";
 
 const canonical = new URL(`about`, Astro.site);
 
@@ -88,10 +89,12 @@ const steps = [
           }
         </div>
         <div class="relative hidden md:block">
-          <img
+          <Image
             src="/main/me.webp"
             alt="My Portrait"
             class="dark:brightness-75"
+            width={500}
+            aspectRatio={3 / 4}
           />
         </div>
       </div>
