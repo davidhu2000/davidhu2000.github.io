@@ -92,9 +92,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:^0.10.3":
-  version: 0.10.3
-  resolution: "@astrojs/mdx@npm:0.10.3"
+"@astrojs/mdx@npm:^0.11.1":
+  version: 0.11.1
+  resolution: "@astrojs/mdx@npm:0.11.1"
   dependencies:
     "@astrojs/prism": ^1.0.1
     "@mdx-js/mdx": ^2.1.2
@@ -103,6 +103,7 @@ __metadata:
     es-module-lexer: ^0.10.5
     github-slugger: ^1.4.0
     gray-matter: ^4.0.3
+    kleur: ^4.1.4
     rehype-raw: ^6.1.1
     remark-frontmatter: ^4.0.1
     remark-gfm: ^3.0.1
@@ -110,7 +111,7 @@ __metadata:
     shiki: ^0.11.1
     unist-util-visit: ^4.1.0
     vfile: ^5.3.2
-  checksum: e99bfc5996058f812bdacdca92fd8afe343e0908bf1ac8ec20a212c6c06bdc7998a6e64aacb4dd50f97e6c48b3bfb5f1030df57412c824e212b5f391abad0375
+  checksum: b6e8a42ffc6215e69f473f31fdcca891ed6fff9f91bde457e5913aad1b0e152f1cfb1a4ce1a544535d94d78fb35c3dbc846ff71b6baf41dd5e7f77e070f17096
   languageName: node
   linkType: hard
 
@@ -468,12 +469,12 @@ __metadata:
   resolution: "@davidhu/blog@workspace:."
   dependencies:
     "@astrojs/image": ^0.5.0
-    "@astrojs/mdx": ^0.10.3
+    "@astrojs/mdx": ^0.11.1
     "@astrojs/rss": ^1.0.0
     "@astrojs/sitemap": ^1.0.0
     "@astrojs/tailwind": ^1.0.0
-    "@tailwindcss/typography": ^0.5.4
-    astro: ^1.1.2
+    "@tailwindcss/typography": ^0.5.7
+    astro: ^1.1.5
     astro-icon: ^0.7.3
   languageName: unknown
   linkType: soft
@@ -714,16 +715,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/typography@npm:^0.5.4":
-  version: 0.5.4
-  resolution: "@tailwindcss/typography@npm:0.5.4"
+"@tailwindcss/typography@npm:^0.5.7":
+  version: 0.5.7
+  resolution: "@tailwindcss/typography@npm:0.5.7"
   dependencies:
     lodash.castarray: ^4.4.0
     lodash.isplainobject: ^4.0.6
     lodash.merge: ^4.6.2
+    postcss-selector-parser: 6.0.10
   peerDependencies:
     tailwindcss: "*"
-  checksum: 016f27266e07fd9966ab785c4182e5ad97c06a2198ff8df739cac90a544ee9c7ac2ac968a4fe9280a1378c3ac8943a315a9f09e70085f21f2839ebc080c88fd8
+  checksum: 27686a455d13367c6ee4473e0579f1fc0e9de1de4606845101f8943eb94c5d00a18fecac60111028b9cb2f3253ea16a9a6f889d3711214b5baaa153f021fbc47
   languageName: node
   linkType: hard
 
@@ -1077,7 +1079,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ast-types@npm:0.14.2, ast-types@npm:^0.14.2":
+"ast-types@npm:0.14.2":
   version: 0.14.2
   resolution: "ast-types@npm:0.14.2"
   dependencies:
@@ -1106,9 +1108,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^1.1.2":
-  version: 1.1.2
-  resolution: "astro@npm:1.1.2"
+"astro@npm:^1.1.5":
+  version: 1.1.5
+  resolution: "astro@npm:1.1.5"
   dependencies:
     "@astrojs/compiler": ^0.23.4
     "@astrojs/language-server": ^0.23.0
@@ -1123,7 +1125,6 @@ __metadata:
     "@babel/types": ^7.18.4
     "@proload/core": ^0.3.2
     "@proload/plugin-tsm": ^0.2.1
-    ast-types: ^0.14.2
     boxen: ^6.2.1
     ci-info: ^3.3.1
     common-ancestor-path: ^1.0.1
@@ -1167,7 +1168,7 @@ __metadata:
     zod: ^3.17.3
   bin:
     astro: astro.js
-  checksum: 41504d13f5961f53f37be16bde63f6cf090ca1157441f4850c249f5b8e97099025a783a8a83aa5604fb48e0eea830b32aef77a77a82a439175902361c43e93f1
+  checksum: fa997f28be32b256bd6960bed78d3122717b07a28023bf92acbc825689a4e308602b7372e3b0d0a99257a172f20520a083eda38694ada34d5e17cb75da010fa9
   languageName: node
   linkType: hard
 
@@ -4647,7 +4648,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-selector-parser@npm:^6.0.10, postcss-selector-parser@npm:^6.0.6":
+"postcss-selector-parser@npm:6.0.10, postcss-selector-parser@npm:^6.0.10, postcss-selector-parser@npm:^6.0.6":
   version: 6.0.10
   resolution: "postcss-selector-parser@npm:6.0.10"
   dependencies:
