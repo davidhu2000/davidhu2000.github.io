@@ -2,7 +2,8 @@
 import { formatDate } from "../helpers/formatDate";
 import type { IPostFrontmatter } from "../helpers/frontmatter";
 import PageLayout from "../layouts/PageLayout.astro";
-import { Image } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
+import { SITE } from "../config";
 
 interface Props {
   content: IPostFrontmatter & { url: string };
@@ -35,13 +36,16 @@ const tweetLink = `https://twitter.com/intent/tweet?url=
           </h1>
         </header>
 
-        <Image
-          src={heroImage}
-          alt="Blog Hero Image"
-          width={640}
-          aspectRatio={4 / 3}
-          class="max-w-full lg:max-w-6xl mx-auto mt-4 mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
-        />
+        <div class=" mt-4 mb-6 sm:rounded-md flex justify-center	">
+          <Picture
+            src={heroImage}
+            widths={[640]}
+            aspectRatio={"4:3"}
+            sizes=""
+            alt="Blog Hero Image"
+            formats={SITE.imageFormats}
+          />
+        </div>
 
         <div
           class="container mx-auto px-4 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8"

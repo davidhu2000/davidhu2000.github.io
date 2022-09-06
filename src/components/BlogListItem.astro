@@ -1,7 +1,13 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
+import { SITE } from "../config";
 import { formatDate } from "../helpers/formatDate";
+import type { TPost } from "../helpers/getPosts";
 import PostTags from "./PostTags.astro";
+
+interface Props {
+  post: TPost;
+}
 
 const { post } = Astro.props;
 
@@ -19,12 +25,14 @@ if (description.length > maxLength) {
   class="max-w-md mx-auto md:max-w-none grid md:grid-cols-2 gap-6 md:gap-8"
 >
   <a class="relative block group p-0 link" href={post.url}>
-    <Image
+    <Picture
       src={frontmatter.heroImage}
       class="inset-0 w-full h-full object-cover mb-6 rounded shadow-lg hover:ring-4 hover:ring-sky-400 dark:hover:ring-sky-500 duration-300"
-      width={400}
-      height={300}
+      widths={[400]}
+      aspectRatio={"4:3"}
+      sizes=""
       alt={frontmatter.description}
+      formats={SITE.imageFormats}
     />
   </a>
   <div>

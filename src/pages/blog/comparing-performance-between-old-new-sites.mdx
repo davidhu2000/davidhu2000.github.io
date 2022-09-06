@@ -51,4 +51,14 @@ AstroJS is a huge part of the performance gain, but also reworking/optimizing th
 
 In any case, the numbers are just:
 
-![WOW](/blog/comparing-performance-between-old-new-sites/wow.webp)
+import { Picture } from "@astrojs/image/components";
+import { SITE } from "../../config";
+
+<Picture
+  src={"/blog/comparing-performance-between-old-new-sites/wow.webp"}
+  widths={[640]}
+  aspectRatio={"4:3"}
+  sizes=""
+  alt="WOW!"
+  formats={SITE.imageFormats}
+/>

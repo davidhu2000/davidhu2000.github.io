@@ -7,4 +7,5 @@ export const SITE = {
   github: "https://github.com/davidhu2000",
   description: "Welcome to my website!",
   postsPerPage: 6,
+  imageFormats: ["webp", "jpeg"],
 };
