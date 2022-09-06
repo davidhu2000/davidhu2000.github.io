@@ -1,4 +1,5 @@
 ---
+import { Image } from "@astrojs/image/components";
 import { getPosts } from "../helpers/getPosts";
 
 const posts = getPosts().slice(0, 4);
@@ -22,8 +23,10 @@ const posts = getPosts().slice(0, 4);
             href={post.url}
             class="link decoration-1 transition ease-in duration-200 p-0"
           >
-            <img
+            <Image
               src={post.frontmatter.heroImage}
+              width={250}
+              height={250}
               class="object-cover w-full h-64 mb-6 rounded shadow-lg hover:ring-4 hover:ring-sky-400 dark:hover:ring-sky-500 transition duration-300"
               alt={post.frontmatter.title}
             />
