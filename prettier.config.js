@@ -1,10 +1,10 @@
 module.exports = {
   printWidth: 100,
   tabWidth: 2,
-  trailingComma: 'es5',
-  singleQuote: true,
+  trailingComma: "es5",
+  singleQuote: false,
   semi: true,
-  importOrder: ['^[./]'],
+  importOrder: ["^[./]"],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
 };

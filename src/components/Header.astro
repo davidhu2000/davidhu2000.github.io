@@ -1,9 +1,10 @@
 ---
+import Logo from "./Logo.astro";
 import IconGithub from "./icons/IconGithub.astro";
-import IconSun from "./icons/IconSun.astro";
 import IconMenu from "./icons/IconMenu.astro";
 import IconRSS from "./icons/IconRSS.astro";
-import Logo from "./Logo.astro";
+import IconSun from "./icons/IconSun.astro";
+
 const {} = Astro.props;
 
 const githubUrl = "https://github.com/davidhu2000";
@@ -12,9 +13,7 @@ const githubUrl = "https://github.com/davidhu2000";
 <header
   class="sticky top-0 z-40 flex-none mx-auto w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-b dark:border-b-0"
 >
-  <div
-    class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4"
-  >
+  <div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
     <div class="flex justify-between">
       <a class="flex items-center" href="/">
         <Logo />
@@ -64,9 +63,7 @@ const githubUrl = "https://github.com/davidhu2000";
           </a>
         </li>
       </ul>
-      <div
-        class="md:self-center flex items-center mb-4 md:mb-0 collapse collapsed"
-      >
+      <div class="md:self-center flex items-center mb-4 md:mb-0 collapse collapsed">
         <div class="hidden items-center mr-3 md:flex">
           <button
             type="button"

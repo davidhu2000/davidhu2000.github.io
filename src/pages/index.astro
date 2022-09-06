@@ -1,14 +1,13 @@
 ---
-import PageLayout from "../layouts/PageLayout.astro";
-import IconProgramming from "../components/icons/IconProgramming.astro";
-import HighlightedBlogs from "../components/HighlightedBlogs.astro";
 import BlogTech from "../components/BlogTech.astro";
+import HighlightedBlogs from "../components/HighlightedBlogs.astro";
+import IconProgramming from "../components/icons/IconProgramming.astro";
+import PageLayout from "../layouts/PageLayout.astro";
 
 const canonical = new URL(`/`, Astro.site);
 
 const title = "David Hu";
-const description =
-  "Sometimes I write code. Other times, I write code with coffee.";
+const description = "Sometimes I write code. Other times, I write code with coffee.";
 ---
 
 <PageLayout meta={{ title, description, canonical }}>
@@ -16,9 +15,7 @@ const description =
     <section class="scroll-mt-16">
       <div class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
         <IconProgramming />
-        <h1
-          class="text-5xl font-bold leading-tighter tracking-tighter mb-4 text-center"
-        >
+        <h1 class="text-5xl font-bold leading-tighter tracking-tighter mb-4 text-center">
           Welcome to my personal site.
         </h1>
       </div>

@@ -1,5 +1,6 @@
 ---
 import { Image } from "@astrojs/image/components";
+
 import { formatDate } from "../helpers/formatDate";
 import PostTags from "./PostTags.astro";
 
@@ -15,9 +16,7 @@ if (description.length > maxLength) {
 }
 ---
 
-<article
-  class="max-w-md mx-auto md:max-w-none grid md:grid-cols-2 gap-6 md:gap-8"
->
+<article class="max-w-md mx-auto md:max-w-none grid md:grid-cols-2 gap-6 md:gap-8">
   <a class="relative block group p-0 link" href={post.url}>
     <Image
       src={frontmatter.heroImage}
