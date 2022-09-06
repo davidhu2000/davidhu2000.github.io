@@ -26,7 +26,7 @@ I found Astro very easy to learn. The only thing that took me a bit to understan
 In the `BlogList.astro` file, I used the `getStaticPaths` function, which receives a `paginate` function as a prop. And I had to define the interface myself and did not find any predefined types for the function. (Please let me know if I missed something obvious)
 
 ```ts
-import { sortPosts, TPost } from "../../helpers/getPosts";
+import { TPost, sortPosts } from "../../helpers/getPosts";
 
 interface Props {
   page: {
@@ -41,9 +41,7 @@ interface IStaticPathProps {
 }
 
 export async function getStaticPaths({ paginate }: IStaticPathProps) {
-  const posts = ((await Astro.glob("../blog/*.{md,mdx}")) as TPost[]).sort(
-    sortPosts
-  );
+  const posts = ((await Astro.glob("../blog/*.{md,mdx}")) as TPost[]).sort(sortPosts);
 
   return paginate(posts, {
     pageSize: SITE.postsPerPage,

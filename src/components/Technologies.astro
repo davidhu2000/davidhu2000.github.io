@@ -54,36 +54,25 @@ const items = [
 ---
 
 <section class="relative">
-  <div
-    class="absolute inset-0 bg-blue-50 dark:bg-slate-800 pointer-events-none"
-    aria-hidden="true"
-  >
+  <div class="absolute inset-0 bg-blue-50 dark:bg-slate-800 pointer-events-none" aria-hidden="true">
   </div>
   <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
     <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
       <div class="mb-8 text-center">
-        <p
-          class="text-base text-blue-600 dark:text-blue-200 font-semibold tracking-wide uppercase"
-        >
+        <p class="text-base text-blue-600 dark:text-blue-200 font-semibold tracking-wide uppercase">
           Technology
         </p>
-        <h2
-          class="text-3xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4"
-        >
+        <h2 class="text-3xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4">
           What I use day to day
         </h2>
-        <p
-          class="max-w-3xl mx-auto text-center text-gray-600 dark:text-slate-400"
-        >
+        <p class="max-w-3xl mx-auto text-center text-gray-600 dark:text-slate-400">
           Icons provided by <a
             class="inline-block p-0 underline"
             href="https://icon-sets.iconify.design/logos/bash-icon/">Iconify</a
           >
         </p>
       </div>
-      <div
-        class="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start dark:text-white"
-      >
+      <div class="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start dark:text-white">
         {
           items.map(({ title, icon }) => (
             <div class="relative flex flex-col p-3 bg-white dark:bg-slate-900 rounded shadow-xl hover:shadow-lg transition">

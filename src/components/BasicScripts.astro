@@ -8,8 +8,7 @@ const {} = Astro.props;
 
   if (
     localStorageTheme === "dark" ||
-    (!localStorageTheme &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
+    (!localStorageTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)
   ) {
     classList.add("dark");
   } else {

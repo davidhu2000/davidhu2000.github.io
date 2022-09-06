@@ -8,12 +8,12 @@
   }
 
   .link {
-    @apply font-bold px-4 py-3 flex items-center transition duration-150 ease-in-out hover:text-sky-500 dark:hover:text-sky-400
+    @apply font-bold px-4 py-3 flex items-center transition duration-150 ease-in-out hover:text-sky-500 dark:hover:text-sky-400;
   }
 }
 
 @layer base {
   a {
-    @apply hover:text-sky-500 dark:hover:text-sky-400
+    @apply hover:text-sky-500 dark:hover:text-sky-400;
   }
 }

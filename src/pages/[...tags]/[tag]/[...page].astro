@@ -2,11 +2,11 @@
 import type { GetStaticPathsOptions } from "astro";
 
 import { SITE } from "../../../config";
-import PageLayout from "../../../layouts/PageLayout.astro";
-import BlogList from "../../../layouts/BlogList.astro";
 import { getPosts } from "../../../helpers/getPosts";
 import { getTags } from "../../../helpers/getTags";
 import type { IPageProps } from "../../../helpers/staticPathProps";
+import BlogList from "../../../layouts/BlogList.astro";
+import PageLayout from "../../../layouts/PageLayout.astro";
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const posts = getPosts();
@@ -34,9 +34,7 @@ const { page, tag } = Astro.props;
 const currentPage = page.currentPage ?? 1;
 
 const meta = {
-  title: `Posts by tag '${tag}' ${
-    currentPage > 1 ? `— Page ${currentPage} ` : ""
-  }— ${SITE.name}`,
+  title: `Posts by tag '${tag}' ${currentPage > 1 ? `— Page ${currentPage} ` : ""}— ${SITE.name}`,
   description: SITE.description,
   canonical: Astro.url,
 };

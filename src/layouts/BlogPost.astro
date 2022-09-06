@@ -1,8 +1,9 @@
 ---
+import { Image } from "@astrojs/image/components";
+
 import { formatDate } from "../helpers/formatDate";
 import type { IPostFrontmatter } from "../helpers/frontmatter";
 import PageLayout from "../layouts/PageLayout.astro";
-import { Image } from "@astrojs/image/components";
 
 interface Props {
   content: IPostFrontmatter & { url: string };
@@ -50,12 +51,7 @@ const tweetLink = `https://twitter.com/intent/tweet?url=
         </div>
 
         <footer class="max-w-3xl mx-auto mt-4 mb-6 px-4 sm:px-6">
-          <a
-            class="link px-0"
-            target="_blank"
-            rel="noreferrer noopener"
-            href={tweetLink}
-          >
+          <a class="link px-0" target="_blank" rel="noreferrer noopener" href={tweetLink}>
             Tweet this article
           </a>
         </footer>

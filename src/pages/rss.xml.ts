@@ -1,4 +1,5 @@
 import rss from "@astrojs/rss";
+
 import { SITE } from "../config";
 
 export const get = () => {

@@ -1,10 +1,11 @@
 ---
 import type { GetStaticPathsOptions } from "astro";
-import PageLayout from "../../layouts/PageLayout.astro";
+
 import { SITE } from "../../config";
-import BlogList from "../../layouts/BlogList.astro";
-import type { IPageProps } from "../../helpers/staticPathProps";
 import { getPosts } from "../../helpers/getPosts";
+import type { IPageProps } from "../../helpers/staticPathProps";
+import BlogList from "../../layouts/BlogList.astro";
+import PageLayout from "../../layouts/PageLayout.astro";
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const posts = getPosts();
@@ -20,9 +21,7 @@ const { page } = Astro.props;
 
 const currentPage = page.currentPage ?? 1;
 
-const title = `Blog ${currentPage > 1 ? `— Page ${currentPage} ` : ""}— ${
-  SITE.name
-}`;
+const title = `Blog ${currentPage > 1 ? `— Page ${currentPage} ` : ""}— ${SITE.name}`;
 const description = "The list of blog posts written by David Hu";
 const canonical = new URL("/blog", Astro.site);
 ---
