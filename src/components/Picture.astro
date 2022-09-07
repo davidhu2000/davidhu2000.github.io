@@ -16,23 +16,26 @@ const {
 
 let picture = null;
 try {
-  picture = src && await getPicture({
-    src,
-    widths,
-    formats,
-    aspectRatio,
-  })
-}
-catch (e) {
-}
+  picture =
+    src &&
+    (await getPicture({
+      src,
+      widths,
+      formats,
+      aspectRatio,
+    }));
+} catch (e) {}
 
-const { image = {}, sources = [] } = picture || {}
+const { image = {}, sources = [] } = picture || {};
 ---
 
-{ (src && image?.src) &&
-<picture {...attrs}>
-  {sources.map((attrs) =>
-  <source {...attrs} {sizes} />)}
-  <img {...image} {loading} {decoding} {alt} class={className} />
-</picture>
+{
+  src && image?.src && (
+    <picture {...attrs}>
+      {sources.map((attrs) => (
+        <source {...attrs} sizes={sizes} />
+      ))}
+      <img {...image} loading={loading} decoding={decoding} alt={alt} class={className} />
+    </picture>
+  )
 }
