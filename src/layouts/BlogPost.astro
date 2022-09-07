@@ -1,6 +1,5 @@
 ---
-import { Image } from "@astrojs/image/components";
-
+import Picture from "../components/Picture.astro";
 import { formatDate } from "../helpers/formatDate";
 import type { IPostFrontmatter } from "../helpers/frontmatter";
 import PageLayout from "../layouts/PageLayout.astro";
@@ -36,12 +35,13 @@ const tweetLink = `https://twitter.com/intent/tweet?url=
           </h1>
         </header>
 
-        <Image
+        <Picture
           src={heroImage}
-          alt="Blog Hero Image"
-          width={640}
-          aspectRatio={4 / 3}
           class="max-w-full lg:max-w-6xl mx-auto mt-4 mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
+          widths={[400, 900]}
+          sizes="(max-width: 900px) 400px, 900px"
+          alt="Blog Hero Image"
+          aspectRatio="16:9"
         />
 
         <div

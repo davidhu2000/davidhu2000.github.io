@@ -1,7 +1,6 @@
 ---
-import { Image } from "@astrojs/image/components";
-
 import { formatDate } from "../helpers/formatDate";
+import Picture from "./Picture.astro";
 import PostTags from "./PostTags.astro";
 
 const { post } = Astro.props;
@@ -17,20 +16,23 @@ if (description.length > maxLength) {
 ---
 
 <article class="max-w-md mx-auto md:max-w-none grid md:grid-cols-2 gap-6 md:gap-8">
-  <a class="relative block group p-0 link" href={post.url}>
-    <Image
-      src={frontmatter.heroImage}
-      class="inset-0 w-full h-full object-cover mb-6 rounded shadow-lg hover:ring-4 hover:ring-sky-400 dark:hover:ring-sky-500 duration-300"
-      width={400}
-      height={300}
-      alt={frontmatter.description}
-    />
+  <a class="relative block group" href={post.url}>
+    <div class="relative h-0 pb-[56.25%] md:pb-[75%] md:h-80 lg:pb-[56.25%] rounded shadow-lg">
+      <Picture
+        src={frontmatter.heroImage}
+        class="absolute inset-0 w-full h-full object-cover mb-6 rounded shadow-lg hover:ring-4 hover:ring-sky-400 dark:hover:ring-sky-500 duration-300"
+        widths={[400, 768]}
+        sizes="(max-width: 767px) 400px, 768px"
+        alt={post.description}
+        aspectRatio={1}
+      />
+    </div>
   </a>
   <div>
     <header>
-      <h2 class="text-xl sm:text-2xl font-bold mb-2">
+      <h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
         <a
-          class="hover:text-blue-600 decoration-1 transition ease-in duration-200 px-0"
+          class="hover:text-primary-600 decoration-1 transition ease-in duration-200"
           href={post.url}
         >
           {frontmatter.title}
@@ -40,11 +42,10 @@ if (description.length > maxLength) {
     <p class="text-md sm:text-lg flex-grow">
       {description}
     </p>
-
     <footer class="mt-4">
       <div>
         <span class="text-gray-500 dark:text-slate-400">
-          <time datetime={post.pubDate}>{formatDate(frontmatter.pubDate)}</time>
+          <time datetime={frontmatter.pubDate}>{formatDate(frontmatter.pubDate)}</time>
         </span>
       </div>
       <div class="mt-4">
