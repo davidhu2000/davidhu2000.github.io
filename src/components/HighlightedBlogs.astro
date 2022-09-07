@@ -1,7 +1,6 @@
 ---
-import { Image } from "@astrojs/image/components";
-
 import { getPosts } from "../helpers/getPosts";
+import Picture from "./Picture.astro";
 
 const posts = getPosts().slice(0, 4);
 ---
@@ -19,23 +18,23 @@ const posts = getPosts().slice(0, 4);
   <div class="grid gap-6 row-gap-5 md:grid-cols-2 lg:grid-cols-4 -mb-6">
     {
       posts.map((post) => (
-        <div class="mb-6 transition">
-          <a href={post.url} class="link decoration-1 transition ease-in duration-200 p-0">
-            <Image
+        <article class="mb-6 transition">
+          <a href={post.url}>
+            <Picture
               src={post.frontmatter.heroImage}
-              width={250}
-              height={250}
               class="object-cover w-full h-64 mb-6 rounded shadow-lg hover:ring-4 hover:ring-sky-400 dark:hover:ring-sky-500 transition duration-300"
+              widths={[400]}
               alt={post.frontmatter.title}
+              aspectRatio="16:9"
             />
           </a>
-          <h3 class="mb-2 text-xl font-bold leading-snug sm:text-2xl">
+          <h3 class="mb-2 text-xl font-bold leading-snug sm:text-2xl font-heading">
             <a href={post.url} class="link decoration-1 transition ease-in duration-200 p-0">
               {post.frontmatter.title}
             </a>
           </h3>
           <p class="text-gray-700 dark:text-gray-400">{post.frontmatter.description}</p>
-        </div>
+        </article>
       ))
     }
   </div>
