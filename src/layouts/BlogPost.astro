@@ -9,12 +9,14 @@ interface Props {
 }
 
 const {
-  content: { title, description, pubDate, heroImage },
+  content: { title, description, pubDate, heroImage, url },
 } = Astro.props as Props;
 
 const tweetLink = `https://twitter.com/intent/tweet?url=
  ${encodeURIComponent(Astro.request.url)}
 &text=${encodeURIComponent(`I just read "${title}" by @notdavidhu\n\n`)}`;
+
+const githubLink = `https://github.com/davidhu2000/davidhu2000.github.io/blob/main/src/pages${url}.mdx`;
 
 // TODO: add reading time functionality
 ---
@@ -50,9 +52,13 @@ const tweetLink = `https://twitter.com/intent/tweet?url=
           <slot />
         </div>
 
-        <footer class="max-w-3xl mx-auto mt-4 mb-6 px-4 sm:px-6">
+        <footer class="max-w-3xl mx-auto mt-4 mb-6 px-4 sm:px-6 flex">
           <a class="link px-0" target="_blank" rel="noreferrer noopener" href={tweetLink}>
             Tweet this article
+          </a>
+
+          <a class="link px-0 ml-8" target="_blank" rel="noreferrer noopener" href={githubLink}>
+            Edit on github
           </a>
         </footer>
       </article>
