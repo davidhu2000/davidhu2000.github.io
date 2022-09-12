@@ -3,7 +3,7 @@ layout: "../../layouts/BlogPost.astro"
 title: "Comparing Performance Between Old & New Sites"
 description: "Taking a closer look at the performance between the two sites. The result may or may not shock you, but probably won't."
 pubDate: "2022-09-05"
-heroImage: "/blog/comparing-performance-between-old-new-sites/hero-image.webp"
+heroImage: "./src/assets/blog/comparing-performance-between-old-new-sites/hero-image.webp"
 tags: ["astro", "web-performance"]
 ---
 
@@ -54,7 +54,7 @@ In any case, the numbers are just:
 import Picture from "../../components/Picture.astro";
 
 <Picture
-  src="/blog/comparing-performance-between-old-new-sites/wow.webp"
+  src="./src/assets/blog/comparing-performance-between-old-new-sites/wow.webp"
   class="max-w-full lg:max-w-6xl mx-auto mt-4 mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
   widths={[400, 720]}
   sizes="(max-width: 720px) 400px, 720px"
