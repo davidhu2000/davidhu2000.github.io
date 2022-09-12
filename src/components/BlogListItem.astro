@@ -45,7 +45,9 @@ if (description.length > maxLength) {
     <footer class="mt-4">
       <div>
         <span class="text-gray-500 dark:text-slate-400">
-          <time datetime={frontmatter.pubDate}>{formatDate(frontmatter.pubDate)}</time>
+          <time datetime={frontmatter.pubDate}>{formatDate(frontmatter.pubDate)}</time> ~ {
+            frontmatter.readingTime
+          }
         </span>
       </div>
       <div class="mt-4">
