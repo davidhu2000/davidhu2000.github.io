@@ -9,7 +9,7 @@ interface Props {
 }
 
 const {
-  content: { title, description, pubDate, heroImage, url, readingTime },
+  content: { title, description, pubDate, heroImage, url },
 } = Astro.props as Props;
 
 const tweetLink = `https://twitter.com/intent/tweet?url=
@@ -27,7 +27,7 @@ const githubLink = `https://github.com/davidhu2000/davidhu2000.github.io/blob/ma
       <article>
         <header>
           <p class="max-w-3xl mx-auto text-center">
-            <time datetime={pubDate}>{formatDate(pubDate)}</time> ~ {readingTime}
+            <time datetime={pubDate}>{formatDate(pubDate)}</time>
           </p>
 
           <h1
