@@ -20,7 +20,9 @@
     "@trivago/prettier-plugin-sort-imports": "^3.3.0",
     "astro": "^1.1.5",
     "astro-icon": "^0.7.3",
-    "prettier": "^2.7.1"
+    "mdast-util-to-string": "^3.1.0",
+    "prettier": "^2.7.1",
+    "reading-time": "^1.5.0"
   },
   "packageManager": "yarn@3.2.2"
 }
