@@ -10,7 +10,8 @@ git checkout main
 git pull 
 git checkout -b blog-$blog
 
-mkdir public/blog/$blog
+mkdir src/assets/blog/$blog
+touch src/assets/blog/$blog/.keep
 touch src/pages/blog/$blog.mdx
 
 cat > src/pages/blog/$blog.mdx << EOF
@@ -19,7 +20,7 @@ layout: "../../layouts/BlogPost.astro"
 title: ""
 description: ""
 pubDate: ""
-heroImage: "./src/assets/blog/$blog/hero-image.webp"
+heroImage: "./src/assets/blog/$blog/hero-image.jpg"
 tags: []
 ---
 
