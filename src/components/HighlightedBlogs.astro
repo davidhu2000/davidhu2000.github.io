@@ -19,7 +19,7 @@ const posts = getPosts().slice(0, 4);
     {
       posts.map((post) => (
         <article class="mb-6 transition">
-          <a href={post.url}>
+          <a href={post.url} rel="prefetch">
             <Picture
               src={post.frontmatter.heroImage}
               class="object-cover w-full h-64 mb-6 rounded shadow-lg hover:ring-4 hover:ring-sky-400 dark:hover:ring-sky-500 transition duration-300"
@@ -29,7 +29,11 @@ const posts = getPosts().slice(0, 4);
             />
           </a>
           <h3 class="mb-2 text-xl font-bold leading-snug sm:text-2xl font-heading">
-            <a href={post.url} class="link decoration-1 transition ease-in duration-200 p-0">
+            <a
+              href={post.url}
+              class="link decoration-1 transition ease-in duration-200 p-0"
+              rel="prefetch"
+            >
               {post.frontmatter.title}
             </a>
           </h3>

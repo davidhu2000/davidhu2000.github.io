@@ -16,7 +16,7 @@ if (description.length > maxLength) {
 ---
 
 <article class="max-w-md mx-auto md:max-w-none grid md:grid-cols-2 gap-6 md:gap-8">
-  <a class="relative block group" href={post.url}>
+  <a class="relative block group" href={post.url} rel="prefetch">
     <div class="relative h-0 pb-[56.25%] md:pb-[75%] md:h-80 lg:pb-[56.25%] rounded shadow-lg">
       <Picture
         src={frontmatter.heroImage}
@@ -34,6 +34,7 @@ if (description.length > maxLength) {
         <a
           class="hover:text-primary-600 decoration-1 transition ease-in duration-200"
           href={post.url}
+          rel="prefetch"
         >
           {frontmatter.title}
         </a>

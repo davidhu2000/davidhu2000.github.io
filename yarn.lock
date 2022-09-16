@@ -132,6 +132,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/prefetch@npm:^0.0.7":
+  version: 0.0.7
+  resolution: "@astrojs/prefetch@npm:0.0.7"
+  dependencies:
+    throttles: ^1.0.1
+  checksum: 4de21e5fea9123d478cfa499568181ffbf1b5c6f1079d3ca79fa2b2582ab06f446d5e69027d00b78dec5954709a75b4027f44e9110ea5b8c00caa3371739f542
+  languageName: node
+  linkType: hard
+
 "@astrojs/prism@npm:^1.0.0, @astrojs/prism@npm:^1.0.1":
   version: 1.0.1
   resolution: "@astrojs/prism@npm:1.0.1"
@@ -648,6 +657,7 @@ __metadata:
   dependencies:
     "@astrojs/image": ^0.5.0
     "@astrojs/mdx": ^0.11.1
+    "@astrojs/prefetch": ^0.0.7
     "@astrojs/rss": ^1.0.0
     "@astrojs/sitemap": ^1.0.0
     "@astrojs/tailwind": ^1.0.0
@@ -5892,6 +5902,13 @@ __metadata:
     mkdirp: ^1.0.3
     yallist: ^4.0.0
   checksum: a04c07bb9e2d8f46776517d4618f2406fb977a74d914ad98b264fc3db0fe8224da5bec11e5f8902c5b9bcb8ace22d95fbe3c7b36b8593b7dfc8391a25898f32f
+  languageName: node
+  linkType: hard
+
+"throttles@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "throttles@npm:1.0.1"
+  checksum: 0f3b36b8fcba720df7ab283f40f4e4d6b1b31939dba7fafac6e4e8bc1743eeaff546916a66344be7af1d7a2d014d799e7924009a15118887aef0cfc5292559a1
   languageName: node
   linkType: hard
 
