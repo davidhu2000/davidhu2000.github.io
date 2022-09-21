@@ -2,19 +2,8 @@
 const {} = Astro.props;
 ---
 
-<script is:inline>
+<script>
   const classList = document.documentElement.classList;
-  const localStorageTheme = localStorage.getItem("theme");
-
-  if (
-    localStorageTheme === "dark" ||
-    (!localStorageTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)
-  ) {
-    classList.add("dark");
-  } else {
-    classList.remove("dark");
-  }
-
   function attachEvent(selector, event, fn) {
     const matches = document.querySelectorAll(selector);
     if (matches && matches.length) {

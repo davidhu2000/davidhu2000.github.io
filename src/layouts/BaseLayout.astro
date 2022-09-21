@@ -10,6 +10,20 @@ const { meta = {} } = Astro.props;
 <html lang="en">
   <head>
     <BaseHead {...meta} />
+
+    <script is:inline>
+      const classList = document.documentElement.classList;
+      const localStorageTheme = localStorage.getItem("theme");
+
+      if (
+        localStorageTheme === "dark" ||
+        (!localStorageTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        classList.add("dark");
+      } else {
+        classList.remove("dark");
+      }
+    </script>
   </head>
 
   <body
