@@ -36,28 +36,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/image@npm:^0.7.0":
-  version: 0.7.0
-  resolution: "@astrojs/image@npm:0.7.0"
+"@astrojs/image@npm:^0.7.1":
+  version: 0.7.1
+  resolution: "@astrojs/image@npm:0.7.1"
   dependencies:
     "@altano/tiny-async-pool": ^1.0.2
     image-size: ^1.0.2
     magic-string: ^0.25.9
     mime: ^3.0.0
     sharp: ^0.30.6
-  checksum: b12f9ebdb38f299bf08fb4b36e07e2cb41e9fb3265f3906a34838ddf47790a38e7748bfdea4cd1aa2e5eeaef42636e3b1e549094fd1da375dc24e6240b57a3fa
+  checksum: 5b1f643750b643b473f18b95b8f1e870d71646baf21961d237f7b45ea7c070de0473aed69fb9d8a4127fed8d4b46615b3506431ef526a22d49c06e5e62260a6b
   languageName: node
   linkType: hard
 
-"@astrojs/language-server@npm:^0.23.0":
-  version: 0.23.0
-  resolution: "@astrojs/language-server@npm:0.23.0"
+"@astrojs/language-server@npm:^0.26.2":
+  version: 0.26.2
+  resolution: "@astrojs/language-server@npm:0.26.2"
   dependencies:
     "@vscode/emmet-helper": ^2.8.4
+    events: ^3.3.0
     prettier: ^2.7.1
     prettier-plugin-astro: ^0.5.3
     source-map: ^0.7.3
-    typescript: ~4.6.4
     vscode-css-languageservice: ^6.0.1
     vscode-html-languageservice: ^5.0.0
     vscode-languageserver: ^8.0.1
@@ -67,19 +67,20 @@ __metadata:
     vscode-uri: ^3.0.3
   bin:
     astro-ls: bin/nodeServer.js
-  checksum: db3fbd61ebd4aad43ce1f648b9aaf9a1ff59b5203a0fccd79048f70d101e175d1030c9f92a7a7faab858bc6b04636162b920d24d4e165bdaeb216787ee719e31
+  checksum: 1e130a011a9ac8c6e45808e8564c352bb75028e2696ba673e8db7ba4ff7aa8c0132e70ac7c9b3df0b59dc7eca94f57447b85bc7d9a392dd72c48d0dd0c055ab6
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "@astrojs/markdown-remark@npm:1.1.1"
+"@astrojs/markdown-remark@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@astrojs/markdown-remark@npm:1.1.2"
   dependencies:
     "@astrojs/micromark-extension-mdx-jsx": ^1.0.3
     "@astrojs/prism": ^1.0.0
     acorn: ^8.7.1
     acorn-jsx: ^5.3.2
     github-slugger: ^1.4.0
+    hast-util-to-html: ^8.0.3
     mdast-util-mdx-expression: ^1.2.1
     mdast-util-mdx-jsx: ^1.2.0
     micromark-extension-mdx-expression: ^1.0.3
@@ -96,7 +97,7 @@ __metadata:
     unist-util-map: ^3.1.1
     unist-util-visit: ^4.1.0
     vfile: ^5.3.2
-  checksum: d3585ce3ae7b228d4bbf45308439513faaffd568d94367156cc0a2d7b4fbd5f4ee181896e408017a2b1dbc7102104cbab570a21b2082e392a280a4729f184dc7
+  checksum: 8352e21e29d5f7087db382bb83d9be1a4f0ed050867df6541ffed56a657da48cc2e8b44cc37229ae81f6ff5ec7489de3104d1779e16b47ac44511dea850cab41
   languageName: node
   linkType: hard
 
@@ -673,7 +674,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@davidhu/blog@workspace:."
   dependencies:
-    "@astrojs/image": ^0.7.0
+    "@astrojs/image": ^0.7.1
     "@astrojs/mdx": ^0.11.1
     "@astrojs/prefetch": ^0.0.7
     "@astrojs/rss": ^1.0.1
@@ -681,7 +682,7 @@ __metadata:
     "@astrojs/tailwind": ^2.0.1
     "@tailwindcss/typography": ^0.5.7
     "@trivago/prettier-plugin-sort-imports": ^3.3.0
-    astro: ^1.2.6
+    astro: ^1.3.0
     astro-icon: ^0.7.3
     mdast-util-to-string: ^3.1.0
     prettier: ^2.7.1
@@ -1417,13 +1418,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^1.2.6":
-  version: 1.2.6
-  resolution: "astro@npm:1.2.6"
+"astro@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "astro@npm:1.3.0"
   dependencies:
     "@astrojs/compiler": ^0.24.0
-    "@astrojs/language-server": ^0.23.0
-    "@astrojs/markdown-remark": ^1.1.1
+    "@astrojs/language-server": ^0.26.2
+    "@astrojs/markdown-remark": ^1.1.2
     "@astrojs/telemetry": ^1.0.0
     "@astrojs/webapi": ^1.0.0
     "@babel/core": ^7.18.2
@@ -1473,14 +1474,15 @@ __metadata:
     strip-ansi: ^7.0.1
     supports-esm: ^1.0.0
     tsconfig-resolver: ^3.0.1
+    typescript: "*"
     unist-util-visit: ^4.1.0
     vfile: ^5.3.2
-    vite: 3.1.0
+    vite: ~3.1.3
     yargs-parser: ^21.0.1
     zod: ^3.17.3
   bin:
     astro: astro.js
-  checksum: 29996a2fcdc35c6505ee41cb30cd4f27477e4ff37be638cc23a978156d4868f8a96826582f1a00f8c124107a2bceb4f728718e61a15a11a9efc9ab7a65eafcc0
+  checksum: 5a273ed8733e3f5729d3664a3ee2f37d69a1f2842320f2f875c69aac9ff1f78a97906c3725c4e079932efd8f0bcbb413358d3e6823fa0ec27a1ecd1ddd864d9b
   languageName: node
   linkType: hard
 
@@ -2795,6 +2797,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"events@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "events@npm:3.3.0"
+  checksum: f6f487ad2198aa41d878fa31452f1a3c00958f46e9019286ff4787c84aac329332ab45c9cdc8c445928fc6d7ded294b9e005a7fce9426488518017831b272780
+  languageName: node
+  linkType: hard
+
 "execa@npm:^6.1.0":
   version: 6.1.0
   resolution: "execa@npm:6.1.0"
@@ -3258,7 +3267,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hast-util-to-html@npm:^8.0.0":
+"hast-util-to-html@npm:^8.0.0, hast-util-to-html@npm:^8.0.3":
   version: 8.0.3
   resolution: "hast-util-to-html@npm:8.0.3"
   dependencies:
@@ -6345,23 +6354,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:~4.6.4":
-  version: 4.6.4
-  resolution: "typescript@npm:4.6.4"
+"typescript@npm:*":
+  version: 4.8.3
+  resolution: "typescript@npm:4.8.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: e7bfcc39cd4571a63a54e5ea21f16b8445268b9900bf55aee0e02ad981be576acc140eba24f1af5e3c1457767c96cea6d12861768fb386cf3ffb34013718631a
+  checksum: 8286a5edcaf3d68e65c451aa1e7150ad1cf53ee0813c07ec35b7abdfdb10f355ecaa13c6a226a694ae7a67785fd7eeebf89f845da0b4f7e4a35561ddc459aba0
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@~4.6.4#~builtin<compat/typescript>":
-  version: 4.6.4
-  resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=f456af"
+"typescript@patch:typescript@*#~builtin<compat/typescript>":
+  version: 4.8.3
+  resolution: "typescript@patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=f456af"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 1cb434fbc637d347be90e3a0c6cd05e33c38f941713c8786d3031faf1842c2c148ba91d2fac01e7276b0ae3249b8633f1660e32686cc7a8c6a8fd5361dc52c66
+  checksum: 0404a09c625df01934ef774b45ce1ca57ccae41cd625fcdbb82056715320d9329e70d9d75c2c732ec6ef947444ca978c189a332b71fa21f5c1437d5a83e24906
   languageName: node
   linkType: hard
 
@@ -6578,9 +6587,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:3.1.0":
-  version: 3.1.0
-  resolution: "vite@npm:3.1.0"
+"vite@npm:~3.1.3":
+  version: 3.1.3
+  resolution: "vite@npm:3.1.3"
   dependencies:
     esbuild: ^0.15.6
     fsevents: ~2.3.2
@@ -6606,7 +6615,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 1a343e3d46450181f79f34ff49cca5ff59bb7472de51ea2c4a042aa076f597d27d25c49f48405e82f607af7d8c1c13a9e789402ccb1b23570132382132ec3903
+  checksum: af13c9820c292792f02d0a25fd46d8557e627b93f95bc05b5f7f1261e9565e9e69fda2df0c0898f248edb811ebcac5400a85a81625ef29749f50b18273439d91
   languageName: node
   linkType: hard
 
