@@ -15,12 +15,12 @@ if (description.length > maxLength) {
 }
 ---
 
-<article class="max-w-md mx-auto md:max-w-none grid md:grid-cols-2 gap-6 md:gap-8">
-  <a class="relative block group" href={post.url} rel="prefetch">
+<article class="max-w-md mx-auto md:max-w-none grid md:grid-cols-2 gap-6 md:gap-8 group">
+  <a class="relative block" href={post.url} rel="prefetch">
     <div class="relative h-0 pb-[56.25%] md:pb-[75%] md:h-80 lg:pb-[56.25%] rounded shadow-lg">
       <Picture
         src={frontmatter.heroImage}
-        class="absolute inset-0 w-full h-full object-cover mb-6 rounded shadow-lg hover:ring-4 hover:ring-sky-400 dark:hover:ring-sky-500 duration-300"
+        class="absolute inset-0 w-full h-full object-cover mb-6 rounded shadow-lg group-hover:ring-4 group-hover:ring-sky-400 dark:group-hover:ring-sky-500 transition ease-in duration-300"
         widths={[400, 768]}
         sizes="(max-width: 767px) 400px, 768px"
         alt={post.description}
@@ -32,7 +32,7 @@ if (description.length > maxLength) {
     <header>
       <h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
         <a
-          class="hover:text-primary-600 decoration-1 transition ease-in duration-200"
+          class="group-hover:text-primary-600 decoration-1 transition ease-in duration-300 group-hover:text-sky-500 dark:group-hover:text-sky-400"
           href={post.url}
           rel="prefetch"
         >
