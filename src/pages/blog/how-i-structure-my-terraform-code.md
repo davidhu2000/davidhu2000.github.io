@@ -10,21 +10,21 @@ tags: ["technologies", "infrastructure"]
 As a quick TLDR, Terraform allows me to write code to create infrastructure. So instead of
 
 1. Open cloud provider UI
-2. click 10-15 buttons
-3. click Create
+2. Click 10-15 buttons
+3. Click Create
 4. make sure to remember how to do this later by writing a doc somewhere
 
-We can just run `terraform plan` to see what changes will be made, and `terraform apply` to make the changes.
+We can just run `terraform plan` to see what changes will be made and `terraform apply` to make the changes.
 
-The HashiCorp [docs](https://www.terraform.io/docs#terraform-documentation) does a great job of explaining this deeper.
+The HashiCorp [docs](https://www.terraform.io/docs#terraform-documentation) do a great job of explaining this deeper.
 
 ## How do I use terraform?
 
-Great question! I generally prefer 3 total layers of abstractions
+Great question! Simply 3 total layers of abstractions:
 
 - **The first layer**: creating a module with all the necessary resources but with tons of inputs to allow you to adjust the resource configurations for your specific needs.
 - **Second layer**: creating a module wrapper for the first layer based on different environments (staging vs production) where most inputs are hardcoded outside a few that need to be different across environments, such as tags.
-- **Third layer**: calling the second layer with environment specific inputs
+- **Third layer**: calling the second layer with environment-specific inputs
 
 Alright alright, enough words, let's see some code.
 
@@ -53,7 +53,7 @@ resource "database" "my_database" {
 }
 ```
 
-This code works wonderfully, and another team notices your code, and asked to have the exact same setup, but they want a `lg` server instead.
+This code works wonderfully, then another team notices your code and asks to have the exact setup, but they want an `lg` server instead.
 
 > What do we do? Do we just copy it and change the server size?
 
@@ -121,7 +121,7 @@ module "api_service" {
 }
 ```
 
-The only variables we need to pass in are `env` and `db_password` when creating infrastructure for each env. This ensure different environments are as closely matched as possible.
+The only variables we need to pass in are `env` and `db_password` when creating infrastructure for each env. This ensures different environments are as closely matched as possible.
 
 ```hcl
 # terraform/env/staging/main.tf
