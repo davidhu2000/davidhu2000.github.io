@@ -8,13 +8,26 @@ import rehypePrettyCode from "rehype-pretty-code";
 
 import { remarkReadingTime } from "./plugins/remark-reading-time.mjs";
 
+async function fetchTheme(name) {
+  const res = await fetch(
+    `https://raw.githubusercontent.com/shikijs/shiki/main/packages/shiki/themes/${name}.json`
+  );
+  return await res.json();
+}
+
+const dark = await fetchTheme("github-dark");
+
+console.log("successfully fetched dark theme");
+
+const light = await fetchTheme("github-light");
+
+console.log("successfully fetched light theme");
+
 const options = {
-  theme: "github-dark",
-  // TODO: figure out how to toggle themes properly
-  // theme: {
-  //   dark: "github-dark",
-  //   light: "github-light",
-  // },
+  theme: {
+    dark,
+    light,
+  },
   onVisitLine(node) {
     // Prevent lines from collapsing in `display: grid` mode, and
     // allow empty lines to be copy/pasted
@@ -22,10 +35,7 @@ const options = {
       node.children = [{ type: "text", value: " " }];
     }
   },
-  // Feel free to add classNames that suit your docs
   onVisitHighlightedLine(node) {
-    console.log("here");
-    console.log(node);
     node.properties.className.push("highlighted");
   },
   onVisitHighlightedWord(node) {
