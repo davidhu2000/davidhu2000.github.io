@@ -61,7 +61,7 @@ So, we can create a terraform module to abstract the code so others can use it e
 
 As an example, the `load_balancer` code from above will become:
 
-```hcl
+```hcl {2-3}
 resource "load_balancer" "my_load_balancer" {
   name = var.load_balancer_name
   env  = var.env
@@ -106,7 +106,7 @@ Moving onto the 2nd layer, because the terraform module is written to be more ge
 
 This new module will use the first layer module as its source, then we hardcode most of the inputs and leave off a couple to differentiate between environments.
 
-```hcl
+```hcl {5,11}
 # terraform/modules/my-service/main.tf
 module "api_service" {
   source = "github.com/my-company/terraform-modules/api_service"
