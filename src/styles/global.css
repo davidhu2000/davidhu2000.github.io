@@ -1,15 +1,19 @@
 /* code blocks: default styles */
 pre {
-  padding: 24px 0 !important;
+  padding: 1.5rem 1rem !important;
+}
+
+pre[data-language] {
+  padding: 1.5rem 0 !important;
 }
 
 pre > code {
   display: grid;
-  padding-right: 24px;
+  padding-right: 1.5rem;
 }
 
 code .line {
-  padding-right: 24px;
+  padding-right: 1.5rem;
 }
 
 /* code blocks: line number styles */

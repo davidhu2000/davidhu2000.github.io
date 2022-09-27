@@ -12,9 +12,9 @@ git checkout -b blog-$blog
 
 mkdir src/assets/blog/$blog
 touch src/assets/blog/$blog/.keep
-touch src/pages/blog/$blog.mdx
+touch src/pages/blog/$blog.md
 
-cat > src/pages/blog/$blog.mdx << EOF
+cat > src/pages/blog/$blog.md << EOF
 ---
 layout: "../../layouts/BlogPost.astro"
 title: ""
