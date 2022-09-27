@@ -2,7 +2,7 @@
 layout: "../../layouts/BlogPost.astro"
 title: "How I Structure My Terraform Code"
 description: "Infrastructure as code is awesome! Here's how I utilize it"
-pubDate: "2022-09-26"
+pubDate: "2022-09-27"
 heroImage: "./src/assets/blog/how-i-structure-my-terraform-code/hero-image.jpg"
 tags: ["technologies", "infrastructure"]
 ---
@@ -20,16 +20,15 @@ The HashiCorp [docs](https://www.terraform.io/docs#terraform-documentation) does
 
 ## How do I use terraform?
 
-Great question! I generally prefer 2 layers of abstractions
+Great question! I generally prefer 3 total layers of abstractions
 
-- The first layer is creating a module that creates all the necessary resources you'd need but with tons of inputs to allow you to adjust the resource configurations for your specific needs.
-- Second layer is based on different environments I'm working in, like staging vs production. This layer is a wrapper around the first layer that hardcodes most of the configuration options outside a few that need to be different across environments, such as tags.
+- **The first layer**: creating a module with all the necessary resources but with tons of inputs to allow you to adjust the resource configurations for your specific needs.
+- **Second layer**: creating a module wrapper for the first layer based on different environments (staging vs production) where most inputs are hardcoded outside a few that need to be different across environments, such as tags.
+- **Third layer**: calling the second layer with environment specific inputs
 
-Then, I call the second layer module on each environment.
+Alright alright, enough words, let's see some code.
 
-Now, enough words, let's show some code.
-
-For our example, (I will mostly be using fake resources to demo), we want to create an API service with 3 servers, a database, and a load balancer. Let's say this is the template we use for all of our API services. In pseudocode, we would roughly need something like the below to achieve this result.
+To set the stage, we are tasked with creating an API service with 3 servers, a database, and a load balancer. We roughly need something like the below to complete this.
 
 ```hcl
 resource "load_balancer" "my_load_balancer" {
@@ -54,7 +53,11 @@ resource "database" "my_database" {
 }
 ```
 
-This works fine until everyone sees your terraform and says I want the same. Do we just copy it? Or, we can create a terraform module to abstract the code so others can use it easily. Now that we want the whole company to use our terraform, we need to make it more generic: meaning we take most of the inputs and allow them as arguments for our module.
+This code works wonderfully, and another team notices your code, and asked to have the exact same setup, but they want a `lg` server instead.
+
+> What do we do? Do we just copy it and change the server size?
+
+So, we can create a terraform module to abstract the code so others can use it easily. Now that we have 2 total users for our terraform, we need to make it more generic: meaning we take most of the inputs and allow them as arguments for our module.
 
 As an example, the `load_balancer` code from above will become:
 
@@ -77,9 +80,11 @@ variables "load_balancer_name" {
   type        = "string"
   description = "The name of the load balancer"
 }
+
+...
 ```
 
-This creates the first layer of abstractions. The code we need to write in the application will now look like
+After this first layer of abstraction, we just need to write:
 
 ```hcl
 module "api_service" {
@@ -95,9 +100,11 @@ module "api_service" {
 }
 ```
 
-See, way less code especially if we need to do this over and over again.
+See, way less code! Less is always more (except for your parent's approval)
 
-Moving onto the 2nd layer, because the terraform module is written to be more generic, and our application has specific needs, we would create another module within our app repo that will look almost identical to the code block above, where we hardcode most of the inputs and leave off a couple to differentiate between environments.
+Moving onto the 2nd layer, because the terraform module is written to be more generic, and our application has specific needs, we would create another module within our app repo.
+
+This new module will use the first layer module as its source, then we hardcode most of the inputs and leave off a couple to differentiate between environments.
 
 ```hcl
 # terraform/modules/my-service/main.tf
@@ -114,7 +121,7 @@ module "api_service" {
 }
 ```
 
-The only variables we need to pass in are `env` and `db_password` when creating infrastructure for each env. This helps make sure different environments are as closely matched as possible. Here is the code for both staging and prod
+The only variables we need to pass in are `env` and `db_password` when creating infrastructure for each env. This ensure different environments are as closely matched as possible.
 
 ```hcl
 # terraform/env/staging/main.tf
@@ -122,7 +129,7 @@ module "api_service" {
   source = "../modules/my-service"
 
   env         = "staging"
-  db_password = "staging-password"
+  db_password = "whatisitgoodfor"
 }
 
 # terraform/env/prod/main.tf
@@ -130,7 +137,7 @@ module "api_service" {
   source = "../modules/my-service"
 
   env         = "prod"
-  db_password = "prod-password"
+  db_password = "absolutelynothing"
 }
 ```
 
@@ -156,4 +163,8 @@ To summarize how the modules are setup,
 
 ### Quick Tip: how to terraform if you don't know what inputs you need to change
 
-Start with making a change in the cloud provider UI. Then run a plan in terraform, which will detect the difference, now just change the input that that code shows and run a new plan to see that terraform now says no changes.
+Start with making a change in the cloud provider UI.
+
+Then run a plan in terraform, which will detect the difference.
+
+Now just change the input that that code shows and run a new plan to see that terraform now says no changes.
