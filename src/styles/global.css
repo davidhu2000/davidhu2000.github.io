@@ -1,10 +1,20 @@
 /* code blocks: default styles */
 pre {
   padding: 1.5rem 1rem !important;
+  position: relative;
 }
 
 pre[data-language] {
   padding: 1.5rem 0 !important;
+}
+
+pre[data-language]:after {
+  content: attr(data-language);
+  font-size: 0.7rem;
+  opacity: 0.7;
+  position: absolute;
+  right: 1rem;
+  text-align: right;
 }
 
 pre > code {
