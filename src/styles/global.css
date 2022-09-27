@@ -1,3 +1,18 @@
+/* code blocks: default styles */
+pre {
+  padding: 16px 24px 16px 0 !important;
+}
+
+pre > code {
+  display: grid;
+  padding-right: 24px;
+}
+
+code .line {
+  padding-right: 24px;
+}
+
+/* code blocks: line number styles */
 code {
   counter-reset: step;
   counter-increment: step 0;
@@ -8,7 +23,19 @@ code .line::before {
   counter-increment: step;
   width: 1rem;
   margin-right: 1.5rem;
+  margin-left: 1rem;
   display: inline-block;
   text-align: right;
-  color: rgba(115,138,148,.4)
+  color: rgba(115, 138, 148, 0.4);
+}
+
+/* code blocks: highlighted styles */
+code .line.highlighted {
+  background: rgba(200, 200, 255, 0.1);
+
+  border-left: 3px solid #60a5fa;
+}
+
+code .line.highlighted:before {
+  color: #94a3b8;
 }
