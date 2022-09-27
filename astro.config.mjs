@@ -19,7 +19,7 @@ const dark = await fetchTheme("github-dark");
 
 console.log("successfully fetched dark theme");
 
-const light = await fetchTheme("github-light");
+const light = await fetchTheme("min-light");
 
 console.log("successfully fetched light theme");
 
