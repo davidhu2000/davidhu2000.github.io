@@ -6,4 +6,6 @@ export interface IPostFrontmatter {
   heroImage: string;
   tags: string[];
   readingTime: string;
+  url: string;
+  file: string;
 }

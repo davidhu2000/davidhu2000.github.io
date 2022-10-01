@@ -5,20 +5,20 @@ import type { IPostFrontmatter } from "../helpers/frontmatter";
 import PageLayout from "../layouts/PageLayout.astro";
 
 interface Props {
-  content: IPostFrontmatter & { url: string };
+  content: IPostFrontmatter;
 }
 
 const {
-  content: { title, description, pubDate, heroImage, url, readingTime },
+  content: { title, description, pubDate, heroImage, url, readingTime, file },
 } = Astro.props as Props;
 
 const tweetLink = `https://twitter.com/intent/tweet?url=
  ${encodeURIComponent(Astro.request.url)}
 &text=${encodeURIComponent(`I just read "${title}" by @notdavidhu\n\n`)}`;
 
-const githubLink = `https://github.com/davidhu2000/davidhu2000.github.io/blob/main/src/pages${url}.mdx`;
+const fileExtension = file.split(".").pop();
 
-// TODO: add reading time functionality
+const githubLink = `https://github.com/davidhu2000/davidhu2000.github.io/blob/main/src/pages${url}.${fileExtension}`;
 ---
 
 <PageLayout meta={{ title, description, image: heroImage }}>
