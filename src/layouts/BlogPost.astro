@@ -1,5 +1,6 @@
 ---
 import Picture from "../components/Picture.astro";
+import PostTags from "../components/PostTags.astro";
 import { formatDate } from "../helpers/formatDate";
 import type { IPostFrontmatter } from "../helpers/frontmatter";
 import PageLayout from "../layouts/PageLayout.astro";
@@ -9,7 +10,7 @@ interface Props {
 }
 
 const {
-  content: { title, description, pubDate, heroImage, url, readingTime, file },
+  content: { title, description, pubDate, heroImage, url, readingTime, file, tags },
 } = Astro.props as Props;
 
 const tweetLink = `https://twitter.com/intent/tweet?url=
@@ -31,10 +32,12 @@ const githubLink = `https://github.com/davidhu2000/davidhu2000.github.io/blob/ma
           </p>
 
           <h1
-            class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-6 md:mb-8"
+            class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-6"
           >
             {title}
           </h1>
+
+          <PostTags tags={tags} class="flex justify-center" />
         </header>
 
         <Picture
