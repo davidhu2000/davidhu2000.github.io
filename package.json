@@ -11,7 +11,7 @@
     "new": "sh scripts/create-blog.sh"
   },
   "devDependencies": {
-    "@astrojs/image": "^0.7.1",
+    "@astrojs/image": "^0.9.1",
     "@astrojs/mdx": "^0.11.1",
     "@astrojs/prefetch": "^0.0.7",
     "@astrojs/rss": "^1.0.1",
