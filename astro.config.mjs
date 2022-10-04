@@ -46,7 +46,15 @@ const options = {
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.davidhu.io",
-  integrations: [mdx(), sitemap(), tailwind(), image(), prefetch()],
+  integrations: [
+    mdx(),
+    sitemap(),
+    tailwind(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+    prefetch(),
+  ],
   markdown: {
     syntaxHighlight: false,
     extendDefaultPlugins: true,

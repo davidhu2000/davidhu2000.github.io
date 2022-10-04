@@ -11,20 +11,21 @@
     "new": "sh scripts/create-blog.sh"
   },
   "devDependencies": {
-    "@astrojs/image": "^0.7.1",
-    "@astrojs/mdx": "^0.11.1",
+    "@astrojs/image": "^0.9.1",
+    "@astrojs/mdx": "^0.11.4",
     "@astrojs/prefetch": "^0.0.7",
-    "@astrojs/rss": "^1.0.1",
+    "@astrojs/rss": "^1.0.2",
     "@astrojs/sitemap": "^1.0.0",
-    "@astrojs/tailwind": "^2.0.1",
+    "@astrojs/tailwind": "^2.0.2",
     "@tailwindcss/typography": "^0.5.7",
     "@trivago/prettier-plugin-sort-imports": "^3.3.0",
-    "astro": "^1.3.0",
+    "astro": "^1.4.4",
     "astro-icon": "^0.7.3",
     "mdast-util-to-string": "^3.1.0",
     "prettier": "^2.7.1",
     "reading-time": "^1.5.0",
     "rehype-pretty-code": "^0.3.2",
+    "sharp": "^0.31.1",
     "tailwindcss": "^3.1.8"
   },
   "packageManager": "yarn@3.2.2"
