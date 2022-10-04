@@ -3,10 +3,11 @@ import Picture from "../components/Picture.astro";
 import PostTags from "../components/PostTags.astro";
 import { formatDate } from "../helpers/formatDate";
 import type { IPostFrontmatter } from "../helpers/frontmatter";
+import { getPosts } from "../helpers/getPosts";
 import PageLayout from "../layouts/PageLayout.astro";
 
 interface Props {
-  content: IPostFrontmatter;
+  content: IPostFrontmatter & { url: string };
 }
 
 const {
@@ -20,6 +21,16 @@ const tweetLink = `https://twitter.com/intent/tweet?url=
 const fileExtension = file.split(".").pop();
 
 const githubLink = `https://github.com/davidhu2000/davidhu2000.github.io/blob/main/src/pages${url}.${fileExtension}`;
+
+const posts = getPosts();
+
+const currentPostIndex = posts.findIndex(
+  (post) => post.frontmatter.title === title && post.frontmatter.description === description
+);
+
+posts.splice(currentPostIndex, 1);
+
+const otherPosts = posts.slice(-3);
 ---
 
 <PageLayout meta={{ title, description, image: heroImage }}>
@@ -64,6 +75,35 @@ const githubLink = `https://github.com/davidhu2000/davidhu2000.github.io/blob/ma
             Edit on github
           </a>
         </footer>
+
+        <figure
+          class="mx-auto max-w-3xl px-6 py-4 italic bg-neutral-100 text-gray-500 dark:text-white border-neutral-500 dark:bg-gray-800"
+        >
+          <p class="font-bold">Interesting in other articles? Here you go:</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {
+              otherPosts.map((post, index) => (
+                <a
+                  href={post.url}
+                  class={`mt-2 pointer link group duration-300 flex-col md:block ${
+                    index === otherPosts.length - 1 ? "hidden" : ""
+                  }`}
+                >
+                  <Picture
+                    src={post.frontmatter.heroImage}
+                    class="rounded-md bg-gray-400 dark:bg-slate-700 group-hover:ring-4 group-hover:ring-sky-400 dark:group-hover:ring-sky-500 transition ease-in duration-300"
+                    widths={[200]}
+                    sizes="(max-width: 900px) 400px, 900px"
+                    alt="Next Blog Hero Image"
+                    aspectRatio="16:9"
+                  />
+                  <span class="block mt-2">{post.frontmatter.title}</span>
+                </a>
+              ))
+            }
+          </div>
+        </figure>
       </article>
     </section>
   </main>
