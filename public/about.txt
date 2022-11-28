@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Zhi Mang Xing
+- Font Author: Copyright 2018 The ZhiMangXing Project Authors (https://github.com/googlefonts/zhimangxing)
+- Font Source: http://fonts.gstatic.com/s/zhimangxing/v17/f0Xw0ey79sErYFtWQ9a2rq-g0actfektIJ0.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
