@@ -29,22 +29,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/image@npm:^0.9.1":
-  version: 0.9.1
-  resolution: "@astrojs/image@npm:0.9.1"
+"@astrojs/image@npm:^0.11.6":
+  version: 0.11.6
+  resolution: "@astrojs/image@npm:0.11.6"
   dependencies:
     "@altano/tiny-async-pool": ^1.0.2
     http-cache-semantics: ^4.1.0
     image-size: ^1.0.2
+    kleur: ^4.1.5
     magic-string: ^0.25.9
     mime: ^3.0.0
     slash: ^4.0.0
+    web-streams-polyfill: ^3.2.1
   peerDependencies:
     sharp: ">=0.31.0"
   peerDependenciesMeta:
     sharp:
       optional: true
-  checksum: 7a9bce51d56597de45850027d3c6925a4c261c8870da0caf2455da0180ea51cc8cd54e9c018e0f09fb45279585cf36902ba6268170ffaf60cbaa51764ce40bb1
+  checksum: 1fdcd109076ad6d396732f3edd571998b72864e9b1883a08b003400c69df5f2115cc3539052a983e94bb00acf0f480ad29988452548c2704976275252c42f275
   languageName: node
   linkType: hard
 
@@ -677,7 +679,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@davidhu/blog@workspace:."
   dependencies:
-    "@astrojs/image": ^0.9.1
+    "@astrojs/image": ^0.11.6
     "@astrojs/mdx": ^0.11.4
     "@astrojs/prefetch": ^0.1.1
     "@astrojs/rss": ^1.0.2
@@ -688,7 +690,7 @@ __metadata:
     astro: ^1.6.11
     astro-icon: ^0.7.3
     mdast-util-to-string: ^3.1.0
-    prettier: ^2.7.1
+    prettier: ^2.8.0
     reading-time: ^1.5.0
     rehype-pretty-code: ^0.5.1
     sharp: ^0.31.2
@@ -3825,7 +3827,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kleur@npm:^4.0.3, kleur@npm:^4.1.4":
+"kleur@npm:^4.0.3, kleur@npm:^4.1.4, kleur@npm:^4.1.5":
   version: 4.1.5
   resolution: "kleur@npm:4.1.5"
   checksum: 1dc476e32741acf0b1b5b0627ffd0d722e342c1b0da14de3e8ae97821327ca08f9fb944542fb3c126d90ac5f27f9d804edbe7c585bf7d12ef495d115e0f22c12
@@ -5433,6 +5435,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prettier@npm:^2.8.0":
+  version: 2.8.0
+  resolution: "prettier@npm:2.8.0"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 72004ce0cc9bb097daf3e3833f62495768724392c1d5b178dd47372337616e9e50ecbb0804f236596223f7b5eb1bbe69cefc8957dca21112c5777e77ef73a564
+  languageName: node
+  linkType: hard
+
 "prismjs@npm:^1.28.0":
   version: 1.28.0
   resolution: "prismjs@npm:1.28.0"
@@ -6952,7 +6963,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-streams-polyfill@npm:^3.0.3":
+"web-streams-polyfill@npm:^3.0.3, web-streams-polyfill@npm:^3.2.1":
   version: 3.2.1
   resolution: "web-streams-polyfill@npm:3.2.1"
   checksum: b119c78574b6d65935e35098c2afdcd752b84268e18746606af149e3c424e15621b6f1ff0b42b2676dc012fc4f0d313f964b41a4b5031e525faa03997457da02
