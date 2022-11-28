@@ -690,7 +690,7 @@ __metadata:
     mdast-util-to-string: ^3.1.0
     prettier: ^2.7.1
     reading-time: ^1.5.0
-    rehype-pretty-code: ^0.3.2
+    rehype-pretty-code: ^0.5.1
     sharp: ^0.31.2
     tailwindcss: ^3.1.8
   languageName: unknown
@@ -5581,14 +5581,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rehype-pretty-code@npm:^0.3.2":
-  version: 0.3.2
-  resolution: "rehype-pretty-code@npm:0.3.2"
+"rehype-pretty-code@npm:^0.5.1":
+  version: 0.5.1
+  resolution: "rehype-pretty-code@npm:0.5.1"
   dependencies:
     parse-numeric-range: ^1.3.0
   peerDependencies:
     shiki: "*"
-  checksum: 7d5f5dc4758e65f4a141bb22fe6863d3d7f1e9b1712fab5bde3a0e5611c89cc4d5945fda59b5d51f993404785d62c1dcac14ccc368ac7892fbed8cee026c843b
+  checksum: 5aa5f6f398497432d70932ab0c17a7023e4f695ce4670227dcf12fc1c41d573bbeff86a3af3572c0c8ddd79a0190a4a2e83634e995fc12284c533daabe3bc5c7
   languageName: node
   linkType: hard
 
