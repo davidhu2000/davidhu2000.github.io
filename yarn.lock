@@ -104,11 +104,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:^0.11.4":
-  version: 0.11.4
-  resolution: "@astrojs/mdx@npm:0.11.4"
+"@astrojs/mdx@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "@astrojs/mdx@npm:0.12.0"
   dependencies:
-    "@astrojs/prism": ^1.0.1
+    "@astrojs/prism": ^1.0.2
     "@mdx-js/mdx": ^2.1.2
     "@mdx-js/rollup": ^2.1.1
     acorn: ^8.8.0
@@ -124,7 +124,7 @@ __metadata:
     shiki: ^0.11.1
     unist-util-visit: ^4.1.0
     vfile: ^5.3.2
-  checksum: 7f4045dcab683e0a6ca7247b7a687175f5eba7ecaf710a120a0ff4058443ed4b56e802e621b2ebb9df552ef1abda7f1f0361c438bea4d21da441b2a15d5e529d
+  checksum: 3903cb04d7b5db2f224cdcadbad8a2b13b92b3762f1395996713fbe67fdce22cbef6ba3c09804886c6c158dbf2c0630d783c045c13b67f4e16b62444c99e0d1b
   languageName: node
   linkType: hard
 
@@ -154,12 +154,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/prism@npm:^1.0.0, @astrojs/prism@npm:^1.0.1":
+"@astrojs/prism@npm:^1.0.0":
   version: 1.0.1
   resolution: "@astrojs/prism@npm:1.0.1"
   dependencies:
     prismjs: ^1.28.0
   checksum: 185504469f68b813b786b53e2254472b7acd092bb4181fd230064ffc35990dd6d17db6fcd3ff2ebd20f5083ce13d726412995f55be5cac3b770a68e2e70c733a
+  languageName: node
+  linkType: hard
+
+"@astrojs/prism@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "@astrojs/prism@npm:1.0.2"
+  dependencies:
+    prismjs: ^1.28.0
+  checksum: ff6a222b402c156c157515ae08d71cebea7ab11807bb0ffcad3ac62e28a85beef93814f040d3706f3e178d825cbf444a315b5bdac3b5412c87df0f83b091d0e6
   languageName: node
   linkType: hard
 
@@ -680,7 +689,7 @@ __metadata:
   resolution: "@davidhu/blog@workspace:."
   dependencies:
     "@astrojs/image": ^0.11.6
-    "@astrojs/mdx": ^0.11.4
+    "@astrojs/mdx": ^0.12.0
     "@astrojs/prefetch": ^0.1.1
     "@astrojs/rss": ^1.0.3
     "@astrojs/sitemap": ^1.0.0
