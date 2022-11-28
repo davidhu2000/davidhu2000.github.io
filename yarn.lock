@@ -182,16 +182,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/tailwind@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "@astrojs/tailwind@npm:2.0.2"
+"@astrojs/tailwind@npm:^2.1.3":
+  version: 2.1.3
+  resolution: "@astrojs/tailwind@npm:2.1.3"
   dependencies:
     "@proload/core": ^0.3.2
     autoprefixer: ^10.4.7
     postcss: ^8.4.14
   peerDependencies:
     tailwindcss: ^3.0.24
-  checksum: 5296880b806ec8610ed9ebb7f9593de1c9a892df3780b1094b7c95e2af600a5665246e3b7bd9d0d4dd29a5cd8ffc1b12f83b0561748de9c4da639c76abc4a673
+  checksum: 5effb3fcd36c1f9297a01226d576c959ff075064010c32f0b71e55c554d178bd07eae648c69b9ece4ab8933077faa3ab9adc4b1846eab8b72ef85f3457a2393c
   languageName: node
   linkType: hard
 
@@ -684,7 +684,7 @@ __metadata:
     "@astrojs/prefetch": ^0.1.1
     "@astrojs/rss": ^1.0.2
     "@astrojs/sitemap": ^1.0.0
-    "@astrojs/tailwind": ^2.0.2
+    "@astrojs/tailwind": ^2.1.3
     "@tailwindcss/typography": ^0.5.8
     "@trivago/prettier-plugin-sort-imports": ^4.0.0
     astro: ^1.6.11
