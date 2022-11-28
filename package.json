@@ -21,7 +21,7 @@
     "@tailwindcss/typography": "^0.5.8",
     "@trivago/prettier-plugin-sort-imports": "^4.0.0",
     "astro": "^1.6.11",
-    "astro-icon": "^0.7.3",
+    "astro-icon": "^0.8.0",
     "mdast-util-to-string": "^3.1.0",
     "prettier": "^2.8.0",
     "reading-time": "^1.5.0",
