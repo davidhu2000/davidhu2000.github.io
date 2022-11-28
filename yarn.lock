@@ -688,7 +688,7 @@ __metadata:
     "@tailwindcss/typography": ^0.5.8
     "@trivago/prettier-plugin-sort-imports": ^4.0.0
     astro: ^1.6.11
-    astro-icon: ^0.7.3
+    astro-icon: ^0.8.0
     mdast-util-to-string: ^3.1.0
     prettier: ^2.8.0
     reading-time: ^1.5.0
@@ -1413,14 +1413,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-icon@npm:^0.7.3":
-  version: 0.7.3
-  resolution: "astro-icon@npm:0.7.3"
+"astro-icon@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "astro-icon@npm:0.8.0"
   dependencies:
     node-fetch: ^3.1.0
     resolve-pkg: ^2.0.0
     svgo: ^2.8.0
-  checksum: fbd3fd823fe19b49497692e61da1d48bdbb135fbdf8a619701c02f13c4abad1a741cf304c94384e9de61bf56cb6150ae224bd55afb552c30f2ef29c5f1e42fd4
+  checksum: 0e5a46e88a05327c1dfff6c2419a4d60094e52aa320fd9795416be2dfb06434ee988cb699c2fdd883afe6bce3f131133a0ad88a7c921a7b0a6053ae81a1c6428
   languageName: node
   linkType: hard
 
