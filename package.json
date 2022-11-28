@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "new": "sh scripts/create-blog.sh"
+    "new": "sh scripts/create-blog.sh",
+    "ui": "yarn upgrade-interactive"
   },
   "devDependencies": {
     "@astrojs/image": "^0.9.1",
