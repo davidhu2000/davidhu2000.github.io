@@ -163,12 +163,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/rss@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "@astrojs/rss@npm:1.0.2"
+"@astrojs/rss@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@astrojs/rss@npm:1.0.3"
   dependencies:
     fast-xml-parser: ^4.0.8
-  checksum: 93e2ec423dc044e374beb865e077ec8f8f26c0267f11185f85674bf104025adc4b0265759778cdf308ccb468acb5880f25afa456614ea4a2afebc48c41f50cd2
+  checksum: ca1ffd98def1ef74d63fc383b999a29a9b00caa22d3be007e0bf707e917d77151458073e3f59c472a1809471a86c63c3eda62a001a02e703b8ed46379a66f735
   languageName: node
   linkType: hard
 
@@ -182,16 +182,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/tailwind@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "@astrojs/tailwind@npm:2.0.2"
+"@astrojs/tailwind@npm:^2.1.3":
+  version: 2.1.3
+  resolution: "@astrojs/tailwind@npm:2.1.3"
   dependencies:
     "@proload/core": ^0.3.2
     autoprefixer: ^10.4.7
     postcss: ^8.4.14
   peerDependencies:
     tailwindcss: ^3.0.24
-  checksum: 5296880b806ec8610ed9ebb7f9593de1c9a892df3780b1094b7c95e2af600a5665246e3b7bd9d0d4dd29a5cd8ffc1b12f83b0561748de9c4da639c76abc4a673
+  checksum: 5effb3fcd36c1f9297a01226d576c959ff075064010c32f0b71e55c554d178bd07eae648c69b9ece4ab8933077faa3ab9adc4b1846eab8b72ef85f3457a2393c
   languageName: node
   linkType: hard
 
@@ -682,9 +682,9 @@ __metadata:
     "@astrojs/image": ^0.11.6
     "@astrojs/mdx": ^0.11.4
     "@astrojs/prefetch": ^0.1.1
-    "@astrojs/rss": ^1.0.2
+    "@astrojs/rss": ^1.0.3
     "@astrojs/sitemap": ^1.0.0
-    "@astrojs/tailwind": ^2.0.2
+    "@astrojs/tailwind": ^2.1.3
     "@tailwindcss/typography": ^0.5.8
     "@trivago/prettier-plugin-sort-imports": ^4.0.0
     astro: ^1.6.11
@@ -694,7 +694,7 @@ __metadata:
     reading-time: ^1.5.0
     rehype-pretty-code: ^0.5.1
     sharp: ^0.31.2
-    tailwindcss: ^3.1.8
+    tailwindcss: ^3.2.4
   languageName: unknown
   linkType: soft
 
@@ -2900,6 +2900,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-glob@npm:^3.2.12":
+  version: 3.2.12
+  resolution: "fast-glob@npm:3.2.12"
+  dependencies:
+    "@nodelib/fs.stat": ^2.0.2
+    "@nodelib/fs.walk": ^1.2.3
+    glob-parent: ^5.1.2
+    merge2: ^1.3.0
+    micromatch: ^4.0.4
+  checksum: 0b1990f6ce831c7e28c4d505edcdaad8e27e88ab9fa65eedadb730438cfc7cde4910d6c975d6b7b8dc8a73da4773702ebcfcd6e3518e73938bb1383badfe01c2
+  languageName: node
+  linkType: hard
+
 "fast-xml-parser@npm:^4.0.8":
   version: 4.0.9
   resolution: "fast-xml-parser@npm:4.0.9"
@@ -4694,7 +4707,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromatch@npm:^4.0.2, micromatch@npm:^4.0.4":
+"micromatch@npm:^4.0.2, micromatch@npm:^4.0.4, micromatch@npm:^4.0.5":
   version: 4.0.5
   resolution: "micromatch@npm:4.0.5"
   dependencies:
@@ -5330,18 +5343,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-nested@npm:5.0.6":
-  version: 5.0.6
-  resolution: "postcss-nested@npm:5.0.6"
+"postcss-nested@npm:6.0.0":
+  version: 6.0.0
+  resolution: "postcss-nested@npm:6.0.0"
   dependencies:
-    postcss-selector-parser: ^6.0.6
+    postcss-selector-parser: ^6.0.10
   peerDependencies:
     postcss: ^8.2.14
-  checksum: dbcbfd11e514f485ac0d2b649b32bcbd855665a88a76f697f8be6c5017aa0260954ecccd2475bbd5865a5d248eae9a4e6e10d2d51927621d05430381aa37e43b
+  checksum: 2105dc52cd19747058f1a46862c9e454b5a365ac2e7135fc1015d67a8fe98ada2a8d9ee578e90f7a093bd55d3994dd913ba5ff1d5e945b4ed9a8a2992ecc8f10
   languageName: node
   linkType: hard
 
-"postcss-selector-parser@npm:6.0.10, postcss-selector-parser@npm:^6.0.10, postcss-selector-parser@npm:^6.0.6":
+"postcss-selector-parser@npm:6.0.10, postcss-selector-parser@npm:^6.0.10":
   version: 6.0.10
   resolution: "postcss-selector-parser@npm:6.0.10"
   dependencies:
@@ -6380,9 +6393,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^3.1.8":
-  version: 3.1.8
-  resolution: "tailwindcss@npm:3.1.8"
+"tailwindcss@npm:^3.2.4":
+  version: 3.2.4
+  resolution: "tailwindcss@npm:3.2.4"
   dependencies:
     arg: ^5.0.2
     chokidar: ^3.5.3
@@ -6390,18 +6403,19 @@ __metadata:
     detective: ^5.2.1
     didyoumean: ^1.2.2
     dlv: ^1.1.3
-    fast-glob: ^3.2.11
+    fast-glob: ^3.2.12
     glob-parent: ^6.0.2
     is-glob: ^4.0.3
     lilconfig: ^2.0.6
+    micromatch: ^4.0.5
     normalize-path: ^3.0.0
     object-hash: ^3.0.0
     picocolors: ^1.0.0
-    postcss: ^8.4.14
+    postcss: ^8.4.18
     postcss-import: ^14.1.0
     postcss-js: ^4.0.0
     postcss-load-config: ^3.1.4
-    postcss-nested: 5.0.6
+    postcss-nested: 6.0.0
     postcss-selector-parser: ^6.0.10
     postcss-value-parser: ^4.2.0
     quick-lru: ^5.1.1
@@ -6411,7 +6425,7 @@ __metadata:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: 86480301fc6ae1e392c2aba8264ab425bd919078176b010fda724518a7c265e950da5f4120c69c9041509c318207985fa9d680b6f5021e23f8214135a61a54b6
+  checksum: ec187d180c722ec4f57537f2216c7b21269b525f12aaf353cea464d939c3e6286a1221eb3e1206e45d1f015f296171309ad4d9952899b0245cd07d9500a9401f
   languageName: node
   linkType: hard
 
