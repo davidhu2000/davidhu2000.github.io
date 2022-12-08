@@ -9,7 +9,7 @@ tags: ["technologies"]
 
 The common joke when it comes to programmers and personal projects is
 
-```
+```txt
 > Number of projects started: 100
 > Number of projects finished: OH! new idea for a project!
 > Number of projects started: 101

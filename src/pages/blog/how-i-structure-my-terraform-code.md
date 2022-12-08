@@ -143,7 +143,7 @@ module "api_service" {
 
 To summarize how the modules are setup,
 
-```
+```tree
 # module repo
 ├── main.tf
 ├── variables.tf
