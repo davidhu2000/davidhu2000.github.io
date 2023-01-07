@@ -36,8 +36,7 @@ jobs:
         uses: actions/deploy-pages@v1
 
   e2e:
-    # if: ${{ github.event_name != 'pull_request' }}
-    # needs: [deploy]
+    needs: [deploy]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
