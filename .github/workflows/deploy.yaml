@@ -32,7 +32,7 @@ jobs:
 
   deploy:
     if: ${{ github.event_name != 'pull_request' }}
-    needs: build
+    needs: [build, format]
     runs-on: ubuntu-latest
     environment:
       name: github-pages
