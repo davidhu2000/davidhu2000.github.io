@@ -749,9 +749,7 @@ __metadata:
     "@trivago/prettier-plugin-sort-imports": ^4.0.0
     astro: ^1.9.1
     astro-icon: ^0.8.0
-    axe-core: ^4.6.2
     cypress: ^12.3.0
-    cypress-axe: ^1.2.0
     mdast-util-to-string: ^3.1.0
     prettier: ^2.8.1
     reading-time: ^1.5.0
@@ -1698,13 +1696,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axe-core@npm:^4.6.2":
-  version: 4.6.2
-  resolution: "axe-core@npm:4.6.2"
-  checksum: 81523eeaf101a3a129545a936d448d235ecf1f8c0daccdee224d29f63bec716fa38cf1a65c8462548b1f995624277eed790d9d9977ae40ba692c4cadf1196403
-  languageName: node
-  linkType: hard
-
 "bail@npm:^2.0.0":
   version: 2.0.2
   resolution: "bail@npm:2.0.2"
@@ -2329,16 +2320,6 @@ __metadata:
   dependencies:
     css-tree: ^1.1.2
   checksum: 380ba9663da3bcea58dee358a0d8c4468bb6539be3c439dc266ac41c047217f52fd698fb7e4b6b6ccdfb8cf53ef4ceed8cc8ceccb8dfca2aa628319826b5b998
-  languageName: node
-  linkType: hard
-
-"cypress-axe@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "cypress-axe@npm:1.2.0"
-  peerDependencies:
-    axe-core: ^3 || ^4
-    cypress: ^10 || ^11 || ^12
-  checksum: 25930a8d4a1161e2f812a3bd34a6d6a79661612c544ef68363843df806832b3c10696bd0dc7d3d15dc17644f61dd59545c17906615ab5505089f83ac0c86656a
   languageName: node
   linkType: hard
 
