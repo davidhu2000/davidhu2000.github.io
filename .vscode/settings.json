@@ -19,5 +19,11 @@
       "scheme": "file",
       "pattern": "src/pages/blog/*.{md,mdx}"
     }
-  ]
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
