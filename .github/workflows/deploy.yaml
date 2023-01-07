@@ -18,10 +18,15 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
-      - name: Install, build, and upload your site
-        uses: withastro/action@v0
+
+      - uses: actions/setup-node@v3
         with:
           node-version: "18"
+          cache: "yarn"
+      # - name: Install, build, and upload your site
+      #   uses: withastro/action@v0
+      #   with:
+      #     node-version: "18"
 
   deploy:
     if: ${{ github.event_name != 'pull_request' }}
