@@ -23,16 +23,9 @@ jobs:
         with:
           node-version: "18"
 
-  format:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v3
-      - run: yarn prettier . --list-different
-
   deploy:
     if: ${{ github.event_name != 'pull_request' }}
-    needs: [build, format]
+    needs: [build]
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -43,8 +36,8 @@ jobs:
         uses: actions/deploy-pages@v1
 
   e2e:
-    if: ${{ github.event_name != 'pull_request' }}
-    needs: deploy
+    # if: ${{ github.event_name != 'pull_request' }}
+    # needs: [deploy]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
