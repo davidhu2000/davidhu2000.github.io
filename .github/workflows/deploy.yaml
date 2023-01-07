@@ -19,6 +19,7 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
 
+      # TODO: pull node version from .node-version file
       - uses: actions/setup-node@v3
         with:
           node-version: "18"
