@@ -57,7 +57,6 @@ export default defineConfig({
   ],
   markdown: {
     syntaxHighlight: false,
-    extendDefaultPlugins: true,
     // TODO: this plugin does not work for mdx files, need to figure out why
     rehypePlugins: [[rehypePrettyCode, options]],
     remarkPlugins: [remarkReadingTime],

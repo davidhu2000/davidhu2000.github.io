@@ -1,12 +1,12 @@
-import rss from "@astrojs/rss";
+import rss, { pagesGlobToRssItems } from "@astrojs/rss";
 
 import { SITE } from "../config";
 
-export const get = () => {
+export async function get() {
   return rss({
     title: SITE.name,
     description: SITE.description,
     site: import.meta.env.SITE,
-    items: import.meta.glob("./blog/**/*.{md,mdx}"),
+    items: await pagesGlobToRssItems(import.meta.glob("./blog/*.{md,mdx}")),
   });
-};
+}
