@@ -36,9 +36,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/image@npm:^0.14.1":
-  version: 0.14.1
-  resolution: "@astrojs/image@npm:0.14.1"
+"@astrojs/image@npm:^0.16.0":
+  version: 0.16.0
+  resolution: "@astrojs/image@npm:0.16.0"
   dependencies:
     "@altano/tiny-async-pool": ^1.0.2
     http-cache-semantics: ^4.1.0
@@ -47,12 +47,12 @@ __metadata:
     magic-string: ^0.27.0
     mime: ^3.0.0
   peerDependencies:
-    astro: ^2.0.7
+    astro: ^2.1.0
     sharp: ">=0.31.0"
   peerDependenciesMeta:
     sharp:
       optional: true
-  checksum: a44e0805228018ea8666165b6d14dbc4ff478cb1ec2d7a2e824ce04005117ad503bb7616aeed94c279386505417b155af188137df374c44ea460c6ee1b7ad015
+  checksum: 8102eb20cf963caa60f3bbfb8ef4c32a6d46da9169a882e3ca17825b9ec442b4fb0cb61c2fe86ec801ca77a783f14f89ffee9711b952519252767ad92f2ebb16
   languageName: node
   linkType: hard
 
@@ -705,7 +705,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@davidhu/blog@workspace:."
   dependencies:
-    "@astrojs/image": ^0.14.1
+    "@astrojs/image": ^0.16.0
     "@astrojs/mdx": ^0.16.0
     "@astrojs/prefetch": ^0.1.2
     "@astrojs/rss": ^2.1.1
