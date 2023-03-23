@@ -8,6 +8,25 @@ import IconSun from "./icons/IconSun.astro";
 const {} = Astro.props;
 
 const githubUrl = "https://github.com/davidhu2000";
+
+const links = [
+  {
+    name: "Blog",
+    href: "/blog",
+  },
+  {
+    name: "Projects",
+    href: "/projects",
+  },
+  {
+    name: "About",
+    href: "/about",
+  },
+  {
+    name: "Contact",
+    href: "/contact",
+  },
+];
 ---
 
 <header
@@ -44,30 +63,19 @@ const githubUrl = "https://github.com/davidhu2000";
       <ul
         class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto text-xl md:text-base"
       >
-        <li>
-          <a
-            class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
-            href="/blog"
-          >
-            Blog
-          </a>
-        </li>
-        <li>
-          <a
-            class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
-            href="/about"
-          >
-            About
-          </a>
-        </li>
-        <li>
-          <a
-            class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
-            href="/contact"
-          >
-            Contact
-          </a>
-        </li>
+        {
+          links.map((link) => (
+            <li>
+              <a
+                class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                href={link.href}
+              >
+                {link.name}
+              </a>
+            </li>
+          ))
+        }
+
         <li class="md:hidden">
           <a
             target="_blank"
