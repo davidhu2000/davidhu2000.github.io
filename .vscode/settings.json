@@ -1,7 +1,7 @@
 {
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "editor.defaultFormatter": "astro-build.astro-vscode",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[mdx]": {
     "editor.wordWrap": "on",
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -13,17 +13,13 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "grammarly.selectors": [
-    {
-      "language": "markdown",
-      "scheme": "file",
-      "pattern": "src/pages/blog/*.{md,mdx}"
-    }
-  ],
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
