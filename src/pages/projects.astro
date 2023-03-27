@@ -6,8 +6,19 @@ import PageLayout from "../layouts/PageLayout.astro";
 
 const canonical = new URL(`projects`, Astro.site);
 
-const title = "Projects";
-const description = "My list of projects.";
+const title = "David Hu's Projects";
+const description = "The list of projects that David Hu has worked on.";
+
+interface GithubResponse {
+  stargazers_count: number;
+}
+
+const reactSpinners = await fetch("https://api.github.com/repos/davidhu2000/react-spinners").then(
+  (res) => res.json() as Promise<GithubResponse>
+);
+const kubeKnots = await fetch("https://api.github.com/repos/davidhu2000/kube-knots").then(
+  (res) => res.json() as Promise<GithubResponse>
+);
 ---
 
 <PageLayout meta={{ title, description, canonical }}>
@@ -55,7 +66,7 @@ const description = "My list of projects.";
             <div class="ml-4">
               <h3 class="font-medium dark:text-white leading-6 text-lg">Highlights</h3>
               <p class="text-muted mt-2">&gt;17 million downloads</p>
-              <p class="text-muted mt-2">&gt;2500 stars on github</p>
+              <p class="text-muted mt-2">{reactSpinners.stargazers_count} stars on github</p>
               <p class="text-muted mt-2">used by &gt;75000 repositories</p>
             </div>
           </div>
@@ -141,7 +152,7 @@ const description = "My list of projects.";
             <div class="ml-4">
               <h3 class="font-medium dark:text-white leading-6 text-lg">Highlights</h3>
               <p class="text-muted mt-2">Available on all macos, windows, and linux</p>
-              <p class="text-muted mt-2">1 star on github 😅</p>
+              <p class="text-muted mt-2">{kubeKnots.stargazers_count} stars on github 😅</p>
             </div>
           </div>
 

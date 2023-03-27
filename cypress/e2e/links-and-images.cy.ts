@@ -22,6 +22,10 @@ describe("links-and-images", () => {
       cy.get("img")
         .should(Cypress._.noop)
         .each((img) => {
+          if (img.prop("src").includes("data:image")) {
+            return;
+          }
+
           cy.request(img.prop("src"));
         })
         .then(() => {
@@ -39,6 +43,10 @@ describe("links-and-images", () => {
               }
 
               if (url.includes("mailto:")) {
+                return;
+              }
+
+              if (url.endsWith(".msi")) {
                 return;
               }
 
