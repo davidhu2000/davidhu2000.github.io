@@ -12,7 +12,7 @@
     "ui": "yarn upgrade-interactive"
   },
   "devDependencies": {
-    "@astrojs/image": "^0.14.1",
+    "@astrojs/image": "^0.16.8",
     "@astrojs/mdx": "^0.16.0",
     "@astrojs/prefetch": "^0.1.2",
     "@astrojs/rss": "^2.1.1",
