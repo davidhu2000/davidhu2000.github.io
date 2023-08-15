@@ -36,23 +36,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/image@npm:^0.14.1":
-  version: 0.14.1
-  resolution: "@astrojs/image@npm:0.14.1"
+"@astrojs/image@npm:^0.17.3":
+  version: 0.17.3
+  resolution: "@astrojs/image@npm:0.17.3"
   dependencies:
     "@altano/tiny-async-pool": ^1.0.2
-    http-cache-semantics: ^4.1.0
+    http-cache-semantics: ^4.1.1
     image-size: ^1.0.2
     kleur: ^4.1.5
-    magic-string: ^0.27.0
+    magic-string: ^0.30.2
     mime: ^3.0.0
   peerDependencies:
-    astro: ^2.0.7
+    astro: ^2.10.0
     sharp: ">=0.31.0"
   peerDependenciesMeta:
     sharp:
       optional: true
-  checksum: a44e0805228018ea8666165b6d14dbc4ff478cb1ec2d7a2e824ce04005117ad503bb7616aeed94c279386505417b155af188137df374c44ea460c6ee1b7ad015
+  checksum: b65e53505e619a6b28c668fb4b9d76a9b4a6b71084ca9bab62d9d5ef35e3f81b20e8640090743a094cfd4923ca997eb92c68c23f83fc382a3e0233a2abf68324
   languageName: node
   linkType: hard
 
@@ -705,7 +705,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@davidhu/blog@workspace:."
   dependencies:
-    "@astrojs/image": ^0.14.1
+    "@astrojs/image": ^0.17.3
     "@astrojs/mdx": ^0.16.0
     "@astrojs/prefetch": ^0.1.2
     "@astrojs/rss": ^2.1.1
@@ -950,6 +950,13 @@ __metadata:
   version: 1.4.14
   resolution: "@jridgewell/sourcemap-codec@npm:1.4.14"
   checksum: 61100637b6d173d3ba786a5dff019e1a74b1f394f323c1fee337ff390239f053b87266c7a948777f4b1ee68c01a8ad0ab61e5ff4abb5a012a0b091bec391ab97
+  languageName: node
+  linkType: hard
+
+"@jridgewell/sourcemap-codec@npm:^1.4.15":
+  version: 1.4.15
+  resolution: "@jridgewell/sourcemap-codec@npm:1.4.15"
+  checksum: b881c7e503db3fc7f3c1f35a1dd2655a188cc51a3612d76efc8a6eb74728bef5606e6758ee77423e564092b4a518aba569bbb21c9bac5ab7a35b0c6ae7e344c8
   languageName: node
   linkType: hard
 
@@ -3641,7 +3648,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"http-cache-semantics@npm:^4.1.0":
+"http-cache-semantics@npm:^4.1.0, http-cache-semantics@npm:^4.1.1":
   version: 4.1.1
   resolution: "http-cache-semantics@npm:4.1.1"
   checksum: 83ac0bc60b17a3a36f9953e7be55e5c8f41acc61b22583060e8dedc9dd5e3607c823a88d0926f9150e571f90946835c7fe150732801010845c72cd8bbff1a236
@@ -4330,6 +4337,15 @@ __metadata:
   dependencies:
     "@jridgewell/sourcemap-codec": ^1.4.13
   checksum: 273faaa50baadb7a2df6e442eac34ad611304fc08fe16e24fe2e472fd944bfcb73ffb50d2dc972dc04e92784222002af46868cb9698b1be181c81830fd95a13e
+  languageName: node
+  linkType: hard
+
+"magic-string@npm:^0.30.2":
+  version: 0.30.2
+  resolution: "magic-string@npm:0.30.2"
+  dependencies:
+    "@jridgewell/sourcemap-codec": ^1.4.15
+  checksum: c0bbb9b27b2772e6bfaa5d0f6452d47c462d588ae7c43fbaac062b07836d3ec0140fcdd42a57aa53ed990abafcdd0fc17907813921b5df04eccf43e67674bc57
   languageName: node
   linkType: hard
 
