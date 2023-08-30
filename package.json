@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@astrojs/image": "^0.14.1",
-    "@astrojs/mdx": "^0.16.0",
+    "@astrojs/mdx": "^1.0.0",
     "@astrojs/prefetch": "^0.1.2",
     "@astrojs/rss": "^2.1.1",
     "@astrojs/sitemap": "^1.0.1",
