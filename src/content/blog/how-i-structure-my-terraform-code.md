@@ -3,7 +3,7 @@ layout: "../../layouts/BlogPost.astro"
 title: "How I Structure My Terraform Code"
 description: "Infrastructure as code is awesome! Here's how I utilize it"
 pubDate: "2022-09-27"
-heroImage: "./src/assets/blog/how-i-structure-my-terraform-code/hero-image.jpg"
+heroImage: "../../assets/blog/how-i-structure-my-terraform-code/hero-image.jpg"
 tags: ["technologies", "infrastructure"]
 ---
 

@@ -1,8 +1,8 @@
 ---
-import { getPosts } from "../helpers/getPosts";
-import Picture from "./Picture.astro";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 
-const posts = getPosts().slice(0, 4);
+const posts = (await getCollection("blog")).slice(0, 4);
 ---
 
 <section class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
@@ -19,20 +19,17 @@ const posts = getPosts().slice(0, 4);
     {
       posts.map((post) => (
         <article class="mb-6 transition">
-          <a href={post.url} rel="prefetch" class="p-0 group flex-col">
-            <Picture
-              src={post.frontmatter.heroImage}
+          <a href={`/blog/${post.slug}`} rel="prefetch" class="p-0 group flex-col">
+            <Image
+              src={post.data.heroImage}
               class="object-cover w-full h-64 mb-6 rounded shadow-lg group-hover:ring-4 group-hover:ring-sky-400 dark:group-hover:ring-sky-500 transition ease-in duration-300"
-              widths={[400]}
-              alt={post.frontmatter.title}
-              aspectRatio="16:9"
+              alt={post.data.title}
             />
-
             <h3 class="mb-2 text-xl font-bold leading-snug sm:text-2xl font-heading group-hover:text-sky-500 dark:group-hover:text-sky-400 transition ease-in duration-300">
-              {post.frontmatter.title}
+              {post.data.title}
             </h3>
           </a>
-          <p class="text-gray-700 dark:text-gray-400">{post.frontmatter.description}</p>
+          <p class="text-gray-700 dark:text-gray-400">{post.data.description}</p>
         </article>
       ))
     }

@@ -1,30 +1,35 @@
 ---
+import { Image } from "astro:assets";
 import { formatDate } from "../helpers/formatDate";
-import Picture from "./Picture.astro";
 import PostTags from "./PostTags.astro";
+import { getEntry } from "astro:content";
 
-const { post } = Astro.props;
+interface Props {
+  slug: string;
+}
 
-const { frontmatter } = post;
+const post = await getEntry("blog", Astro.props.slug);
+
+if (!post) {
+  return;
+}
+
+const { data } = post;
 
 const maxLength = 340;
-let { description } = frontmatter;
 
-if (description.length > maxLength) {
-  description = `${description.slice(0, maxLength)}...`;
+if (data.description.length > maxLength) {
+  data.description = `${data.description.slice(0, maxLength)}...`;
 }
 ---
 
 <article class="max-w-md mx-auto md:max-w-none grid md:grid-cols-2 gap-6 md:gap-8 group">
-  <a class="relative block" href={post.url} rel="prefetch">
+  <a class="relative block" href={`/blog/${post.slug}`} rel="prefetch">
     <div class="relative h-0 pb-[56.25%] md:pb-[75%] md:h-80 lg:pb-[56.25%] rounded shadow-lg">
-      <Picture
-        src={frontmatter.heroImage}
+      <Image
+        src={data.heroImage}
+        alt={data.description}
         class="absolute inset-0 w-full h-full object-cover mb-6 rounded shadow-lg group-hover:ring-4 group-hover:ring-sky-400 dark:group-hover:ring-sky-500 transition ease-in duration-300"
-        widths={[400, 768]}
-        sizes="(max-width: 767px) 400px, 768px"
-        alt={post.description}
-        aspectRatio={1}
       />
     </div>
   </a>
@@ -33,26 +38,24 @@ if (description.length > maxLength) {
       <h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
         <a
           class="group-hover:text-primary-600 decoration-1 transition ease-in duration-300 group-hover:text-sky-500 dark:group-hover:text-sky-400"
-          href={post.url}
+          href={`/blog/${post.slug}`}
           rel="prefetch"
         >
-          {frontmatter.title}
+          {data.title}
         </a>
       </h2>
     </header>
     <p class="text-md sm:text-lg flex-grow">
-      {description}
+      {data.description}
     </p>
     <footer class="mt-4">
       <div>
         <span class="text-gray-500 dark:text-slate-400">
-          <time datetime={frontmatter.pubDate}>{formatDate(frontmatter.pubDate)}</time> ~ {
-            frontmatter.readingTime
-          }
+          <time datetime={data.pubDate}>{formatDate(data.pubDate)}</time> ~ {data.readingTime}
         </span>
       </div>
       <div class="mt-4">
-        <PostTags tags={frontmatter.tags} />
+        <PostTags tags={data.tags} />
       </div>
     </footer>
   </div>

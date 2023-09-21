@@ -1,28 +1,25 @@
 ---
-import Picture from "../components/Picture.astro";
+import { Image } from "astro:assets";
 import PostTags from "../components/PostTags.astro";
 import { formatDate } from "../helpers/formatDate";
-import type { IPostFrontmatter } from "../helpers/frontmatter";
-import { getPosts } from "../helpers/getPosts";
 import PageLayout from "../layouts/PageLayout.astro";
+import { CollectionEntry } from "astro:content";
 
-interface Props {
-  content: IPostFrontmatter & { url: string };
-}
+type Props = CollectionEntry<"blog">;
+const post = Astro.props;
 
-const {
-  content: { title, description, pubDate, heroImage, url, readingTime, file, tags },
-} = Astro.props as Props;
+console.log(Astro.props);
 
 const tweetLink = `https://twitter.com/intent/tweet?url=
  ${encodeURIComponent(Astro.request.url)}
-&text=${encodeURIComponent(`I just read "${title}" by @notdavidhu\n\n`)}`;
+&text=${encodeURIComponent(`I just read "${post.data.title}" by @notdavidhu\n\n`)}`;
 
-const fileExtension = file.split(".").pop();
+console.log(post);
+const fileExtension = post.id.split(".").pop();
 
 const githubLink = `https://github.com/davidhu2000/davidhu2000.github.io/blob/main/src/pages${url}.${fileExtension}`;
 
-const posts = getPosts();
+const posts = [];
 
 const currentPostIndex = posts.findIndex(
   (post) => post.frontmatter.title === title && post.frontmatter.description === description
@@ -33,7 +30,9 @@ posts.splice(currentPostIndex, 1);
 const otherPosts = posts.slice(-3);
 ---
 
-<PageLayout meta={{ title, description, image: heroImage }}>
+<PageLayout
+  meta={{ title: post.data.title, description: post.data.description, image: post.data.heroImage }}
+>
   <main>
     <section class="py-8 sm:py-16 lg:py-20 mx-auto">
       <article>
@@ -51,13 +50,10 @@ const otherPosts = posts.slice(-3);
           <PostTags tags={tags} class="flex justify-center" />
         </header>
 
-        <Picture
+        <Image
           src={heroImage}
-          class="max-w-full lg:max-w-6xl mx-auto mt-4 mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
-          widths={[400, 900]}
-          sizes="(max-width: 900px) 400px, 900px"
           alt="Blog Hero Image"
-          aspectRatio="16:9"
+          class="max-w-full lg:max-w-6xl mx-auto mt-4 mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
         />
 
         <div
@@ -90,13 +86,10 @@ const otherPosts = posts.slice(-3);
                     index === otherPosts.length - 1 ? "hidden" : ""
                   }`}
                 >
-                  <Picture
+                  <Image
                     src={post.frontmatter.heroImage}
-                    class="rounded-md bg-gray-400 dark:bg-slate-700 group-hover:ring-4 group-hover:ring-sky-400 dark:group-hover:ring-sky-500 transition ease-in duration-300"
-                    widths={[200]}
-                    sizes="(max-width: 900px) 400px, 900px"
                     alt="Next Blog Hero Image"
-                    aspectRatio="16:9"
+                    class="rounded-md bg-gray-400 dark:bg-slate-700 group-hover:ring-4 group-hover:ring-sky-400 dark:group-hover:ring-sky-500 transition ease-in duration-300"
                   />
                   <span class="block mt-2">{post.frontmatter.title}</span>
                 </a>

@@ -21,7 +21,7 @@ const { title, page } = Astro.props;
     {
       page.data.map((post) => (
         <li class="mb-10 md:mb-16">
-          <BlogListItem post={post} />
+          <BlogListItem slug={post.slug} />
         </li>
       ))
     }

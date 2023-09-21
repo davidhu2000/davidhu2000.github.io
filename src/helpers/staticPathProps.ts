@@ -1,4 +1,4 @@
-import type { TPost } from "./getPosts";
+import { CollectionEntry } from "astro:content";
 
 export interface IPageProps {
   page: {
@@ -6,6 +6,7 @@ export interface IPageProps {
       prev?: string;
       next?: string;
     };
-    data: TPost[];
+    data: CollectionEntry<"blog">;
+    currentPage: number;
   };
 }

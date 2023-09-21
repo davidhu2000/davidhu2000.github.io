@@ -2,13 +2,15 @@
 import type { GetStaticPathsOptions } from "astro";
 
 import { SITE } from "../../config";
-import { getPosts } from "../../helpers/getPosts";
 import type { IPageProps } from "../../helpers/staticPathProps";
 import BlogList from "../../layouts/BlogList.astro";
 import PageLayout from "../../layouts/PageLayout.astro";
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-  const posts = getPosts();
+  const posts = (await getCollection("blog")).sort(
+    (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+  );
 
   return paginate(posts, {
     pageSize: SITE.postsPerPage,
@@ -16,7 +18,6 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 }
 
 interface Props extends IPageProps {}
-
 const { page } = Astro.props;
 
 const currentPage = page.currentPage ?? 1;

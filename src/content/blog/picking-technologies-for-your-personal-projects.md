@@ -1,9 +1,9 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: "../../../layouts/BlogPost.astro"
 title: "How to pick technologies for your personal projects?"
 description: "My take on how to pick what to use for your personal projects"
 pubDate: "2022-09-14"
-heroImage: "./src/assets/blog/picking-technologies-for-your-personal-projects/hero-image.png"
+heroImage: "../../assets/blog/picking-technologies-for-your-personal-projects/hero-image.png"
 tags: ["technologies"]
 ---
 

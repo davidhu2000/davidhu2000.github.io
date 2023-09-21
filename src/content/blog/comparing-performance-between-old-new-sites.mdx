@@ -1,9 +1,9 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: "../../../layouts/BlogPost.astro"
 title: "Comparing Performance Between Old & New Sites"
 description: "Taking a closer look at the performance between the two sites. The result may or may not shock you, but probably won't."
 pubDate: "2022-09-05"
-heroImage: "./src/assets/blog/comparing-performance-between-old-new-sites/hero-image.webp"
+heroImage: "../../assets/blog/comparing-performance-between-old-new-sites/hero-image.webp"
 tags: ["astro", "web-performance"]
 ---
 
@@ -51,13 +51,11 @@ AstroJS is a huge part of the performance gain, but also reworking/optimizing th
 
 In any case, the numbers are just:
 
-import Picture from "../../components/Picture.astro";
+import { Image } from "astro:assets";
+import wowImage from "../../assets/blog/comparing-performance-between-old-new-sites/wow.webp";
 
-<Picture
-  src="./src/assets/blog/comparing-performance-between-old-new-sites/wow.webp"
-  class="max-w-full lg:max-w-6xl mx-auto mt-4 mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
-  widths={[400, 720]}
-  sizes="(max-width: 720px) 400px, 720px"
-  alt="wow!"
-  aspectRatio="16:9"
+<Image
+  alt="Wow!"
+  src={wowImage}
+  class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full dark:brightness-75"
 />

@@ -1,9 +1,11 @@
 ---
 import Icon from "astro-icon";
 
-import Picture from "../components/Picture.astro";
 import PageLayout from "../layouts/PageLayout.astro";
-
+import { Image } from "astro:assets";
+import reactSpinnersScreenshot from "../assets/main/project-react-spinners.png";
+import kubeKnotsDark from "../assets/main/project-kube-knots-dark.png";
+import kubeKnotsLight from "../assets/main/project-kube-knots-light.png";
 const canonical = new URL(`projects`, Astro.site);
 
 const title = "David Hu's Projects";
@@ -106,13 +108,10 @@ const kubeKnots = await fetch("https://api.github.com/repos/davidhu2000/kube-kno
         </div>
 
         <div>
-          <Picture
-            src="./src/assets/main/project-react-spinners.png"
-            class="opacity-90 rounded-lg shadow-lg"
-            widths={[400, 768]}
-            sizes="(max-width: 767px) 400px, 768px"
+          <Image
+            src={reactSpinnersScreenshot}
             alt="React spinners"
-            aspectRatio={1.15625}
+            class="opacity-90 rounded-lg shadow-lg"
           />
         </div>
       </div>
@@ -141,8 +140,8 @@ const kubeKnots = await fetch("https://api.github.com/repos/davidhu2000/kube-kno
                 A desktop application for managing Kubernetes clusters, built using rust and
                 reactJS.
                 <br />
-                This application is deployed to all major platforms, including Windows, Mac (Apple Silicon
-                and Intel), and Linux.
+                 This application is deployed to all major platforms, including Windows, Mac (Apple
+                Silicon and Intel), and Linux.
               </p>
             </div>
           </div>
@@ -192,21 +191,15 @@ const kubeKnots = await fetch("https://api.github.com/repos/davidhu2000/kube-kno
         </div>
 
         <div>
-          <Picture
-            src="./src/assets/main/project-kube-knots-dark.png"
+          <Image
+            src={kubeKnotsDark}
+            alt="Kube Knots"
             class="opacity-90 rounded-lg shadow-lg hidden dark:block"
-            widths={[400, 768]}
-            sizes="(max-width: 767px) 400px, 768px"
-            alt="Kube Knots"
-            aspectRatio={1.3}
           />
-          <Picture
-            src="./src/assets/main/project-kube-knots-light.png"
-            class="opacity-90 rounded-lg shadow-lg dark:hidden"
-            widths={[400, 768]}
-            sizes="(max-width: 767px) 400px, 768px"
+          <Image
+            src={kubeKnotsLight}
             alt="Kube Knots"
-            aspectRatio={1.3}
+            class="opacity-90 rounded-lg shadow-lg dark:hidden"
           />
         </div>
       </div>

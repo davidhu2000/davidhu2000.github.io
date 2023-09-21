@@ -1,9 +1,9 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: "../../../layouts/BlogPost.astro"
 title: "First Post on My New Blog"
 description: "How did I like using Astro to rebuild my personal site?"
 pubDate: "2022-08-30"
-heroImage: "./src/assets/blog/first-post-on-my-new-blog/hero-image.webp"
+heroImage: "../../assets/blog/first-post-on-my-new-blog/hero-image.webp"
 tags: ["astro", "web-performance"]
 ---
 

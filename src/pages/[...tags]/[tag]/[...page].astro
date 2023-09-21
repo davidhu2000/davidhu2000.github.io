@@ -2,20 +2,23 @@
 import type { GetStaticPathsOptions } from "astro";
 
 import { SITE } from "../../../config";
-import { getPosts } from "../../../helpers/getPosts";
-import { getTags } from "../../../helpers/getTags";
+
 import type { IPageProps } from "../../../helpers/staticPathProps";
 import BlogList from "../../../layouts/BlogList.astro";
 import PageLayout from "../../../layouts/PageLayout.astro";
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-  const posts = getPosts();
+  const posts = await getCollection("blog");
 
-  const tags = getTags(posts);
+  const tags = new Set<string>();
+  posts.forEach((post) => {
+    post.data.tags.forEach((tag) => tags.add(tag.toLowerCase()));
+  });
 
-  return tags.map((tag) => {
+  return Array.from(tags).flatMap((tag) => {
     return paginate(
-      posts.filter((post) => post.frontmatter.tags.includes(tag)),
+      posts.filter((post) => post.data.tags.includes(tag)),
       {
         params: { tag, tags: "tag" },
         pageSize: SITE.postsPerPage,
