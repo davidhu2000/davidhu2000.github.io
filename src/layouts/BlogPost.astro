@@ -84,16 +84,17 @@ const otherPosts = posts.slice(-3);
               otherPosts.map((post, index) => (
                 <a
                   href={post.url}
-                  class={`mt-2 pointer link group duration-300 flex-col md:block text-center w-12 ${
+                  class={`mt-2 pointer link group duration-300 flex-col md:block text-center ${
                     index === otherPosts.length - 1 ? "hidden" : ""
                   }`}
                 >
-                  <Image
-                    src={post.frontmatter.heroImageMetadata}
-                    class="rounded-md bg-gray-400 dark:bg-slate-700 group-hover:ring-4 group-hover:ring-sky-400 dark:group-hover:ring-sky-500 transition ease-in duration-300"
-                    sizes="(max-width: 900px) 400px, 900px"
-                    alt="Next Blog Hero Image"
-                  />
+                  <div class="flex w-52 h-32 rounded-md overflow-hidden">
+                    <Image
+                      src={post.frontmatter.heroImageMetadata}
+                      class="object-fill rounded-md bg-gray-400 dark:bg-slate-700 group-hover:ring-4 group-hover:ring-sky-400 dark:group-hover:ring-sky-500 transition ease-in duration-300"
+                      alt="Next Blog Hero Image"
+                    />
+                  </div>
                   <span class="block mt-2">{post.frontmatter.title}</span>
                 </a>
               ))
