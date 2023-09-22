@@ -1,6 +1,6 @@
 /* code blocks: default styles */
 pre {
-  /* padding: 1.5rem 1rem !important; */
+  padding: 1.5rem 1rem !important;
   position: relative;
 }
 
@@ -33,9 +33,6 @@ code .line {
 
 /* code blocks: line number styles */
 code {
-  /* counter-increment: line; */
-  /* content: counter(line); */
-  /* color: red; */
   counter-reset: line;
 }
 
