@@ -7,27 +7,13 @@ import rehypePrettyCode from "rehype-pretty-code";
 
 import { remarkReadingTime } from "./plugins/remark-reading-time.mjs";
 
-async function fetchTheme(name) {
-  const res = await fetch(
-    `https://raw.githubusercontent.com/shikijs/shiki/main/packages/shiki/themes/${name}.json`
-  );
-  return await res.json();
-}
-
-const dark = await fetchTheme("github-dark");
-
-console.log("successfully fetched dark theme");
-
-const light = await fetchTheme("min-light");
-
-console.log("successfully fetched light theme");
-
 /** @type {import('rehype-pretty-code').Options} */
 const options = {
   theme: {
-    dark,
-    light,
+    dark: "github-dark",
+    light: "min-light",
   },
+  keepBackground: false,
   onVisitLine(node) {
     // Prevent lines from collapsing in `display: grid` mode, and
     // allow empty lines to be copy/pasted
