@@ -1,5 +1,5 @@
 ---
-import Picture from "../components/Picture.astro";
+import { Image } from "astro:assets";
 import PostTags from "../components/PostTags.astro";
 import { formatDate } from "../helpers/formatDate";
 import type { IPostFrontmatter } from "../helpers/frontmatter";
@@ -11,7 +11,7 @@ interface Props {
 }
 
 const {
-  content: { title, description, pubDate, heroImage, url, readingTime, file, tags },
+  content: { title, description, pubDate, heroImage, heroImageMetadata, url, readingTime, file, tags },
 } = Astro.props as Props;
 
 const tweetLink = `https://twitter.com/intent/tweet?url=
@@ -51,13 +51,11 @@ const otherPosts = posts.slice(-3);
           <PostTags tags={tags} class="flex justify-center" />
         </header>
 
-        <Picture
-          src={heroImage}
+        <Image
+          src={heroImageMetadata}
           class="max-w-full lg:max-w-6xl mx-auto mt-4 mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
-          widths={[400, 900]}
           sizes="(max-width: 900px) 400px, 900px"
           alt="Blog Hero Image"
-          aspectRatio="16:9"
         />
 
         <div
@@ -90,14 +88,13 @@ const otherPosts = posts.slice(-3);
                     index === otherPosts.length - 1 ? "hidden" : ""
                   }`}
                 >
-                  <Picture
-                    src={post.frontmatter.heroImage}
-                    class="rounded-md bg-gray-400 dark:bg-slate-700 group-hover:ring-4 group-hover:ring-sky-400 dark:group-hover:ring-sky-500 transition ease-in duration-300"
-                    widths={[200]}
-                    sizes="(max-width: 900px) 400px, 900px"
-                    alt="Next Blog Hero Image"
-                    aspectRatio="16:9"
-                  />
+                  <div class="flex w-52 h-32 rounded-md overflow-hidden">
+                    <Image
+                      src={post.frontmatter.heroImageMetadata}
+                      class="object-fill rounded-md bg-gray-400 dark:bg-slate-700 group-hover:ring-4 group-hover:ring-sky-400 dark:group-hover:ring-sky-500 transition ease-in duration-300"
+                      alt="Next Blog Hero Image"
+                    />
+                  </div>
                   <span class="block mt-2">{post.frontmatter.title}</span>
                 </a>
               ))

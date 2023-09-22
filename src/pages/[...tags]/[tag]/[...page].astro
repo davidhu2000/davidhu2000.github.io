@@ -13,7 +13,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 
   const tags = getTags(posts);
 
-  return tags.map((tag) => {
+  return tags.flatMap((tag) => {
     return paginate(
       posts.filter((post) => post.frontmatter.tags.includes(tag)),
       {

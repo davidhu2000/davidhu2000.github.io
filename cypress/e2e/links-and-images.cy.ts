@@ -46,7 +46,13 @@ describe("links-and-images", () => {
                 return;
               }
 
-              if (url.endsWith(".msi")) {
+              // don't download any files
+              if (
+                url.endsWith(".msi") ||
+                url.endsWith(".dmg") ||
+                url.endsWith(".AppImage") ||
+                url.endsWith(".deb")
+              ) {
                 return;
               }
 
@@ -55,6 +61,8 @@ describe("links-and-images", () => {
               if (url.includes(".xml")) {
                 return;
               }
+
+              cy.log('>>>> Adding "' + url + '" to pages to test');
               if (url.includes("davidhu.io/") && !testedPages.has(url)) {
                 pagesToTest.push(url);
               }
@@ -64,9 +72,5 @@ describe("links-and-images", () => {
     }
 
     visitUrlsOnPage();
-
-    // cy.log(pagesToTest);
-    // cy.log(testedPages);
-    // }
   });
 });

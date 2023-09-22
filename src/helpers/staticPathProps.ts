@@ -7,5 +7,6 @@ export interface IPageProps {
       next?: string;
     };
     data: TPost[];
+    currentPage: number;
   };
 }
