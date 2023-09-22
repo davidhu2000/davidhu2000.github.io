@@ -1,6 +1,6 @@
 ---
+import { Image } from "astro:assets";
 import { formatDate } from "../helpers/formatDate";
-import Picture from "./Picture.astro";
 import PostTags from "./PostTags.astro";
 
 const { post } = Astro.props;
@@ -18,13 +18,12 @@ if (description.length > maxLength) {
 <article class="max-w-md mx-auto md:max-w-none grid md:grid-cols-2 gap-6 md:gap-8 group">
   <a class="relative block" href={post.url} rel="prefetch">
     <div class="relative h-0 pb-[56.25%] md:pb-[75%] md:h-80 lg:pb-[56.25%] rounded shadow-lg">
-      <Picture
-        src={frontmatter.heroImage}
+      <Image
+        src={frontmatter.heroImageMetadata}
         class="absolute inset-0 w-full h-full object-cover mb-6 rounded shadow-lg group-hover:ring-4 group-hover:ring-sky-400 dark:group-hover:ring-sky-500 transition ease-in duration-300"
-        widths={[400, 768]}
+        alt={description}
         sizes="(max-width: 767px) 400px, 768px"
-        alt={post.description}
-        aspectRatio={1}
+      
       />
     </div>
   </a>

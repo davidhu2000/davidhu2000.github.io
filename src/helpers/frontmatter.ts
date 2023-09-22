@@ -1,3 +1,5 @@
+import type { ImageMetadata } from "astro";
+
 export interface IPostFrontmatter {
   layout: string;
   title: string;
@@ -7,4 +9,5 @@ export interface IPostFrontmatter {
   tags: string[];
   readingTime: string;
   file: string;
+  heroImageMetadata: ImageMetadata;
 }
