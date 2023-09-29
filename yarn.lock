@@ -513,7 +513,7 @@ __metadata:
     "@astrojs/tailwind": ^5.0.0
     "@tailwindcss/typography": ^0.5.10
     "@trivago/prettier-plugin-sort-imports": ^4.2.0
-    astro: ^3.1.2
+    astro: ^3.2.0
     astro-icon: ^0.8.1
     cypress: ^13.2.0
     mdast-util-to-string: ^4.0.0
@@ -1457,9 +1457,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^3.1.2":
-  version: 3.1.2
-  resolution: "astro@npm:3.1.2"
+"astro@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "astro@npm:3.2.0"
   dependencies:
     "@astrojs/compiler": ^2.1.0
     "@astrojs/internal-helpers": 0.2.0
@@ -1523,7 +1523,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 65756745f56744459c52d39e65903460ca53121fd0f0710e23801ab36be84994c7c7579cd94f56091ba3be3b93e031626345f6e08fea053913493dad9da2c3f0
+  checksum: 0950a6daa296909c6a0ca2a9706c41bf2d794872b8bc70fb59c6fd845a51908b0241c2122865d695d532ce637911659ec5c483452acfb9d4f29b06173806cd50
   languageName: node
   linkType: hard
 
