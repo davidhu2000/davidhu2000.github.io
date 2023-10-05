@@ -85,12 +85,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/prefetch@npm:^0.4.0":
-  version: 0.4.0
-  resolution: "@astrojs/prefetch@npm:0.4.0"
+"@astrojs/prefetch@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "@astrojs/prefetch@npm:0.4.1"
   dependencies:
     throttles: ^1.0.1
-  checksum: 0243e469838bc094d73f8e291896bd555cb464f807aeac0002d385fe8146a73e4d5d942121bbcc0d3d287976968b3ee419fdc6fdacff21b2ffe0a56f567478b0
+  checksum: 83bb0957fff80f9a0c9cb303ac2c3b8c87d4519f0879dc0cfbc02498303efcc92aacb9b1eb6091ad60048f2cb5cba12b94d688641fd9cc71672912a7d47e03ef
   languageName: node
   linkType: hard
 
@@ -507,7 +507,7 @@ __metadata:
   resolution: "@davidhu/blog@workspace:."
   dependencies:
     "@astrojs/mdx": ^1.1.0
-    "@astrojs/prefetch": ^0.4.0
+    "@astrojs/prefetch": ^0.4.1
     "@astrojs/rss": ^3.0.0
     "@astrojs/sitemap": ^3.0.0
     "@astrojs/tailwind": ^5.0.0
