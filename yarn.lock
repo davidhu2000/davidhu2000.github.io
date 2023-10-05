@@ -113,13 +113,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/sitemap@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@astrojs/sitemap@npm:3.0.0"
+"@astrojs/sitemap@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@astrojs/sitemap@npm:3.0.1"
   dependencies:
     sitemap: ^7.1.1
     zod: 3.21.1
-  checksum: 45c5371da74737c6ba651dd7502fd831543b069b9c73d537e8204411b3f72a2676db2a56d6e485c243f013aa90fc44218485b3bfef1f4aeeca3da33d34f5991c
+  checksum: 6e5455d800c3498357827bf13ec6eec36cf370b4b285cc0d04ad7db708c502a302fb54554717ffd4178136a9dd0bf4c1bb90f7d3c4679dda2368b1ed79e4c4d7
   languageName: node
   linkType: hard
 
@@ -509,7 +509,7 @@ __metadata:
     "@astrojs/mdx": ^1.1.0
     "@astrojs/prefetch": ^0.4.0
     "@astrojs/rss": ^3.0.0
-    "@astrojs/sitemap": ^3.0.0
+    "@astrojs/sitemap": ^3.0.1
     "@astrojs/tailwind": ^5.0.0
     "@tailwindcss/typography": ^0.5.10
     "@trivago/prettier-plugin-sort-imports": ^4.2.0
