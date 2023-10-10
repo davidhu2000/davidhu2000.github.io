@@ -29,10 +29,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/internal-helpers@npm:0.2.0":
-  version: 0.2.0
-  resolution: "@astrojs/internal-helpers@npm:0.2.0"
-  checksum: f0191b969f78091c9d01e48d85113ecf1fcd6060aa8f826e1ad80c399ac98b162fae15f96d544d56fd45546bb6073cb7efd496700eb4e2df282c991a9e0dbd05
+"@astrojs/internal-helpers@npm:0.2.1":
+  version: 0.2.1
+  resolution: "@astrojs/internal-helpers@npm:0.2.1"
+  checksum: 32cb7dc17f36742b1078b208430a6b75e3f7f341e815514af5be759de3701eb89d909db341bd030cc2342cca32fad5fa9447f27b81c7d120114723948ae9d59e
   languageName: node
   linkType: hard
 
@@ -57,6 +57,30 @@ __metadata:
   peerDependencies:
     astro: ^3.1.0
   checksum: f95f4df79a1f2ebf7ead1af60a0956ac620ce0bf8b8d5c4b360c4a800d5c8ba9c216480d8acfe5b037be68886eb84ed31b4cfc299fc6d7d664ccc2c7a6adb87b
+  languageName: node
+  linkType: hard
+
+"@astrojs/markdown-remark@npm:3.2.1":
+  version: 3.2.1
+  resolution: "@astrojs/markdown-remark@npm:3.2.1"
+  dependencies:
+    "@astrojs/prism": ^3.0.0
+    github-slugger: ^2.0.0
+    import-meta-resolve: ^3.0.0
+    mdast-util-definitions: ^6.0.0
+    rehype-raw: ^6.1.1
+    rehype-stringify: ^9.0.4
+    remark-gfm: ^3.0.1
+    remark-parse: ^10.0.2
+    remark-rehype: ^10.1.0
+    remark-smartypants: ^2.0.0
+    shiki: ^0.14.3
+    unified: ^10.1.2
+    unist-util-visit: ^4.1.2
+    vfile: ^5.3.7
+  peerDependencies:
+    astro: ^3.2.3
+  checksum: 666552212c8b661e47f93d846b5d83d18c4d17178436419bddcfc7145f1aa75933262ebfa7dfcdfa8c8eeda65fff12e41339af3bda77f47fb83a70f588654829
   languageName: node
   linkType: hard
 
@@ -137,9 +161,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/telemetry@npm:3.0.2":
-  version: 3.0.2
-  resolution: "@astrojs/telemetry@npm:3.0.2"
+"@astrojs/telemetry@npm:3.0.3":
+  version: 3.0.3
+  resolution: "@astrojs/telemetry@npm:3.0.3"
   dependencies:
     ci-info: ^3.8.0
     debug: ^4.3.4
@@ -147,9 +171,8 @@ __metadata:
     dset: ^3.1.2
     is-docker: ^3.0.0
     is-wsl: ^3.0.0
-    undici: ^5.23.0
     which-pm-runs: ^1.1.0
-  checksum: fb82228c5b501fe7cd672c822ef3cb1778392b27342e4ecc16828a7b90ecbc0725b88b6062411dba854d0869d125f4e4c8ff1217f8a211e7e9f2bba7898b3ba8
+  checksum: c87bb5a064bd4b155ea9b7aaebcb8ca00d8a626e072f9871829043e6cdf100e725e6af5cd9a4c0e819e3f3f779c785b1652f5ed9bee8266d6233a6abe889938a
   languageName: node
   linkType: hard
 
@@ -513,7 +536,7 @@ __metadata:
     "@astrojs/tailwind": ^5.0.0
     "@tailwindcss/typography": ^0.5.10
     "@trivago/prettier-plugin-sort-imports": ^4.2.0
-    astro: ^3.1.2
+    astro: ^3.2.4
     astro-icon: ^0.8.1
     cypress: ^13.2.0
     mdast-util-to-string: ^4.0.0
@@ -1457,14 +1480,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^3.1.2":
-  version: 3.1.2
-  resolution: "astro@npm:3.1.2"
+"astro@npm:^3.2.4":
+  version: 3.2.4
+  resolution: "astro@npm:3.2.4"
   dependencies:
     "@astrojs/compiler": ^2.1.0
-    "@astrojs/internal-helpers": 0.2.0
-    "@astrojs/markdown-remark": 3.2.0
-    "@astrojs/telemetry": 3.0.2
+    "@astrojs/internal-helpers": 0.2.1
+    "@astrojs/markdown-remark": 3.2.1
+    "@astrojs/telemetry": 3.0.3
     "@babel/core": ^7.22.10
     "@babel/generator": ^7.22.10
     "@babel/parser": ^7.22.10
@@ -1510,7 +1533,6 @@ __metadata:
     string-width: ^6.1.0
     strip-ansi: ^7.1.0
     tsconfig-resolver: ^3.0.1
-    undici: ^5.23.0
     unist-util-visit: ^4.1.2
     vfile: ^5.3.7
     vite: ^4.4.9
@@ -1523,7 +1545,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 65756745f56744459c52d39e65903460ca53121fd0f0710e23801ab36be84994c7c7579cd94f56091ba3be3b93e031626345f6e08fea053913493dad9da2c3f0
+  checksum: 70656aec8e52653fa007ccbe8ef201e33e6d89a4ceb6e1820caf9e8f69411eb1654e091a59699eee04a9644dbf45fbb9248c6e8246b651c507a596363b3136e3
   languageName: node
   linkType: hard
 
@@ -1749,15 +1771,6 @@ __metadata:
     base64-js: ^1.3.1
     ieee754: ^1.2.1
   checksum: 5ad23293d9a731e4318e420025800b42bf0d264004c0286c8cc010af7a270c7a0f6522e84f54b9ad65cbd6db20b8badbfd8d2ebf4f80fa03dab093b89e68c3f9
-  languageName: node
-  linkType: hard
-
-"busboy@npm:^1.6.0":
-  version: 1.6.0
-  resolution: "busboy@npm:1.6.0"
-  dependencies:
-    streamsearch: ^1.1.0
-  checksum: 32801e2c0164e12106bf236291a00795c3c4e4b709ae02132883fe8478ba2ae23743b11c5735a0aae8afe65ac4b6ca4568b91f0d9fed1fdbc32ede824a73746e
   languageName: node
   linkType: hard
 
@@ -6597,13 +6610,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"streamsearch@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "streamsearch@npm:1.1.0"
-  checksum: 1cce16cea8405d7a233d32ca5e00a00169cc0e19fbc02aa839959985f267335d435c07f96e5e0edd0eadc6d39c98d5435fb5bbbdefc62c41834eadc5622ad942
-  languageName: node
-  linkType: hard
-
 "streamx@npm:^2.15.0":
   version: 2.15.1
   resolution: "streamx@npm:2.15.1"
@@ -7084,15 +7090,6 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 0f4da2f15e6f1245e49db15801dbee52f2bbfb267e1c39225afdab5afee1a72839cd86000e65ee9d7e4dfaff12239d28beaf5ee431357fcced15fb08583d72ca
-  languageName: node
-  linkType: hard
-
-"undici@npm:^5.23.0":
-  version: 5.25.1
-  resolution: "undici@npm:5.25.1"
-  dependencies:
-    busboy: ^1.6.0
-  checksum: ed69ef41ef87ccb7925deca2f66841b74aaf01811e1f294a14a1d4ac7dc5aa3d24dcfd877abfa39e7eebf928f4ef1bc149302fd2468e185f90621dd26607efb9
   languageName: node
   linkType: hard
 
