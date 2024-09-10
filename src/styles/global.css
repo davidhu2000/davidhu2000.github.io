@@ -56,16 +56,16 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 }
 
 /* code blocks: highlighted styles */
-html code .line.highlighted {
+html code .highlighted {
   background: rgba(200, 200, 255, 0.5);
   border-left: 0.25rem solid #60a5fa;
 }
 
-html.dark code .line.highlighted {
+html.dark code .highlighted {
   background: rgba(200, 200, 255, 0.1);
 }
 
-code .line.highlighted:before {
+code .highlighted:before {
   margin-left: 0.75rem;
 }
 

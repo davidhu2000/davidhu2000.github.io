@@ -1,3 +1,4 @@
+import icon from "astro-icon";
 import mdx from "@astrojs/mdx";
 import prefetch from "@astrojs/prefetch";
 import sitemap from "@astrojs/sitemap";
@@ -9,10 +10,7 @@ import { remarkReadingTime } from "./plugins/remark-reading-time.mjs";
 
 /** @type {import('rehype-pretty-code').Options} */
 const options = {
-  theme: {
-    dark: "github-dark",
-    light: "min-light",
-  },
+  theme: "github-dark",
   keepBackground: false,
   onVisitLine(node) {
     // Prevent lines from collapsing in `display: grid` mode, and
@@ -35,7 +33,7 @@ const options = {
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.davidhu.io",
-  integrations: [mdx(), sitemap(), tailwind(), prefetch()],
+  integrations: [mdx(), sitemap(), tailwind(), prefetch(), icon()],
   markdown: {
     syntaxHighlight: false,
     // TODO: this plugin does not work for mdx files, need to figure out why

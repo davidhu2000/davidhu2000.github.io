@@ -12,23 +12,33 @@
     "ui": "yarn upgrade-interactive"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^1.1.0",
-    "@astrojs/prefetch": "^0.4.0",
-    "@astrojs/rss": "^3.0.0",
-    "@astrojs/sitemap": "^3.0.0",
-    "@astrojs/tailwind": "^5.0.0",
-    "@tailwindcss/typography": "^0.5.10",
-    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
-    "astro": "^3.1.2",
-    "astro-icon": "^0.8.1",
-    "cypress": "^13.2.0",
+    "@astrojs/mdx": "^3.1.5",
+    "@astrojs/prefetch": "^0.4.1",
+    "@astrojs/rss": "^4.0.7",
+    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/tailwind": "^5.1.0",
+    "@tailwindcss/typography": "^0.5.15",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "astro": "^4.15.4",
+    "astro-icon": "^1.1.1",
+    "cypress": "^13.14.2",
     "mdast-util-to-string": "^4.0.0",
-    "prettier": "^3.0.3",
+    "prettier": "^3.3.3",
     "reading-time": "^1.5.0",
-    "rehype-pretty-code": "^0.10.1",
-    "sharp": "^0.32.6",
-    "tailwindcss": "^3.3.3",
-    "typescript": "^5.2.2"
+    "rehype-pretty-code": "^0.14.0",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5.6.2"
   },
-  "packageManager": "yarn@3.6.3"
+  "packageManager": "yarn@4.4.1",
+  "dependencies": {
+    "@iconify-json/akar-icons": "^1.2.0",
+    "@iconify-json/cil": "^1.2.0",
+    "@iconify-json/fa-brands": "^1.2.0",
+    "@iconify-json/ic": "^1.2.0",
+    "@iconify-json/logos": "^1.2.0",
+    "@iconify-json/mdi": "^1.2.0",
+    "@iconify-json/ri": "^1.2.0",
+    "@iconify-json/simple-icons": "^1.2.0"
+  }
 }
