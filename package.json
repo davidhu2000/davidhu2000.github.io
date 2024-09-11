@@ -19,7 +19,7 @@
     "@astrojs/tailwind": "^5.0.0",
     "@tailwindcss/typography": "^0.5.10",
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",
-    "astro": "^3.1.2",
+    "astro": "^4.15.4",
     "astro-icon": "^0.8.1",
     "cypress": "^13.2.0",
     "mdast-util-to-string": "^4.0.0",
