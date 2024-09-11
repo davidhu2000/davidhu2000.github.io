@@ -15,7 +15,7 @@
     "@astrojs/mdx": "^1.1.0",
     "@astrojs/prefetch": "^0.4.0",
     "@astrojs/rss": "^3.0.0",
-    "@astrojs/sitemap": "^3.0.0",
+    "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.0.0",
     "@tailwindcss/typography": "^0.5.10",
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",
