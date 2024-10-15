@@ -113,13 +113,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/sitemap@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@astrojs/sitemap@npm:3.0.0"
+"@astrojs/sitemap@npm:^3.2.1":
+  version: 3.2.1
+  resolution: "@astrojs/sitemap@npm:3.2.1"
   dependencies:
-    sitemap: ^7.1.1
-    zod: 3.21.1
-  checksum: 45c5371da74737c6ba651dd7502fd831543b069b9c73d537e8204411b3f72a2676db2a56d6e485c243f013aa90fc44218485b3bfef1f4aeeca3da33d34f5991c
+    sitemap: ^8.0.0
+    stream-replace-string: ^2.0.0
+    zod: ^3.23.8
+  checksum: a2e0c172822b6e47c4ebf7a0e87ec442fdeac671fd690e496224e061e2a545ad8c6a33cc8afee4af1574678039892dce1bb1b79df429ec2250f808c638bf7ab1
   languageName: node
   linkType: hard
 
@@ -509,7 +510,7 @@ __metadata:
     "@astrojs/mdx": ^1.1.0
     "@astrojs/prefetch": ^0.4.0
     "@astrojs/rss": ^3.0.0
-    "@astrojs/sitemap": ^3.0.0
+    "@astrojs/sitemap": ^3.2.1
     "@astrojs/tailwind": ^5.0.0
     "@tailwindcss/typography": ^0.5.10
     "@trivago/prettier-plugin-sort-imports": ^4.2.0
@@ -6427,9 +6428,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sitemap@npm:^7.1.1":
-  version: 7.1.1
-  resolution: "sitemap@npm:7.1.1"
+"sitemap@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "sitemap@npm:8.0.0"
   dependencies:
     "@types/node": ^17.0.5
     "@types/sax": ^1.2.1
@@ -6437,7 +6438,7 @@ __metadata:
     sax: ^1.2.4
   bin:
     sitemap: dist/cli.js
-  checksum: 87a6d21b0d4a33b8c611d3bb8543d02b813c0ebfce014213ef31849b5c1439005644f19ad1593ec89815f6101355f468c9a02c251d09aa03f6fddd17e23c4be4
+  checksum: 1867d86a8948acdf1ca2ffee06d43eab4317dbfb40f62a7ce122ffa9526fea5adb5ad58d2389e0f6fab24dac65ff7a8136c35a1bbf16a0e161d11e5a58fc280e
   languageName: node
   linkType: hard
 
@@ -6594,6 +6595,13 @@ __metadata:
   dependencies:
     debug: 2
   checksum: 4d86ff8cffe7c7587dc91433fff9dce38a93ea7e9f47560055addc81eae6b6befab22b75643ce539faf325fe2b17d371778242566bed086e75f6cffb1e76c06c
+  languageName: node
+  linkType: hard
+
+"stream-replace-string@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "stream-replace-string@npm:2.0.0"
+  checksum: 51dfef22a010bd0196792f3a846445029d47b79a60c698528ebf3e811b7751883d7d28a5dfe2ff38868e1a5c1222df4ff1d3fe7f958ad5db33d4727460509af0
   languageName: node
   linkType: hard
 
@@ -7609,6 +7617,13 @@ __metadata:
   version: 3.21.1
   resolution: "zod@npm:3.21.1"
   checksum: e02ed16b26e171f244fb7592177bef21b67956683aaed57bc8f02dfa5ad307d5cf347e9557c84c0849d96305efaf7c90c909620eaade08cfdf35f62935d741d2
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.23.8":
+  version: 3.23.8
+  resolution: "zod@npm:3.23.8"
+  checksum: 15949ff82118f59c893dacd9d3c766d02b6fa2e71cf474d5aa888570c469dbf5446ac5ad562bb035bf7ac9650da94f290655c194f4a6de3e766f43febd432c5c
   languageName: node
   linkType: hard
 
