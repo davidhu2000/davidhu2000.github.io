@@ -52,7 +52,7 @@ describe("links-and-images", () => {
               const url = new URL(urlString);
 
               // do not allow bot visits
-              if (url.host === "www.linkedin.com" || url.host === "angel.co") {
+              if (url.host === "www.linkedin.com") {
                 return;
               }
 
