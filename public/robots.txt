@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://davidhu.io/sitemap-index.xml
+Sitemap: https://www.davidhu.io/sitemap-index.xml
