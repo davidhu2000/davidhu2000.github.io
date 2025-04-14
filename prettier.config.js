@@ -4,7 +4,4 @@ module.exports = {
   trailingComma: "es5",
   singleQuote: false,
   semi: true,
-  importOrder: ["^[./]"],
-  importOrderSeparation: true,
-  importOrderSortSpecifiers: true,
 };
