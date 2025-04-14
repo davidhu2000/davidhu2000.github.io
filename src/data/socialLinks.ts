@@ -14,9 +14,4 @@ export const socialLinks = [
     url: "https://twitter.com/notdavidhu",
     icon: "mdi:twitter",
   },
-  {
-    label: "AngelList",
-    url: "https://angel.co/davidhu2000",
-    icon: "fa-brands:angellist",
-  },
 ];
