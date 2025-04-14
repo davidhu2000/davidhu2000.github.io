@@ -11,7 +11,7 @@ interface Props {
 }
 
 const {
-  content: { title, description, pubDate, heroImage, heroImageMetadata, url, readingTime, file, tags },
+  content: { title, description, pubDate, heroImage, url, readingTime, file, tags },
 } = Astro.props as Props;
 
 const tweetLink = `https://twitter.com/intent/tweet?url=
@@ -31,6 +31,14 @@ const currentPostIndex = posts.findIndex(
 posts.splice(currentPostIndex, 1);
 
 const otherPosts = posts.slice(-3);
+
+const images = import.meta.glob("../assets/blog/**/*", {
+  eager: true,
+});
+
+const image = images[heroImage] as { default: ImageMetadata };
+
+const heroImageMetadata = image.default as ImageMetadata;
 ---
 
 <PageLayout meta={{ title, description, image: heroImage }}>
