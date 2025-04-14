@@ -1,3 +1,5 @@
+import * as urlLib from 'url';
+
 describe("links-and-images", () => {
   it("should return 200 for all links and images", () => {
     const testedPages = new Set<string>();
@@ -63,7 +65,10 @@ describe("links-and-images", () => {
               }
 
               cy.log('>>>> Adding "' + url + '" to pages to test');
-              if (url.includes("davidhu.io/") && !testedPages.has(url)) {
+              const parsedUrl = urlLib.parse(url);
+              const host = parsedUrl.host || "";
+              const allowedHosts = ["davidhu.io"];
+              if (allowedHosts.includes(host) && !testedPages.has(url)) {
                 pagesToTest.push(url);
               }
             });
