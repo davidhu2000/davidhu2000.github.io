@@ -253,7 +253,6 @@ __metadata:
     "@iconify-json/fa-brands": ^1.2.1
     "@iconify-json/logos": ^1.2.4
     "@iconify-json/mdi": ^1.2.3
-    "@iconify-json/simple-icons": ^1.2.32
     "@tailwindcss/typography": ^0.5.10
     astro: 5.6.2
     astro-icon: ^1.1.5
@@ -477,15 +476,6 @@ __metadata:
   dependencies:
     "@iconify/types": "*"
   checksum: cf229936c9941b9f022e24423a5a6b0953869c701ca36fef021cef08be1b59571de879568302b168d4912962c6ad17f93d3eb43fe9722b00bf9967b22d9cbb79
-  languageName: node
-  linkType: hard
-
-"@iconify-json/simple-icons@npm:^1.2.32":
-  version: 1.2.32
-  resolution: "@iconify-json/simple-icons@npm:1.2.32"
-  dependencies:
-    "@iconify/types": "*"
-  checksum: cc714131e558558ac6715e6661e38b7799c61565ed9976e086cf24e727ee0438c40c1c47d7f1e3a8fe488817b3fd6caa091c591dbb8b0d5b5223b63f89a3ee06
   languageName: node
   linkType: hard
 
