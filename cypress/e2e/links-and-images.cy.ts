@@ -1,7 +1,26 @@
 describe("links-and-images", () => {
   it("should return 200 for all links and images", () => {
     const testedPages = new Set<string>();
-    const pagesToTest = ["/"];
+    const pagesToTest: string[] = [];
+
+    // First get all URLs from sitemap
+    cy.request("https://www.davidhu.io/sitemap-0.xml").then((response) => {
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(response.body, "text/xml");
+      const urls = xmlDoc.getElementsByTagName("url");
+
+      for (let i = 0; i < urls.length; i++) {
+        const loc = urls[i].getElementsByTagName("loc")[0];
+        if (loc) {
+          const url = loc.textContent;
+          if (url) {
+            pagesToTest.push(url);
+          }
+        }
+      }
+
+      visitUrlsOnPage();
+    });
 
     function visitUrlsOnPage() {
       const url = pagesToTest.pop();
@@ -35,42 +54,33 @@ describe("links-and-images", () => {
           cy.get("a")
             .should(Cypress._.noop)
             .each((link) => {
-              const url = (link.prop("href") as string) || "";
+              const urlString = (link.prop("href") as string) || "";
+
+              const url = new URL(urlString);
 
               // these two links do not allow bot visits
-              if (url.includes("angel.co") || url.includes("linkedin.com")) {
+              if (url.host.includes("angel.co") || url.host.includes("linkedin.com")) {
                 return;
               }
 
-              if (url.includes("mailto:")) {
+              if (url.protocol === "mailto:") {
                 return;
               }
 
               // don't download any files
               if (
-                url.endsWith(".msi") ||
-                url.endsWith(".dmg") ||
-                url.endsWith(".AppImage") ||
-                url.endsWith(".deb")
+                url.href.endsWith(".msi") ||
+                url.href.endsWith(".dmg") ||
+                url.href.endsWith(".AppImage") ||
+                url.href.endsWith(".deb")
               ) {
                 return;
               }
 
-              cy.request(url);
-
-              if (url.includes(".xml")) {
-                return;
-              }
-
-              cy.log('>>>> Adding "' + url + '" to pages to test');
-              if (url.includes("davidhu.io/") && !testedPages.has(url)) {
-                pagesToTest.push(url);
-              }
+              cy.request(url.href);
             });
         })
         .then(visitUrlsOnPage);
     }
-
-    visitUrlsOnPage();
   });
 });
