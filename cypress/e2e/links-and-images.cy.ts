@@ -51,8 +51,8 @@ describe("links-and-images", () => {
 
               const url = new URL(urlString);
 
-              // these two links do not allow bot visits
-              if (url.host.includes("angel.co") || url.host.includes("linkedin.com")) {
+              // do not allow bot visits
+              if (url.host === "https://www.linkedin.com") {
                 return;
               }
 
