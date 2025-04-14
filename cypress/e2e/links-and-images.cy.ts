@@ -1,6 +1,5 @@
 describe("links-and-images", () => {
   it("should return 200 for all links and images", () => {
-    const testedPages = new Set<string>();
     const pagesToTest: string[] = [];
 
     // First get all URLs from sitemap
@@ -29,12 +28,6 @@ describe("links-and-images", () => {
         return;
       }
 
-      if (testedPages.has(url)) {
-        visitUrlsOnPage();
-        return;
-      }
-
-      testedPages.add(url);
       cy.visit(url);
       cy.log(">>>> Checking images for " + url);
 
