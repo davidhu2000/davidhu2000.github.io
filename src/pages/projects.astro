@@ -1,11 +1,11 @@
 ---
-import Icon from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 import PageLayout from "../layouts/PageLayout.astro";
 import { Image } from "astro:assets";
-import reactSpinnersImage from "../assets/main/project-react-spinners.png"
-import kubeKnotsDarkImage from "../assets/main/project-kube-knots-dark.png"
-import kubeKnotsLightImage from "../assets/main/project-kube-knots-light.png"
+import reactSpinnersImage from "../assets/main/project-react-spinners.png";
+import kubeKnotsDarkImage from "../assets/main/project-kube-knots-dark.png";
+import kubeKnotsLightImage from "../assets/main/project-kube-knots-light.png";
 
 const canonical = new URL(`projects`, Astro.site);
 
@@ -63,12 +63,12 @@ const kubeKnots = await fetch("https://api.github.com/repos/davidhu2000/kube-kno
           <div class="flex mt-4">
             <div class="flex-shrink-0">
               <div class="flex items-center justify-center h-6">
-                <Icon name="ic:outline-highlight" class="w-5 h-5" />
+                <Icon name="mdi:sparkles-outline" class="w-5 h-5" />
               </div>
             </div>
             <div class="ml-4">
               <h3 class="font-medium dark:text-white leading-6 text-lg">Highlights</h3>
-              <p class="text-muted mt-2">&gt;20 million downloads</p>
+              <p class="text-muted mt-2">&gt;28 million downloads</p>
               <p class="text-muted mt-2">{reactSpinners.stargazers_count} stars on github</p>
               <p class="text-muted mt-2">used by &gt;100000 repositories</p>
             </div>
@@ -77,7 +77,7 @@ const kubeKnots = await fetch("https://api.github.com/repos/davidhu2000/kube-kno
           <div class="flex mt-4">
             <div class="flex-shrink-0">
               <div class="flex items-center justify-center h-6">
-                <Icon name="ic:baseline-open-in-new" class="w-5 h-5" />
+                <Icon name="mdi:external-link" class="w-5 h-5" />
               </div>
             </div>
             <div class="ml-4">
@@ -151,7 +151,7 @@ const kubeKnots = await fetch("https://api.github.com/repos/davidhu2000/kube-kno
           <div class="flex mt-4">
             <div class="flex-shrink-0">
               <div class="flex items-center justify-center h-6">
-                <Icon name="ic:outline-highlight" class="w-5 h-5" />
+                <Icon name="mdi:sparkles-outline" class="w-5 h-5" />
               </div>
             </div>
             <div class="ml-4">
@@ -164,7 +164,7 @@ const kubeKnots = await fetch("https://api.github.com/repos/davidhu2000/kube-kno
           <div class="flex mt-4">
             <div class="flex-shrink-0">
               <div class="flex items-center justify-center h-6">
-                <Icon name="ic:baseline-open-in-new" class="w-5 h-5" />
+                <Icon name="mdi:external-link" class="w-5 h-5" />
               </div>
             </div>
             <div class="ml-4">
