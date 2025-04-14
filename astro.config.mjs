@@ -9,10 +9,10 @@ import { remarkReadingTime } from "./plugins/remark-reading-time.mjs";
 
 /** @type {import('rehype-pretty-code').Options} */
 const options = {
-  theme: {
-    dark: "github-dark",
-    light: "min-light",
-  },
+  // theme: {
+  //   dark: "github-dark",
+  //   light: "min-light",
+  // },
   keepBackground: false,
   onVisitLine(node) {
     // Prevent lines from collapsing in `display: grid` mode, and
