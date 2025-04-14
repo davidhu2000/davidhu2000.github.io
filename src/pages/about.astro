@@ -17,6 +17,8 @@ const steps = [
     name: "Co-founder & CTO @ Magic Hour",
     content: "Building AI Video & Image Creation Platform",
     content2: "Still doing full stack work, now just without needing to write unit tests.",
+    link: "https://magichour.ai",
+    linkText: "Magic Hour",
   },
   {
     icon: "mdi:work",
@@ -24,19 +26,25 @@ const steps = [
     content: "Maker of full stack apps. Fan of infrastructure as code. Builder of CI/CD pipelines.",
     content2:
       "My favorite part of the role is the variety, going from frontend one day, to backend the next day, then infrastructure and cost optimizations. I like it all!",
+    link: "https://github.com/davidhu2000",
+    linkText: "My Github Profile",
   },
   {
     icon: "mdi:open-source-initiative",
     name: "Open Source",
     content:
-      "I maintain an NPM package titled 'React Spinners', a set of loading components. Go check it out at /react-spinners. 15 million downloads and counting 🙂",
+      "I maintain an NPM package titled 'React Spinners', a set of loading components. 28 million downloads and counting 🙂",
+    link: "https://www.davidhu.io/react-spinners",
+    linkText: "React Spinners Demo",
   },
-  {
-    icon: "mdi:stackoverflow",
-    name: "Stack Overflow",
-    content:
-      "I'm not sure I can write code without this website. I tried to contribute whenever I can. My goal is to reach 10,000 reputations by end of this year.",
-  },
+  // {
+  //   icon: "mdi:stackoverflow",
+  //   name: "Stack Overflow",
+  //   content:
+  //     "I'm not sure I can write code without this website. I tried to contribute whenever I can. My goal is to reach 10,000 reputations by end of this year.",
+  //   link: "https://stackoverflow.com/users/6496010/davidhu",
+  //   linkText: "My StackOverflow Profile",
+  // },
   {
     icon: "mdi:mood",
     name: "Thank you for reading!",
@@ -80,12 +88,21 @@ const steps = [
                   </div>
                   {step.content && <div class="w-px h-full bg-gray-300 dark:bg-slate-500" />}
                 </div>
-                <div class="pt-1 pb-8">
-                  <p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">
-                    {step.name}
-                  </p>
-                  <p class="mb-2">{step.content}</p>
+                <div class="pt-1 pb-8 flex flex-col gap-2">
+                  <p class=" text-xl font-bold text-gray-900 dark:text-slate-300">{step.name}</p>
+                  <p class="">{step.content}</p>
                   <p>{step.content2}</p>
+
+                  {step.link && (
+                    <a
+                      href={step.link}
+                      class="font-medium text-blue-600 dark:text-blue-500 flex items-center gap-1"
+                      target="_blank"
+                    >
+                      {step.linkText}
+                      <Icon name="mdi:external-link" />
+                    </a>
+                  )}
                 </div>
               </div>
             ))
