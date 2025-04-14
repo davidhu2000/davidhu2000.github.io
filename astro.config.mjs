@@ -7,6 +7,8 @@ import rehypePrettyCode from "rehype-pretty-code";
 
 import { remarkReadingTime } from "./plugins/remark-reading-time.mjs";
 
+import icon from "astro-icon";
+
 /** @type {import('rehype-pretty-code').Options} */
 const options = {
   // theme: {
@@ -35,7 +37,7 @@ const options = {
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.davidhu.io",
-  integrations: [mdx(), sitemap(), tailwind(), prefetch()],
+  integrations: [mdx(), sitemap(), tailwind(), prefetch(), icon()],
   markdown: {
     syntaxHighlight: false,
     // TODO: this plugin does not work for mdx files, need to figure out why

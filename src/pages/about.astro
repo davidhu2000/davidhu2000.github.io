@@ -1,10 +1,10 @@
 ---
-import { Icon } from "astro-icon";
-import { Image } from 'astro:assets'
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
 import Technologies from "../components/Technologies.astro";
 import IconLoading from "../components/icons/IconLoading.astro";
 import PageLayout from "../layouts/PageLayout.astro";
-import myImage from "../assets/main/me.webp"
+import myImage from "../assets/main/me.webp";
 
 const canonical = new URL(`about`, Astro.site);
 
@@ -13,6 +13,13 @@ const description = "Sometimes I write code. Other times, I write code with coff
 
 const steps = [
   {
+    icon: "mdi:company",
+    name: "CoFounder & CTO @ Magic Hour",
+    content: "Maker of full stack apps. Fan of infrastructure as code. Builder of CI/CD pipelines.",
+    content2:
+      "My favorite part of the role is the variety, going from frontend one day, to backend the next day, then infrastructure and cost optimizations. I like it all!",
+  },
+  {
     icon: "mdi:work",
     name: "Lead Full Stack Engineer",
     content: "Maker of full stack apps. Fan of infrastructure as code. Builder of CI/CD pipelines.",
@@ -20,7 +27,7 @@ const steps = [
       "My favorite part of the role is the variety, going from frontend one day, to backend the next day, then infrastructure and cost optimizations. I like it all!",
   },
   {
-    icon: "ri:open-source-fill",
+    icon: "mdi:open-source-initiative",
     name: "Open Source",
     content:
       "I maintain an NPM package titled 'React Spinners', a set of loading components. Go check it out at /react-spinners. 15 million downloads and counting 🙂",
@@ -32,7 +39,7 @@ const steps = [
       "I'm not sure I can write code without this website. I tried to contribute whenever I can. My goal is to reach 10,000 reputations by end of this year.",
   },
   {
-    icon: "cil:mood-very-good",
+    icon: "mdi:mood",
     name: "Thank you for reading!",
   },
 ];
