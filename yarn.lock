@@ -113,16 +113,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/rss@npm:4.0.11":
-  version: 4.0.11
-  resolution: "@astrojs/rss@npm:4.0.11"
-  dependencies:
-    fast-xml-parser: ^4.5.0
-    kleur: ^4.1.5
-  checksum: 5aeed9e6b83f4bfb166ef4467985b0c54ed72f40ee588509e3d74ce54f6af97f70944b699223286ba7a1e56b5e0bfaedaedf678497b6cdeaaab2d25cc726bfd1
-  languageName: node
-  linkType: hard
-
 "@astrojs/sitemap@npm:3.3.0":
   version: 3.3.0
   resolution: "@astrojs/sitemap@npm:3.3.0"
@@ -247,7 +237,6 @@ __metadata:
   dependencies:
     "@astrojs/mdx": 4.2.4
     "@astrojs/prefetch": 0.4.1
-    "@astrojs/rss": 4.0.11
     "@astrojs/sitemap": 3.3.0
     "@astrojs/tailwind": 6.0.2
     "@iconify-json/fa-brands": ^1.2.1
@@ -3116,17 +3105,6 @@ __metadata:
     merge2: ^1.3.0
     micromatch: ^4.0.8
   checksum: 0704d7b85c0305fd2cef37777337dfa26230fdd072dce9fb5c82a4b03156f3ffb8ed3e636033e65d45d2a5805a4e475825369a27404c0307f2db0c8eb3366fbd
-  languageName: node
-  linkType: hard
-
-"fast-xml-parser@npm:^4.5.0":
-  version: 4.5.3
-  resolution: "fast-xml-parser@npm:4.5.3"
-  dependencies:
-    strnum: ^1.1.1
-  bin:
-    fxparser: src/cli/cli.js
-  checksum: cd6a184941ec6c23f9e6b514421a3f396cfdff5f4a8c7c27bd0eff896edb4a2b55c27da16f09b789663613dfc4933602b9b71ac3e9d1d2ddcc0492fc46c8fa52
   languageName: node
   linkType: hard
 
@@ -6868,13 +6846,6 @@ __metadata:
   version: 2.0.0
   resolution: "strip-final-newline@npm:2.0.0"
   checksum: 69412b5e25731e1938184b5d489c32e340605bb611d6140344abc3421b7f3c6f9984b21dff296dfcf056681b82caa3bb4cc996a965ce37bcfad663e92eae9c64
-  languageName: node
-  linkType: hard
-
-"strnum@npm:^1.1.1":
-  version: 1.1.2
-  resolution: "strnum@npm:1.1.2"
-  checksum: a85219eda13e97151c95e343a9e5960eacfb0a0ff98104b4c9cb7a212e3008bddf0c9714c9c37c2e508be78e741a04afc80027c2dc18509d1b5ffd4c37191fc2
   languageName: node
   linkType: hard
 
