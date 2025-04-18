@@ -256,7 +256,7 @@ __metadata:
     "@tailwindcss/typography": ^0.5.10
     astro: 5.6.2
     astro-icon: ^1.1.5
-    cypress: ^14.3.0
+    cypress: ^14.3.1
     mdast-util-to-string: ^4.0.0
     prettier: ^3.5.3
     reading-time: ^1.5.0
@@ -2412,9 +2412,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:^14.3.0":
-  version: 14.3.0
-  resolution: "cypress@npm:14.3.0"
+"cypress@npm:^14.3.1":
+  version: 14.3.1
+  resolution: "cypress@npm:14.3.1"
   dependencies:
     "@cypress/request": ^3.0.8
     "@cypress/xvfb": ^1.2.4
@@ -2461,7 +2461,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: 3c21a9864bb6fd2614e7e551fec2c520b673a48af0071a3a29b4df9b309c5e586c6dfd55eb28cbc1a3cc4f9d5400dc6c63d91a3bebe7c2b71dce494b88c0d99e
+  checksum: 2d996fd758efe6b4d421778bf91651499912e30f472fc5e2a7a5dae82c52f8c2e69eadf67a2bd5e33d62151cc47423038d9ff20707c7e19345ea1a396990cc21
   languageName: node
   linkType: hard
 
