@@ -148,18 +148,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/telemetry@npm:3.2.0":
-  version: 3.2.0
-  resolution: "@astrojs/telemetry@npm:3.2.0"
+"@astrojs/telemetry@npm:3.2.1":
+  version: 3.2.1
+  resolution: "@astrojs/telemetry@npm:3.2.1"
   dependencies:
-    ci-info: ^4.1.0
-    debug: ^4.3.7
+    ci-info: ^4.2.0
+    debug: ^4.4.0
     dlv: ^1.1.3
     dset: ^3.1.4
     is-docker: ^3.0.0
     is-wsl: ^3.1.0
     which-pm-runs: ^1.1.0
-  checksum: cda264155467c48d71adbe0ab9b029322263dee4deef29ccd830647cf38f6bb726574af0082ba7982466d8429aae667cdf72a60b243b3b88a235a5b7a45849b5
+  checksum: 30a8d5facf1332ee5c1b229d70db4dcbdf8d32432a468d10389b64d2466e2c60972c1bd1c4f9eaec48fc04e16da4ec26124aedd562734b8e3550db57d8455e31
   languageName: node
   linkType: hard
 
@@ -265,7 +265,7 @@ __metadata:
     "@iconify-json/mdi": ^1.2.3
     "@iconify-json/simple-icons": ^1.2.32
     "@tailwindcss/typography": ^0.5.10
-    astro: 5.7.4
+    astro: 5.7.5
     astro-icon: ^1.1.5
     cypress: ^14.3.2
     mdast-util-to-string: ^4.0.0
@@ -1712,14 +1712,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:5.7.4":
-  version: 5.7.4
-  resolution: "astro@npm:5.7.4"
+"astro@npm:5.7.5":
+  version: 5.7.5
+  resolution: "astro@npm:5.7.5"
   dependencies:
     "@astrojs/compiler": ^2.11.0
     "@astrojs/internal-helpers": 0.6.1
     "@astrojs/markdown-remark": 6.3.1
-    "@astrojs/telemetry": 3.2.0
+    "@astrojs/telemetry": 3.2.1
     "@capsizecss/unpack": ^2.4.0
     "@oslojs/encoding": ^1.1.0
     "@rollup/pluginutils": ^5.1.4
@@ -1781,7 +1781,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 8ca4cafd44e46263fa4537f50550502346c04c71e723aa6a4fb04793705eafe85618065ee7f0cfcdf0f7d3de78179030de35c9c3040258deb6eb1612dc09f09f
+  checksum: 7549b9750d8f92b19662c7b0ee5c3dc42e6e73246848353786ac3b85c745c7f9667d7c50453e2dba5427c2fb04d7d190c8d5a57c22421d85f63fe80996b2dee3
   languageName: node
   linkType: hard
 
@@ -2606,7 +2606,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.1.1, debug@npm:^4.3.3, debug@npm:^4.3.4, debug@npm:^4.3.7, debug@npm:^4.4.0":
+"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.1.1, debug@npm:^4.3.3, debug@npm:^4.3.4, debug@npm:^4.4.0":
   version: 4.4.0
   resolution: "debug@npm:4.4.0"
   dependencies:
