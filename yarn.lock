@@ -123,14 +123,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/sitemap@npm:3.3.0":
-  version: 3.3.0
-  resolution: "@astrojs/sitemap@npm:3.3.0"
+"@astrojs/sitemap@npm:3.3.1":
+  version: 3.3.1
+  resolution: "@astrojs/sitemap@npm:3.3.1"
   dependencies:
     sitemap: ^8.0.0
     stream-replace-string: ^2.0.0
     zod: ^3.24.2
-  checksum: f8fe39801f53dd1c2697d73a8d510dc4c65931c7e76714c89b8c8ee8a8880900c672121bcc904c0c0e6774796836b69f839024a1291c34e443ebb1398e43c56e
+  checksum: d66ed2dc73ea996d85fca88e4db8e9b873047a73013c04df11ffdadf1df27b1b1cafa97031f0348cb290c7b2a5c3fcb7c70eb179f9b00769dcf3bfd071098ae3
   languageName: node
   linkType: hard
 
@@ -259,7 +259,7 @@ __metadata:
     "@astrojs/mdx": 4.2.4
     "@astrojs/prefetch": 0.4.1
     "@astrojs/rss": 4.0.11
-    "@astrojs/sitemap": 3.3.0
+    "@astrojs/sitemap": 3.3.1
     "@astrojs/tailwind": 6.0.2
     "@iconify-json/fa-brands": ^1.2.1
     "@iconify-json/mdi": ^1.2.3
