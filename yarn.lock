@@ -265,7 +265,7 @@ __metadata:
     "@iconify-json/mdi": ^1.2.3
     "@iconify-json/simple-icons": ^1.2.33
     "@tailwindcss/typography": ^0.5.10
-    astro: 5.7.5
+    astro: 5.7.7
     astro-icon: ^1.1.5
     cypress: ^14.3.2
     mdast-util-to-string: ^4.0.0
@@ -1712,9 +1712,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:5.7.5":
-  version: 5.7.5
-  resolution: "astro@npm:5.7.5"
+"astro@npm:5.7.7":
+  version: 5.7.7
+  resolution: "astro@npm:5.7.7"
   dependencies:
     "@astrojs/compiler": ^2.11.0
     "@astrojs/internal-helpers": 0.6.1
@@ -1764,7 +1764,7 @@ __metadata:
     tinyglobby: ^0.2.12
     tsconfck: ^3.1.5
     ultrahtml: ^1.6.0
-    unifont: ~0.2.0
+    unifont: ~0.4.0
     unist-util-visit: ^5.0.0
     unstorage: ^1.15.0
     vfile: ^6.0.3
@@ -1781,7 +1781,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 7549b9750d8f92b19662c7b0ee5c3dc42e6e73246848353786ac3b85c745c7f9667d7c50453e2dba5427c2fb04d7d190c8d5a57c22421d85f63fe80996b2dee3
+  checksum: 992b23ed21b1cd84ad1854053e36730fc18316553d7dd87b3f764503bd33341b49e4d07ee70104bdada04736cc25d4bd4c86668da9af778fade536f47c139795
   languageName: node
   linkType: hard
 
@@ -7494,13 +7494,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unifont@npm:~0.2.0":
-  version: 0.2.0
-  resolution: "unifont@npm:0.2.0"
+"unifont@npm:~0.4.0":
+  version: 0.4.0
+  resolution: "unifont@npm:0.4.0"
   dependencies:
     css-tree: ^3.0.0
     ohash: ^2.0.0
-  checksum: f2fb2661ab9750ef4f2a7d9e33fd8cae21e020038f8f5f9a87db5310ed704416a4e9e0be3a2fcfe07b05711f9768a09f0e924e8033eff99511eff87ca03e058b
+  checksum: 11491921ab3cb988252f684696485c619c390d4d5a7f52118182672b94c4b2b5cf176299ce0a24e4f7b1abba6cb3c022394aeaf68d3829d3fa6a6e0e4843369f
   languageName: node
   linkType: hard
 
