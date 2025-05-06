@@ -273,7 +273,7 @@ __metadata:
     reading-time: ^1.5.0
     rehype-pretty-code: ^0.14.1
     sharp: ^0.34.1
-    shiki: ^3.3.0
+    shiki: ^3.4.0
     tailwindcss: ^3.4.17
     typescript: ^5.8.3
   languageName: unknown
@@ -1195,15 +1195,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shikijs/core@npm:3.3.0":
-  version: 3.3.0
-  resolution: "@shikijs/core@npm:3.3.0"
+"@shikijs/core@npm:3.4.0":
+  version: 3.4.0
+  resolution: "@shikijs/core@npm:3.4.0"
   dependencies:
-    "@shikijs/types": 3.3.0
+    "@shikijs/types": 3.4.0
     "@shikijs/vscode-textmate": ^10.0.2
     "@types/hast": ^3.0.4
     hast-util-to-html: ^9.0.5
-  checksum: 71fade1ed9c64b541c7c7d8898bd6c5ffe0913b32b57dfd5259b1a561ad1ed32e2a68adf56a60872f2957346fd210760525fa73bc1953fff838c5d69e588a466
+  checksum: 4f7284d254d5f5ad908c84aa1e255c39da6276f842013b5ab97d5f76da8c28cd39bdd902f89dc5fa1b05e961e9679c40406fe749ba103f15a6dd0a1d10af5eda
   languageName: node
   linkType: hard
 
@@ -1218,14 +1218,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shikijs/engine-javascript@npm:3.3.0":
-  version: 3.3.0
-  resolution: "@shikijs/engine-javascript@npm:3.3.0"
+"@shikijs/engine-javascript@npm:3.4.0":
+  version: 3.4.0
+  resolution: "@shikijs/engine-javascript@npm:3.4.0"
   dependencies:
-    "@shikijs/types": 3.3.0
+    "@shikijs/types": 3.4.0
     "@shikijs/vscode-textmate": ^10.0.2
-    oniguruma-to-es: ^4.2.0
-  checksum: 4f05dd7949c5c992be1c023b2cbadd3e9454d1d91f3ebd95abdce4d4b06b63cdb6ef354500c47fc6b5ad158d2a4a9eb554cee22b639138ef6f111c9f98ef01e7
+    oniguruma-to-es: ^4.3.3
+  checksum: 8838e21081ae82b332ec57b4a5ee38232588ecfb952d981f6d5ed4bc8e8d8f3a75d36b3851ed2e556cbe5103a9fbe4954495d2d8b4b6486fe130f4fe40a63fa5
   languageName: node
   linkType: hard
 
@@ -1239,13 +1239,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shikijs/engine-oniguruma@npm:3.3.0":
-  version: 3.3.0
-  resolution: "@shikijs/engine-oniguruma@npm:3.3.0"
+"@shikijs/engine-oniguruma@npm:3.4.0":
+  version: 3.4.0
+  resolution: "@shikijs/engine-oniguruma@npm:3.4.0"
   dependencies:
-    "@shikijs/types": 3.3.0
+    "@shikijs/types": 3.4.0
     "@shikijs/vscode-textmate": ^10.0.2
-  checksum: c5488daa27cb4a6489e458e920417ef6e3ed74e45e69efb3c817fa69dba515d4db331833cb2eb9495031ddf6a292c201ca0b3b66d5adbd6cda1d37e4481728fa
+  checksum: 0e89206e6037a8276564b0a5068739f5cf8f4f37548528cc6a4a6b446744568f3d46d3107dd016a745283d3a0d34243997e144c0e7f1debe504d7e90d2f92ae4
   languageName: node
   linkType: hard
 
@@ -1258,12 +1258,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shikijs/langs@npm:3.3.0":
-  version: 3.3.0
-  resolution: "@shikijs/langs@npm:3.3.0"
+"@shikijs/langs@npm:3.4.0":
+  version: 3.4.0
+  resolution: "@shikijs/langs@npm:3.4.0"
   dependencies:
-    "@shikijs/types": 3.3.0
-  checksum: fcef4d7e4768b1fe0a1722164ab096c3aa839d5d05d658da7dbd5e8a693eb5022d2cdc9952938fde8858f0f48b9e568d009e1271eedd219c2835689fe18de055
+    "@shikijs/types": 3.4.0
+  checksum: f92532428708a8b48cfeace96564397ca64074a32e66a653507fd27618d7779ba87fb208bd32e009e9ad1cb1b67c131486256f2695d34bbf10f3f8b32e8d7e2b
   languageName: node
   linkType: hard
 
@@ -1276,12 +1276,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shikijs/themes@npm:3.3.0":
-  version: 3.3.0
-  resolution: "@shikijs/themes@npm:3.3.0"
+"@shikijs/themes@npm:3.4.0":
+  version: 3.4.0
+  resolution: "@shikijs/themes@npm:3.4.0"
   dependencies:
-    "@shikijs/types": 3.3.0
-  checksum: c5f233754d106ea6c1d55a8462e26685d641a8e2b5326ed55b67e47b1f0484a7f43a45834fc5b10838a6e2c63a37fd5842474d3c92aafd86236f2cb83b25c44c
+    "@shikijs/types": 3.4.0
+  checksum: cfc3b9b58a81d944ad3ad57c77bee80e96f05d9187bb6883d0a41f7a207f2818cf0d43d857ddffdcbb3c27f55589bf029bb2d1b8fba68fbe86cea93853d9d3c2
   languageName: node
   linkType: hard
 
@@ -1295,13 +1295,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shikijs/types@npm:3.3.0":
-  version: 3.3.0
-  resolution: "@shikijs/types@npm:3.3.0"
+"@shikijs/types@npm:3.4.0":
+  version: 3.4.0
+  resolution: "@shikijs/types@npm:3.4.0"
   dependencies:
     "@shikijs/vscode-textmate": ^10.0.2
     "@types/hast": ^3.0.4
-  checksum: c3d7530ba89787a191f82eb1ebc3ff094d82cdde5f138654bbec9aff6167b462448bd4ba69adfda8c9b1135e0dc722652d473e49d19a77e9263ed3de1193c7e3
+  checksum: 1e2aa3a1160e3a99edc2889ea1c1288de6808e59487e3b60d18674abe040e9c50923b53a5c5727cd3bca1197a4bd2f0db377d8fc117dd325819febe9f0ba7c8c
   languageName: node
   linkType: hard
 
@@ -5619,7 +5619,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"oniguruma-to-es@npm:^4.1.0, oniguruma-to-es@npm:^4.2.0":
+"oniguruma-parser@npm:^0.12.1":
+  version: 0.12.1
+  resolution: "oniguruma-parser@npm:0.12.1"
+  checksum: 3477cecee6f93e312a59fca66bc8fa206729698ea27d2d501d5ac970918b5cdfcf5efbdae6eeb6c7cd7f9cb2ccc52536d57ce90679070ce50a245f8a1f4bc1b5
+  languageName: node
+  linkType: hard
+
+"oniguruma-to-es@npm:^4.1.0":
   version: 4.2.0
   resolution: "oniguruma-to-es@npm:4.2.0"
   dependencies:
@@ -5628,6 +5635,17 @@ __metadata:
     regex: ^6.0.1
     regex-recursion: ^6.0.2
   checksum: bd9f43a7f0800fcf64491b364a8ea2af37e217b2835c0ae3ab5de9b793beebe8bad96ce25befb153b9e03ecfcfffea1b21c9caab41dd3ab5fc390fb2b51b3d34
+  languageName: node
+  linkType: hard
+
+"oniguruma-to-es@npm:^4.3.3":
+  version: 4.3.3
+  resolution: "oniguruma-to-es@npm:4.3.3"
+  dependencies:
+    oniguruma-parser: ^0.12.1
+    regex: ^6.0.1
+    regex-recursion: ^6.0.2
+  checksum: 0d99452fa436558b42f2d9381b1371760e95041bc3049a87a3ad0939e7cbb2df9413b34a2901e7862e488b1ccca9be048294fc1036a83d5ca75cf2c543ae33e5
   languageName: node
   linkType: hard
 
@@ -6785,19 +6803,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shiki@npm:^3.3.0":
-  version: 3.3.0
-  resolution: "shiki@npm:3.3.0"
+"shiki@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "shiki@npm:3.4.0"
   dependencies:
-    "@shikijs/core": 3.3.0
-    "@shikijs/engine-javascript": 3.3.0
-    "@shikijs/engine-oniguruma": 3.3.0
-    "@shikijs/langs": 3.3.0
-    "@shikijs/themes": 3.3.0
-    "@shikijs/types": 3.3.0
+    "@shikijs/core": 3.4.0
+    "@shikijs/engine-javascript": 3.4.0
+    "@shikijs/engine-oniguruma": 3.4.0
+    "@shikijs/langs": 3.4.0
+    "@shikijs/themes": 3.4.0
+    "@shikijs/types": 3.4.0
     "@shikijs/vscode-textmate": ^10.0.2
     "@types/hast": ^3.0.4
-  checksum: 5af8f02244ceb0c160969efb1f1eeeb8e5797767d3d288083942455f724ed5dc638607b27bfcce10705c749cb4f635538f61df60ed2e9bd42d7318d735823092
+  checksum: 17868988c97ab49010d396417a72ee2a669880394127bd8ec8bd55608645e68f84f4051c62ab6871ad6d877cc2975af29ba39b1a49717122c3a4e4abbec68780
   languageName: node
   linkType: hard
 
