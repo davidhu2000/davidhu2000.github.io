@@ -11,7 +11,7 @@
     "ui": "yarn upgrade-interactive"
   },
   "devDependencies": {
-    "@astrojs/mdx": "4.2.5",
+    "@astrojs/mdx": "4.3.0",
     "@astrojs/prefetch": "0.4.1",
     "@astrojs/rss": "4.0.11",
     "@astrojs/sitemap": "3.3.1",
