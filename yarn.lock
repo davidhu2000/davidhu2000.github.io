@@ -72,11 +72,40 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:4.2.5":
-  version: 4.2.5
-  resolution: "@astrojs/mdx@npm:4.2.5"
+"@astrojs/markdown-remark@npm:6.3.2":
+  version: 6.3.2
+  resolution: "@astrojs/markdown-remark@npm:6.3.2"
   dependencies:
-    "@astrojs/markdown-remark": 6.3.1
+    "@astrojs/internal-helpers": 0.6.1
+    "@astrojs/prism": 3.3.0
+    github-slugger: ^2.0.0
+    hast-util-from-html: ^2.0.3
+    hast-util-to-text: ^4.0.2
+    import-meta-resolve: ^4.1.0
+    js-yaml: ^4.1.0
+    mdast-util-definitions: ^6.0.0
+    rehype-raw: ^7.0.0
+    rehype-stringify: ^10.0.1
+    remark-gfm: ^4.0.1
+    remark-parse: ^11.0.0
+    remark-rehype: ^11.1.2
+    remark-smartypants: ^3.0.2
+    shiki: ^3.2.1
+    smol-toml: ^1.3.1
+    unified: ^11.0.5
+    unist-util-remove-position: ^5.0.0
+    unist-util-visit: ^5.0.0
+    unist-util-visit-parents: ^6.0.1
+    vfile: ^6.0.3
+  checksum: e779ab6df83e970b9f92664720c073221642ecb978059688cd9e3c4196b68692c0717f71d51531424d6e9a828cdea2f9d04b23dc05d5d408d9fbd815ce058649
+  languageName: node
+  linkType: hard
+
+"@astrojs/mdx@npm:4.3.0":
+  version: 4.3.0
+  resolution: "@astrojs/mdx@npm:4.3.0"
+  dependencies:
+    "@astrojs/markdown-remark": 6.3.2
     "@mdx-js/mdx": ^3.1.0
     acorn: ^8.14.1
     es-module-lexer: ^1.6.0
@@ -91,7 +120,7 @@ __metadata:
     vfile: ^6.0.3
   peerDependencies:
     astro: ^5.0.0
-  checksum: 45274d37ce0f2e621cb2ac8d51bde5d3ffb1b0607d39a135eab7762b65ff2e899d3e7ec5118d69a38070cde8209f183558046b26f2e795cda1cc29ed9d469d5a
+  checksum: 7236314e24644fca6e1cb6866ab3cefaab0fa303df3722b38bcca1dfbfe74f7b1b2c6b2078fdfee6c7984a479bac00a00e34bfceac963932e08228e6d008a5f0
   languageName: node
   linkType: hard
 
@@ -110,6 +139,15 @@ __metadata:
   dependencies:
     prismjs: ^1.29.0
   checksum: 7264117e8266103266379bdc33d25ee55f891a7d9cf342efa1d85ade0d8972b6b218cc97ef8d835d207052de35b3ef22caeabff3a9ef6d07aedd2e97609f1e81
+  languageName: node
+  linkType: hard
+
+"@astrojs/prism@npm:3.3.0":
+  version: 3.3.0
+  resolution: "@astrojs/prism@npm:3.3.0"
+  dependencies:
+    prismjs: ^1.30.0
+  checksum: d124c3c43231d506c4ad40a4870decca9cb5585b518a2745556ab9faa4f6ead2e027b492290a238c0ecf53c9b80bd7565147cb428387f9b5fe81d1ad616d9c2e
   languageName: node
   linkType: hard
 
@@ -256,7 +294,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@davidhu/blog@workspace:."
   dependencies:
-    "@astrojs/mdx": 4.2.5
+    "@astrojs/mdx": 4.3.0
     "@astrojs/prefetch": 0.4.1
     "@astrojs/rss": 4.0.11
     "@astrojs/sitemap": 3.3.1
@@ -5991,7 +6029,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prismjs@npm:^1.29.0":
+"prismjs@npm:^1.29.0, prismjs@npm:^1.30.0":
   version: 1.30.0
   resolution: "prismjs@npm:1.30.0"
   checksum: a68eddd4c5f1c506badb5434b0b28a7cc2479ed1df91bc4218e6833c7971ef40c50ec481ea49749ac964256acb78d8b66a6bd11554938e8998e46c18b5f9a580
@@ -6317,7 +6355,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remark-rehype@npm:^11.0.0, remark-rehype@npm:^11.1.1":
+"remark-rehype@npm:^11.0.0, remark-rehype@npm:^11.1.1, remark-rehype@npm:^11.1.2":
   version: 11.1.2
   resolution: "remark-rehype@npm:11.1.2"
   dependencies:
