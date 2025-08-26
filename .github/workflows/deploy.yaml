@@ -27,7 +27,7 @@ jobs:
           cache: "yarn"
       - run: yarn install
       - run: yarn build
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: "dist/"
 
