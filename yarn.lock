@@ -43,6 +43,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/internal-helpers@npm:0.7.2":
+  version: 0.7.2
+  resolution: "@astrojs/internal-helpers@npm:0.7.2"
+  checksum: 70e11b51eca9999414c52706a20f8bf0a892d5d54cb2f2350e1c40af563a010f834939cefc603b076e0abf5067a1b128e07085aed484770714359da756ee5828
+  languageName: node
+  linkType: hard
+
 "@astrojs/markdown-remark@npm:6.3.1":
   version: 6.3.1
   resolution: "@astrojs/markdown-remark@npm:6.3.1"
@@ -72,26 +79,55 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:4.2.5":
-  version: 4.2.5
-  resolution: "@astrojs/mdx@npm:4.2.5"
+"@astrojs/markdown-remark@npm:6.3.6":
+  version: 6.3.6
+  resolution: "@astrojs/markdown-remark@npm:6.3.6"
   dependencies:
-    "@astrojs/markdown-remark": 6.3.1
-    "@mdx-js/mdx": ^3.1.0
-    acorn: ^8.14.1
-    es-module-lexer: ^1.6.0
+    "@astrojs/internal-helpers": 0.7.2
+    "@astrojs/prism": 3.3.0
+    github-slugger: ^2.0.0
+    hast-util-from-html: ^2.0.3
+    hast-util-to-text: ^4.0.2
+    import-meta-resolve: ^4.1.0
+    js-yaml: ^4.1.0
+    mdast-util-definitions: ^6.0.0
+    rehype-raw: ^7.0.0
+    rehype-stringify: ^10.0.1
+    remark-gfm: ^4.0.1
+    remark-parse: ^11.0.0
+    remark-rehype: ^11.1.2
+    remark-smartypants: ^3.0.2
+    shiki: ^3.2.1
+    smol-toml: ^1.3.4
+    unified: ^11.0.5
+    unist-util-remove-position: ^5.0.0
+    unist-util-visit: ^5.0.0
+    unist-util-visit-parents: ^6.0.1
+    vfile: ^6.0.3
+  checksum: 3ccdbea7eb3f5f9348c93b83807c6e139ea58678222391ab9e5d72c8fcb7961ee5df0aab2afd006de55ef20147b8e85510ab71d50196466be12ef1e5fd27a97c
+  languageName: node
+  linkType: hard
+
+"@astrojs/mdx@npm:4.3.5":
+  version: 4.3.5
+  resolution: "@astrojs/mdx@npm:4.3.5"
+  dependencies:
+    "@astrojs/markdown-remark": 6.3.6
+    "@mdx-js/mdx": ^3.1.1
+    acorn: ^8.15.0
+    es-module-lexer: ^1.7.0
     estree-util-visit: ^2.0.0
     hast-util-to-html: ^9.0.5
     kleur: ^4.1.5
     rehype-raw: ^7.0.0
     remark-gfm: ^4.0.1
     remark-smartypants: ^3.0.2
-    source-map: ^0.7.4
+    source-map: ^0.7.6
     unist-util-visit: ^5.0.0
     vfile: ^6.0.3
   peerDependencies:
     astro: ^5.0.0
-  checksum: 45274d37ce0f2e621cb2ac8d51bde5d3ffb1b0607d39a135eab7762b65ff2e899d3e7ec5118d69a38070cde8209f183558046b26f2e795cda1cc29ed9d469d5a
+  checksum: 9b03e4e5fc154d9309194cbec0c105e2e4d3b7963351f511d15075022e4533f163528fc147dc47479ab3d185a974b001430f41660754d4625c68046ee3b813d0
   languageName: node
   linkType: hard
 
@@ -110,6 +146,15 @@ __metadata:
   dependencies:
     prismjs: ^1.29.0
   checksum: 7264117e8266103266379bdc33d25ee55f891a7d9cf342efa1d85ade0d8972b6b218cc97ef8d835d207052de35b3ef22caeabff3a9ef6d07aedd2e97609f1e81
+  languageName: node
+  linkType: hard
+
+"@astrojs/prism@npm:3.3.0":
+  version: 3.3.0
+  resolution: "@astrojs/prism@npm:3.3.0"
+  dependencies:
+    prismjs: ^1.30.0
+  checksum: d124c3c43231d506c4ad40a4870decca9cb5585b518a2745556ab9faa4f6ead2e027b492290a238c0ecf53c9b80bd7565147cb428387f9b5fe81d1ad616d9c2e
   languageName: node
   linkType: hard
 
@@ -256,7 +301,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@davidhu/blog@workspace:."
   dependencies:
-    "@astrojs/mdx": 4.2.5
+    "@astrojs/mdx": 4.3.5
     "@astrojs/prefetch": 0.4.1
     "@astrojs/rss": 4.0.11
     "@astrojs/sitemap": 3.3.1
@@ -945,14 +990,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/mdx@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "@mdx-js/mdx@npm:3.1.0"
+"@mdx-js/mdx@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "@mdx-js/mdx@npm:3.1.1"
   dependencies:
     "@types/estree": ^1.0.0
     "@types/estree-jsx": ^1.0.0
     "@types/hast": ^3.0.0
     "@types/mdx": ^2.0.0
+    acorn: ^8.0.0
     collapse-white-space: ^2.0.0
     devlop: ^1.0.0
     estree-util-is-identifier-name: ^3.0.0
@@ -973,7 +1019,7 @@ __metadata:
     unist-util-stringify-position: ^4.0.0
     unist-util-visit: ^5.0.0
     vfile: ^6.0.0
-  checksum: 8a1aa72ddb23294ef28903fc7ad32439a8588106949d789477c2e858e6f068c7b979ae4b2296e820987f7c4d75d6781dafb6fe6a514828bb2ab2b81d89548064
+  checksum: 6e624abc177345b80e1fedd0e899e06ceb2e73dfba7b4a5ac59e415a3f905048818dbe6e89c46e20cafcb20ef53ea6901193fbd5d59fa661680d81b837b6d7df
   languageName: node
   linkType: hard
 
@@ -1514,6 +1560,15 @@ __metadata:
   bin:
     acorn: bin/acorn
   checksum: 260d9bb6017a1b6e42d31364687f0258f78eb20210b36ef2baad38fd619d78d4e95ff7dde9b3dbe0d81f137f79a8d651a845363a26e6985997f7b71145dc5e94
+  languageName: node
+  linkType: hard
+
+"acorn@npm:^8.15.0":
+  version: 8.15.0
+  resolution: "acorn@npm:8.15.0"
+  bin:
+    acorn: bin/acorn
+  checksum: 309c6b49aedf1a2e34aaf266de06de04aab6eb097c02375c66fdeb0f64556a6a823540409914fb364d9a11bc30d79d485a2eba29af47992d3490e9886c4391c3
   languageName: node
   linkType: hard
 
@@ -2916,6 +2971,13 @@ __metadata:
   version: 1.6.0
   resolution: "es-module-lexer@npm:1.6.0"
   checksum: 4413a9aed9bf581de62b98174f3eea3f23ce2994fb6832df64bdd6504f6977da1a3b5ebd3c10f75e3c2f214dcf1a1d8b54be5e62c71b7110e6ccedbf975d2b7d
+  languageName: node
+  linkType: hard
+
+"es-module-lexer@npm:^1.7.0":
+  version: 1.7.0
+  resolution: "es-module-lexer@npm:1.7.0"
+  checksum: 7858bb76ae387fdbf8a6fccc951bf18919768309850587553eca34698b9193fbc65fab03d3d9f69163d860321fbf66adf89d5821e7f4148c7cb7d7b997259211
   languageName: node
   linkType: hard
 
@@ -5991,7 +6053,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prismjs@npm:^1.29.0":
+"prismjs@npm:^1.29.0, prismjs@npm:^1.30.0":
   version: 1.30.0
   resolution: "prismjs@npm:1.30.0"
   checksum: a68eddd4c5f1c506badb5434b0b28a7cc2479ed1df91bc4218e6833c7971ef40c50ec481ea49749ac964256acb78d8b66a6bd11554938e8998e46c18b5f9a580
@@ -6317,7 +6379,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remark-rehype@npm:^11.0.0, remark-rehype@npm:^11.1.1":
+"remark-rehype@npm:^11.0.0, remark-rehype@npm:^11.1.1, remark-rehype@npm:^11.1.2":
   version: 11.1.2
   resolution: "remark-rehype@npm:11.1.2"
   dependencies:
@@ -6929,6 +6991,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"smol-toml@npm:^1.3.4":
+  version: 1.4.2
+  resolution: "smol-toml@npm:1.4.2"
+  checksum: f12d3fbc2d49396ec523170828a5c9a89bc7740eb7b205f8d8553af18629d936474c1ce55b70c7839aa239a11252e16fd1c3fc955b966b81c9dec00155df4f85
+  languageName: node
+  linkType: hard
+
 "socks-proxy-agent@npm:^7.0.0":
   version: 7.0.0
   resolution: "socks-proxy-agent@npm:7.0.0"
@@ -6957,10 +7026,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map@npm:^0.7.0, source-map@npm:^0.7.4":
+"source-map@npm:^0.7.0":
   version: 0.7.4
   resolution: "source-map@npm:0.7.4"
   checksum: 01cc5a74b1f0e1d626a58d36ad6898ea820567e87f18dfc9d24a9843a351aaa2ec09b87422589906d6ff1deed29693e176194dc88bcae7c9a852dc74b311dbf5
+  languageName: node
+  linkType: hard
+
+"source-map@npm:^0.7.6":
+  version: 0.7.6
+  resolution: "source-map@npm:0.7.6"
+  checksum: 932f4a2390aa7100e91357d88cc272de984ad29139ac09eedfde8cc78d46da35f389065d0c5343c5d71d054a6ebd4939a8c0f2c98d5df64fe97bb8a730596c2d
   languageName: node
   linkType: hard
 
